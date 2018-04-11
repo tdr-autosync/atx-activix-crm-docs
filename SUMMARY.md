@@ -3,5 +3,6 @@
 * [Introduction](README.md)
 * [Authentication](authentication.md)
 * [Errors](errors.md)
-* [REST API \(v1\)](resources.md)
+* [Resources \(v2\)](resources/README.md)
+  * [Leads](resources/lead-api.md)
 
