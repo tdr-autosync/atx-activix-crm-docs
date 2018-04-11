@@ -6,7 +6,7 @@ This documentation is constantly updated to reflect the latest changes and featu
 
 The Activix CRM API is based on [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). We try to follow the common standards for API communication as much as possible.
 
-You may directly access to our API Reference here:
+You may directly access our API Reference here:
 
 {% page-ref page="resources/" %}
 
