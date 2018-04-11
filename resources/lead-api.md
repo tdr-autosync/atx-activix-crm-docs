@@ -6,10 +6,10 @@ This documentation is in construction. Some sections might be missing.
 
 The representation of a lead is called a `Lead` object. You can retrieve individual leads as well as list all leads. Leads are identified by an incremental ID.
 
-## The lead object
+## The `Lead` object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `id` | integer | Unique identifier for the lead. |
 | `first_name` | string | First\_name of the lead. |
 | `last_name` | string | Last name of the lead. |
@@ -32,6 +32,8 @@ The representation of a lead is called a `Lead` object. You can retrieve individ
 | `phones` | array | Array of phone objects. |
 | `emails` | array | Array of email objects. |
 | `vehicles` | array | Array of vehicle objects. |
+| `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was created. |
+| `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was last updated. |
 
 {% hint style="info" %}
 You may request additional fields by contacting [Activix](https://activix.ca/en/contact-us).
@@ -83,17 +85,35 @@ The search query \(name, phone or email\).
 			"locale": "en",
 			"birth_date": "1990-04-10",
 			"gender": 1,
+			"emails": [
+				{
+					"id": 3664451,
+					"address": "example@activix.ca",
+					"created_at": "2018-04-09T18:05:00+00:00",
+					"updated_at": "2018-04-09T18:07:00+00:00"
+				},
+				...
+			],
 			"phones": [
 				{
-					"id": 3554076,
+					"id": 9465546,
 					"number": "+14501234567",
 					"created_at": "2018-04-09T18:05:00+00:00",
-			"updated_at": "2018-04-09T18:07:00+00:00"
-				}
+					"updated_at": "2018-04-09T18:07:00+00:00"
+				},
+				...
+			],
+			"vehicles": [
+				{
+					"id": 4542214,
+					"created_at": "2018-04-09T18:05:00+00:00",
+					"updated_at": "2018-04-09T18:07:00+00:00"
+				},
+				...
 			],
 			"created_at": "2018-04-09T18:05:00+00:00",
 			"updated_at": "2018-04-09T18:07:00+00:00"
-		}
+		},
 		...
 	],
 	"links": {
