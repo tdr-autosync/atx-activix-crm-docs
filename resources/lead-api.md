@@ -29,8 +29,8 @@ The representation of a lead is called a `Lead` object. You can retrieve individ
 | `birth_date` | string | [ISO date](https://en.wikipedia.org/wiki/ISO_8601) representing the date of birth of the lead. |
 | `gender` | integer | Single-digit [ISO code](https://en.wikipedia.org/wiki/ISO/IEC_5218) representing the gender of the lead. |
 | `advisor` | object | User object representing the associated advisor. |
-| `phones` | array | Array of phone objects. |
-| `emails` | array | Array of email objects. |
+| `phones` | array | Array of [phone objects](https://docs.crm.activix.ca/resources/phones). |
+| `emails` | array | Array of [email objects](https://docs.crm.activix.ca/resources/emails). |
 | `vehicles` | array | Array of vehicle objects. |
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was created. |
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was last updated. |
