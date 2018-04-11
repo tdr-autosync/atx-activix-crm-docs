@@ -6,7 +6,7 @@ This documentation is in construction. Some sections might be missing.
 
 The representation of a lead is called a `Lead` object. You can retrieve individual leads as well as list all leads. Leads are identified by an incremental ID.
 
-## The `Lead` object
+## The `Lead` Object
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
