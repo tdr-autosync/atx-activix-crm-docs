@@ -28,15 +28,15 @@ The representation of a lead is called a `Lead` object. You can retrieve individ
 | `locale` | string | Two-letter [ISO code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) representing the locale \(language\) of the lead. |
 | `birth_date` | string | [ISO date](https://en.wikipedia.org/wiki/ISO_8601) representing the date of birth of the lead. |
 | `gender` | integer | Single-digit [ISO code](https://en.wikipedia.org/wiki/ISO/IEC_5218) representing the gender of the lead. |
-| `advisor` | object | User object representing the associated advisor. |
+| `advisor` | object | [User object](https://docs.crm.activix.ca/resources/users) representing the associated advisor. |
 | `phones` | array | Array of [phone objects](https://docs.crm.activix.ca/resources/phones). |
 | `emails` | array | Array of [email objects](https://docs.crm.activix.ca/resources/emails). |
-| `vehicles` | array | Array of vehicle objects. |
+| `vehicles` | array | Array of [vehicle objects](https://docs.crm.activix.ca/resources/vehicles). |
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was created. |
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was last updated. |
 
 {% hint style="info" %}
-You may request additional fields by contacting [Activix](https://activix.ca/en/contact-us).
+You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
 {% endhint %}
 
 {% api-method method="get" host="https://crm.activix.ca/api/v2" path="/leads/search" %}
@@ -85,29 +85,28 @@ The search query \(name, phone or email\).
 			"locale": "en",
 			"birth_date": "1990-04-10",
 			"gender": 1,
+			"advisor": {
+				"id": 51112,
+				...
+			},
 			"emails": [
 				{
 					"id": 3664451,
-					"address": "example@activix.ca",
-					"created_at": "2018-04-09T18:05:00+00:00",
-					"updated_at": "2018-04-09T18:07:00+00:00"
+					...
 				},
 				...
 			],
 			"phones": [
 				{
 					"id": 9465546,
-					"number": "+14501234567",
-					"created_at": "2018-04-09T18:05:00+00:00",
-					"updated_at": "2018-04-09T18:07:00+00:00"
+					...
 				},
 				...
 			],
 			"vehicles": [
 				{
 					"id": 4542214,
-					"created_at": "2018-04-09T18:05:00+00:00",
-					"updated_at": "2018-04-09T18:07:00+00:00"
+					...
 				},
 				...
 			],

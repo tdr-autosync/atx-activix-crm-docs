@@ -8,4 +8,5 @@
   * [Phones](resources/phones.md)
   * [Emails](resources/emails.md)
   * [Vehicles](resources/vehicles.md)
+  * [Users](resources/users.md)
 
