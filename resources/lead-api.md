@@ -13,7 +13,7 @@ The representation of a lead is called a `Lead` object. You can retrieve individ
 | `id` | integer | Unique identifier for the lead. |
 | `first_name` | string | First\_name of the lead. |
 | `last_name` | string | Last name of the lead. |
-| `civility` | string | The social title of the lead. Possible values are **`mr`**, **`ms`**, **`miss`**, **`dr`**, **`me`.** |
+| `civility` | string | The social title of the lead. Possible values are **`mr`**, **`ms`**, **`miss`**, **`dr`**, **`me`**. |
 | `second_contact` | string | Optional second contact for the lead. May be a person or a business. |
 | `second_contact_civility` | string | The social title of the second contact for the lead. Possible values are **`mr`**, **`ms`**, **`miss`**, **`dr`**, **`me`**. |
 | `division` | string | Division of the lead. Possible values are **`new`**, **`used`** or **`service`**. |
@@ -116,10 +116,10 @@ The search query \(name, phone or email\).
 		...
 	],
 	"links": {
-		"first": "https://crm.activix.ca/api/v2/leads/search?page=1",
-		"last": "https://crm.activix.ca/api/v2/leads/search?page=47",
+		"first": "https://crm.activix.ca/api/v2/leads/search?query=John&page=1",
+		"last": "https://crm.activix.ca/api/v2/leads/search?query=John&page=47",
 		"prev": null,
-		"next": "https://crm.activix.ca/api/v2/leads/search?page=2"
+		"next": "https://crm.activix.ca/api/v2/leads/search?query=John&page=2"
 	},
 	"meta": {
 		"current_page": 1,
