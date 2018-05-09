@@ -1,8 +1,8 @@
 # Introduction
 
-This documentation will help you understand how third-party services can interact with Activix CRM.
+This documentation will help you understand how third-party services can interact with Activix CRM and vice-versa.
 
-Every piece of data in the CRM is represented as an object. Lead more here:
+Every piece of data in the CRM is represented as an object. Learn more here:
 
 {% page-ref page="objects/" %}
 
