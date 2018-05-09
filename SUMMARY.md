@@ -1,6 +1,6 @@
 # Table of contents
 
-* Introduction
+* [Introduction](README.md)
 * [Objects](objects/README.md)
   * [Lead](objects/lead.md)
   * [Phone](objects/phone.md)
