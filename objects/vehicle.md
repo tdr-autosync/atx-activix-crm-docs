@@ -1,6 +1,6 @@
-# Vehicles
+# Vehicle
 
-The representation of a vehicle is called a `Vehicle` object. At the moment, you can only retrieve vehicles as part of other requests.
+The representation of a vehicle is called a `Vehicle` object. Vehicles are identified by a unique incremental ID.
 
 ## The `Vehicle` Object
 

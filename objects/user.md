@@ -1,10 +1,6 @@
-# Users
+# User
 
-{% hint style="warning" %}
-This documentation is in construction. Some sections might be missing.
-{% endhint %}
-
-The representation of a user is called a `User` object. You can retrieve individual users as well as list all users. Leads are identified by an incremental ID.
+The representation of a user is called a `User` object. Users are identified by a unique incremental ID.
 
 ## The `User` Object
 
@@ -20,4 +16,6 @@ The representation of a user is called a `User` object. You can retrieve individ
 {% hint style="info" %}
 You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
 {% endhint %}
+
+
 
