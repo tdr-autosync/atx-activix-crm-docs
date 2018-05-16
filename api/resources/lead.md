@@ -8,7 +8,7 @@ Search a lead
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Run a full-text search on leads. Returns a collection Lead object.
+Run a full-text search on leads. Returns a collection of Lead object.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -33,21 +33,9 @@ The search query \(name, phone or email\).
 			"id": 3387562,
 			"first_name": "John",
 			"last_name": "Doe",
-			"civility": "mr",
-			"second_contact": "ABC Motors",
-			"second_contact_civility": null,
-			"division": "new",
-			"type": "walk_in",
-			"source": "Lespacs",
-			"address_line1": "123 av. Riverwood",
-			"address_line2": "Suite 200",
-			"postal_code": "J1E4Y7",
-			"city": "Montreal",
-			"province": "QC",
-			"country": "CA",
-			"locale": "en",
-			"birth_date": "1990-04-10",
-			"gender": 1,
+			"created_at": "2018-04-09T18:05:00+00:00",
+			"updated_at": "2018-04-09T18:07:00+00:00",
+			...
 			"account": {
 				"id": 66,
 				...
@@ -76,9 +64,7 @@ The search query \(name, phone or email\).
 					...
 				},
 				...
-			],
-			"created_at": "2018-04-09T18:05:00+00:00",
-			"updated_at": "2018-04-09T18:07:00+00:00"
+			]
 		},
 		...
 	],
@@ -113,5 +99,243 @@ Currently, the search try to find a matching result in these fields:
 * `number` in any of the phone objects
 * `address` in any of the email objects
 
+{% api-method method="post" host="https://crm.activix.ca/api/v2" path="/leads" %}
+{% api-method-summary %}
+Create a lead
+{% endapi-method-summary %}
 
+{% api-method-description %}
+Create a lead. Returns the created lead.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authentication" required=true %}
+OAuth 2 or Basic Auth authentication credentials.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" %}
+Should be application/json.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" %}
+Should be application/json.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=201 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+	"id": 3387562,
+	"first_name": "John",
+	"last_name": "Doe",
+	"created_at": "2018-04-09T18:05:00+00:00",
+	"updated_at": "2018-04-09T18:07:00+00:00",
+	...
+	"account": {
+		"id": 66,
+		...
+	},
+	"advisor": {
+		"id": 51112,
+		...
+	},
+	"emails": [
+		{
+			"id": 3664451,
+			...
+		},
+		...
+	],
+	"phones": [
+		{
+			"id": 9465546,
+			...
+		},
+		...
+	],
+	"vehicles": [
+		{
+			"id": 4542214,
+			...
+		},
+		...
+	]
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Body Example
+
+```javascript
+{
+	"first_name": "John",
+	"last_name": "Doe",
+	...
+	"advisor": {
+		"first_name": "John",
+		"last_name": "Doe"
+	},
+	"emails": [
+		{
+			"address": "hello@example.com"
+		},
+		...
+	],
+	"phones": [
+		{
+			"number": "+15144321214"
+			"extension": 12345,
+		},
+		...
+	],
+	"vehicles": [
+		{
+			"make": "Aston Martin",
+			"model": "DB11",
+			"year": 2018,
+			...
+		},
+		...
+	]
+}
+```
+
+The `advisor` object is only used to associate a user using it's first name and last name.
+
+{% api-method method="put" host="https://crm.activix.ca/api/v2" path="/leads/:id" %}
+{% api-method-summary %}
+Update a lead
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Update a lead by it's ID. Returns the updated lead.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="integer" required=true %}
+The ID of the lead to update.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authentification" required=true %}
+OAuth 2 or Basic Auth authentication credentials.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" %}
+Should be application/json.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" %}
+Should be application/json.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+	"id": 3387562,
+	"first_name": "John",
+	"last_name": "Doe",
+	"created_at": "2018-04-09T18:05:00+00:00",
+	"updated_at": "2018-04-09T18:07:00+00:00",
+	...
+	"account": {
+		"id": 66,
+		...
+	},
+	"advisor": {
+		"id": 51112,
+		...
+	},
+	"emails": [
+		{
+			"id": 3664451,
+			...
+		},
+		...
+	],
+	"phones": [
+		{
+			"id": 9465546,
+			...
+		},
+		...
+	],
+	"vehicles": [
+		{
+			"id": 4542214,
+			...
+		},
+		...
+	]
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Body Example
+
+```javascript
+{
+	"first_name": "John",
+	"last_name": "Doe",
+	...
+	"advisor": {
+		"first_name": "John",
+		"last_name": "Doe"
+	},
+	"emails": [
+		{
+			"address": "hello@example.com"
+		},
+		...
+	],
+	"phones": [
+		{
+			"number": "+15144321214"
+			"extension": 12345,
+		},
+		...
+	],
+	"vehicles": [
+		{
+			"make": "Aston Martin",
+			"model": "DB11",
+			"year": 2018,
+			...
+		},
+		...
+	]
+}
+```
+
+The `advisor` object is only used to associate a user using it's first name and last name.
+
+At this time, the `phones` collection only appends new phone to the lead. We don't support updating or deleting a phone.
+
+At this time, the `emails` collection only appends new email to the lead. We don't support updating or deleting a phone.
+
+At this time, the `vehicles` collection will update a vehicle if it the lead already have a vehicle with the same `vin` or `stock`. Otherwise, it will create one.
 
