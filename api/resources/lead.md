@@ -306,28 +306,7 @@ Should be application/json.
 		"first_name": "John",
 		"last_name": "Doe"
 	},
-	"emails": [
-		{
-			"address": "hello@example.com"
-		},
-		...
-	],
-	"phones": [
-		{
-			"number": "+15144321214"
-			"extension": 12345,
-		},
-		...
-	],
-	"vehicles": [
-		{
-			"make": "Aston Martin",
-			"model": "DB11",
-			"year": 2018,
-			...
-		},
-		...
-	]
+	...
 }
 ```
 
