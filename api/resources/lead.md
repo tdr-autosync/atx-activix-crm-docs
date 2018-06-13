@@ -181,6 +181,8 @@ Should be application/json.
 {
 	"first_name": "John",
 	"last_name": "Doe",
+	"account_id": 44,
+	"lead_type": "email",
 	...
 	"advisor": {
 		"first_name": "John",
