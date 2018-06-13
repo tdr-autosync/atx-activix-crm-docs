@@ -206,6 +206,7 @@ Should be application/json.
 			"make": "Aston Martin",
 			"model": "DB11",
 			"year": 2018,
+			"type": "wanted"
 			...
 		},
 		...
