@@ -211,7 +211,7 @@ Should be application/json.
 }
 ```
 
-The `advisor` object is only used to associate a user using it's first name and last name.
+The `advisor, bdc, commercial, service_agent, service_advisor` object is only used to associate a user using : 1. there first name and last name, 2. his email or 3. his id.
 
 {% api-method method="put" host="https://crm.activix.ca/api/v2" path="/leads/:id" %}
 {% api-method-summary %}
@@ -310,7 +310,7 @@ Should be application/json.
 }
 ```
 
-The `advisor` object is only used to associate a user using it's first name and last name.
+The `advisor, bdc, commercial, service_agent, service_advisor` object is only used to associate a user using : 1. there first name and last name, 2. his email or 3. his id.
 
 At this time, the `phones` collection only appends new phone to the lead. We don't support updating or deleting a phone.
 
