@@ -14,6 +14,7 @@
   * [Resources](api/resources/README.md)
     * [Lead](api/resources/lead.md)
     * [Phone](api/resources/phone.md)
+    * [Email](api/resources/email.md)
 * [Pushing Data](pushing-data/README.md)
   * [Lead](pushing-data/lead.md)
 
