@@ -145,13 +145,88 @@ Should be application/json.
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
 
+```javascript
+{
+    "id": 34566,
+    "address": "test@activix.ca",
+    "created_at": "2018-04-09T18:05:00+00:00",
+    "lead": {
+        "id": 3387562,
+        ...    
+    },
+    "updated_at": "2018-04-09T18:05:00+00:00",
+    "valid": true
+}
 ```
+{% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "message": "Unauthenticated."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "message": "Duplicate phone."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "message": "No query results for model LeadEmail."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=405 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "message": "Method not allowed."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=422 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{    
+    "message": "The given data was invalid.",    
+    "errors": {        
+        "lead_id": [            
+            "The field lead_id is required."        
+        ]    
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
