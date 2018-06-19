@@ -126,16 +126,6 @@ Should be application/json.
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-
-```
-{% endapi-method-response-example %}
-
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
 
@@ -354,6 +344,59 @@ Should be application/json.
 		},
 		...
 	]
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "message": "Unauthenticated."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "message": "Duplicate lead."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=405 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "message": "Method not allowed."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=422 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "message": "The given data was invalid.",
+    "errors": {
+        "account_id": [
+            "The field account_id is required."
+        ]
+    }
 }
 ```
 {% endapi-method-response-example %}
