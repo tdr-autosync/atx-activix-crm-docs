@@ -13,6 +13,7 @@
   * [Errors](api/errors.md)
   * [Resources](api/resources/README.md)
     * [Lead](api/resources/lead.md)
+    * [Phone](api/resources/phone.md)
 * [Pushing Data](pushing-data/README.md)
   * [Lead](pushing-data/lead.md)
 
