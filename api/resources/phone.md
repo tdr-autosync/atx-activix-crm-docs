@@ -79,7 +79,9 @@ Could not find a cake matching this query.
 {% endapi-method-response-example-description %}
 
 ```javascript
-"message": "Method not allowed."
+{
+    "message": "Method not allowed."
+}
 ```
 {% endapi-method-response-example %}
 
