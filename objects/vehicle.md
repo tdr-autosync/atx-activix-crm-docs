@@ -6,7 +6,6 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |
 | `id` | integer | Unique identifier for the vehicle. |
 | `lead_id` | integer | The lead id associated with the phone number \(_required on store_\). |
 | `related_id` | integer | Related id from the supplier. Used to link vehicle from the supplier to Activix. |
@@ -27,7 +26,7 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was created. |
 | `end_contract_date` | string | [​​​ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the end contract date of the current vehicle. |
 | `end_warranty_date` | string | [​​​ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the end warranty date of the current vehicle. |
-| `engine` | string | Engine of the vehicle (3.0L for exemple). |
+| `engine` | string | Engine of the vehicle \(3.0L for exemple\). |
 | `extended_warranty` | string | Comment about the extended warranty for the vehicle. |
 | `payment_frequency` | string | Payment frequency for the vehicle. Possible values are **monthly**, **two\_weeks**, **weekly**, **one\_payment**. |
 | `fuel` | string | Fuel for the vehicle. Possible values are **gasoline**, **diesel**. |
@@ -57,7 +56,7 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `sold_by` | string | Name of the saler. |
 | `sold_date` | string | [​​​ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the sale date of the vehicle. |
 | `stock` | string | The dealers's stock \# of the vehicle. |
-| `stock_state` | string | The dealers's stock state of the vehicle. Possible values are **locate**, **notAvailable**, **order**, **stock**.|
+| `stock_state` | string | The dealers's stock state of the vehicle. Possible values are **locate**, **notAvailable**, **order**, **stock**. |
 | `tire` | boolean | Determine if the vehicle came/come with spare tires. |
 | `trade_notes` | string | Comment about the trade. |
 | `trade_type` | string | Trade type of the vehicle. Possible values are **retail**, **wholesale**, **recycled**, **lost**, **excluded**, **other**. |
@@ -72,8 +71,8 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `year` | string | Four-digit representing the year of the vehicle |
 | `wanted_year_max` | string | Four-digit representing the max year of the wanted vehicle |
 | `wanted_year_min` | string | Four-digit representing the min year of the wanted vehicle |
-|  |  |  |
 
 {% hint style="info" %}
 You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
 {% endhint %}
+
