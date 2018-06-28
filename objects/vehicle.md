@@ -9,7 +9,7 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `id` | integer | Unique identifier for the vehicle. |
 | `lead_id` | integer | The lead id associated with the phone number \(_required on store_\). |
 | `related_id` | integer | Related id from the supplier. Used to link vehicle from the supplier to Activix. |
-| `verified_by_id` | object | [​​User object](https://docs.crm.activix.ca/objects/user) representing the associated user who verified the vehicle \(_can't update it_\). |
+| `verified_by` | object | [​​User object](https://docs.crm.activix.ca/objects/user) representing the associated user who verified the vehicle \(_can't update it_\). |
 | `accessories` | integer | Amount of vehicle accessories \(_used for sold vehicle_\). |
 | `actual_value` | integer | Actual value of the current vehicle. |
 | `allowed_mileage` | string | Allowed mileage of the current vehicle. |
