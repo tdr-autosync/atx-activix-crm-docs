@@ -12,7 +12,7 @@ Create a vehicle
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a vehicle. Return the created vehicle.
+Create a vehicle. Returns the created vehicle.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -23,7 +23,7 @@ OAuth 2 or Basic Auth authentification credentials.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=false %}
-Should be application/json,
+Should be application/json.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Accept" type="string" required=false %}
@@ -35,17 +35,19 @@ Should be application/json.
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+Vehicle created successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "id": 3387562,	
-    "type": "wanted",	
-    "vin": "VIN333",	
-    "created_at": "2018-04-09T18:05:00+00:00",	
-    "updated_at": "2018-04-09T18:07:00+00:00",
-    ...
+    "data": {
+        "id": 3387562,
+        "created_at": "2018-04-09T18:05:00+00:00",
+        "updated_at": "2018-04-09T18:07:00+00:00",
+        "type": "wanted",
+        "vin": "VIN333",
+        ...
+    }
 }
 ```
 {% endapi-method-response-example %}
@@ -70,7 +72,7 @@ Update a vehicle
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Update a vehicle. Return the updated vehicle.
+Update a vehicle. Returns the updated vehicle.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -97,19 +99,21 @@ Shoud be application/json.
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=201 %}
+{% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+Vehicle updated successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "id": 3387562,	
-    "type": "wanted",	
-    "vin": "VIN444",	
-    "created_at": "2018-04-09T18:05:00+00:00",	
-    "updated_at": "2018-04-09T18:07:00+00:00",
-    ...
+    "data": {
+        "id": 3387562,
+        "created_at": "2018-04-09T18:05:00+00:00",
+        "updated_at": "2018-04-09T18:07:00+00:00",
+        "type": "wanted",
+        "vin": "VIN444",
+        ...
+    }
 }
 ```
 {% endapi-method-response-example %}
@@ -125,4 +129,3 @@ Shoud be application/json.
     ...
 }
 ```
-
