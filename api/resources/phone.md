@@ -55,7 +55,7 @@ Phone created successfully.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Body Example
+### Body Example
 
 ```javascript
 {
@@ -121,7 +121,7 @@ Phone updated successfully.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Body Example
+### Body Example
 
 ```javascript
 {

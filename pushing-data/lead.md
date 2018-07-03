@@ -1,6 +1,6 @@
 # Lead
 
-Here is an example of request that Activix CRM can make to push data to an external web service.  
+Here is an example of request that Activix CRM can make to push data to an external web service.
 Refer to the [Lead object](https://docs.crm.activix.ca/objects/lead) documentation to see all the attributes that may be included in the request.
 
 All the responses in the example **must** be handled \(you may handle more if you want\).
@@ -69,7 +69,7 @@ Internal Server Error.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Body Example
+### Body Example
 
 ```javascript
 {

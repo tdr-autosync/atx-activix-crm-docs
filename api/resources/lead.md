@@ -215,11 +215,11 @@ Should be application/json.
 
 ```javascript
 {
-    "message": "The given data was invalid.",    
+    "message": "The given data was invalid.",
     "errors": {
         "account_id": [
             "The field account_id is required."
-        ]    
+        ]
     }
 }
 ```
@@ -228,7 +228,7 @@ Should be application/json.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Body Example
+### Body Example
 
 ```javascript
 {
@@ -404,7 +404,7 @@ Should be application/json.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Body Example
+### Body Example
 
 ```javascript
 {
