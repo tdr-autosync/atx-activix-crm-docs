@@ -55,7 +55,7 @@ Email created successfully.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Body Example
+#### Body Example
 
 ```javascript
 {
@@ -121,7 +121,7 @@ Email updated successfully.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Body Example
+#### Body Example
 
 ```javascript
 {
@@ -130,3 +130,4 @@ Email updated successfully.
     ...
 }
 ```
+

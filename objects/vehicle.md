@@ -5,7 +5,7 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 ## The `Vehicle` Object
 
 | **Attribute** | **Type** | **Description** |
-| ------------- | -------- | --------------- |
+| --- | --- | --- |
 | `id` | integer | Unique identifier for the vehicle. |
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was created. |
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was last updated. |
@@ -23,7 +23,7 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `color_exterior` | string | Exterior color of the vehicle. |
 | `color_interior` | string | Interior color of the vehicle. |
 | `comment` | string | Comment about the vehicle. |
-| `condition` | string | Condition of the vehicle. Possible values are **rough**, **average**, **clean**, **extra_clean**. |
+| `condition` | string | Condition of the vehicle. Possible values are **rough**, **average**, **clean**, **extra\_clean**. |
 | `end_contract_date` | string | [​​​ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the end contract date of the vehicle. |
 | `end_warranty_date` | string | [​​​ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the end warranty date of the vehicle. |
 | `engine` | string | Engine capacity of the vehicle. |

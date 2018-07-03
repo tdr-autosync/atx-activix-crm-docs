@@ -5,7 +5,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 ## The `Lead` Object
 
 | **Attribute** | **Type** | **Description** |
-| ------------- | -------- | --------------- |
+| --- | --- | --- |
 | `id` | integer | Unique identifier for the lead. |
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was created. |
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was last updated. |
@@ -25,7 +25,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `country` | string | Two-letter [ISO code](https://en.wikipedia.org/wiki/ISO_3166-2) representing the country of the lead. |
 | `csi_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing planned csi date. |
 | `delivered_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the vehicle delivered date. |
-| `delivery_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the vehicle delivery date.  |
+| `delivery_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the vehicle delivery date. |
 | `division` | string | Division of the lead. Possible values are **new**, **used** or **service**. |
 | `end_contract_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the end contract date of the exchange vehicle. |
 | `first_name` | string | First name of the lead. |
@@ -51,7 +51,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `type` | string | The type of lead. Possible values are **email**, **phone**, **walk\_in**, **loyalty**, **renewal**, **sms**, **event** and **pre\_booking**. |
 | `unsubscribe_all_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the "Do not disturb" date. |
 | `unsubscribe_call_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the unsubcribe call date was set. |
-| `unsubscribe_email_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the unsubcribe email date was set.  |
+| `unsubscribe_email_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the unsubcribe email date was set. |
 | `unsubscribe_sms_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the unsubcribe sms date was set. |
 | `walk_around` | bool | Represents the walk around vehicle from the advisor to the client. |
 | `account` | object | [​Account object](https://docs.crm.activix.ca/objects/account) representing the associated account. |
@@ -68,3 +68,4 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 {% hint style="info" %}
 You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
 {% endhint %}
+

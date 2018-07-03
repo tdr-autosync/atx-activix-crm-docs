@@ -12,5 +12,3 @@ To authenticatie a request, you must include an `Authorization` header like so:
 Authorization: Bearer {your_key}
 ```
 
-
-

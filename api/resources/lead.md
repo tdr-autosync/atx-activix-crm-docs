@@ -28,61 +28,61 @@ The search query \(name, phone or email\).
 
 ```javascript
 {
-	"data": [
-		{
-			"id": 3387562,
-			"first_name": "John",
-			"last_name": "Doe",
-			"created_at": "2018-04-09T18:05:00+00:00",
-			"updated_at": "2018-04-09T18:07:00+00:00",
-			...
-			"account": {
-				"id": 66,
-				...
-			},
-			"advisor": {
-				"id": 51112,
-				...
-			},
-			"emails": [
-				{
-					"id": 3664451,
-					...
-				},
-				...
-			],
-			"phones": [
-				{
-					"id": 9465546,
-					...
-				},
-				...
-			],
-			"vehicles": [
-				{
-					"id": 4542214,
-					...
-				},
-				...
-			]
-		},
-		...
-	],
-	"links": {
-		"first": "https://crm.activix.ca/api/v2/leads/search?query=John&page=1",
-		"last": "https://crm.activix.ca/api/v2/leads/search?query=John&page=47",
-		"prev": null,
-		"next": "https://crm.activix.ca/api/v2/leads/search?query=John&page=2"
-	},
-	"meta": {
-		"current_page": 1,
-		"from": 1,
-		"last_page": 47,
-		"path": "https://crm.activix.ca/api/v2/leads/search",
-		"per_page": 25,
-		"to": 25,
-		"total": 1161
-	}
+    "data": [
+        {
+            "id": 3387562,
+            "first_name": "John",
+            "last_name": "Doe",
+            "created_at": "2018-04-09T18:05:00+00:00",
+            "updated_at": "2018-04-09T18:07:00+00:00",
+            ...
+            "account": {
+                "id": 66,
+                ...
+            },
+            "advisor": {
+                "id": 51112,
+                ...
+            },
+            "emails": [
+                {
+                    "id": 3664451,
+                    ...
+                },
+                ...
+            ],
+            "phones": [
+                {
+                    "id": 9465546,
+                    ...
+                },
+                ...
+            ],
+            "vehicles": [
+                {
+                    "id": 4542214,
+                    ...
+                },
+                ...
+            ]
+        },
+        ...
+    ],
+    "links": {
+        "first": "https://crm.activix.ca/api/v2/leads/search?query=John&page=1",
+        "last": "https://crm.activix.ca/api/v2/leads/search?query=John&page=47",
+        "prev": null,
+        "next": "https://crm.activix.ca/api/v2/leads/search?query=John&page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 47,
+        "path": "https://crm.activix.ca/api/v2/leads/search",
+        "per_page": 25,
+        "to": 25,
+        "total": 1161
+    }
 }
 ```
 {% endapi-method-response-example %}
@@ -133,41 +133,41 @@ Should be application/json.
 
 ```javascript
 {
-	"id": 3387562,
-	"first_name": "John",
-	"last_name": "Doe",
-	"created_at": "2018-04-09T18:05:00+00:00",
-	"updated_at": "2018-04-09T18:07:00+00:00",
-	...
-	"account": {
-		"id": 66,
-		...
-	},
-	"advisor": {
-		"id": 51112,
-		...
-	},
-	"emails": [
-		{
-			"id": 3664451,
-			...
-		},
-		...
-	],
-	"phones": [
-		{
-			"id": 9465546,
-			...
-		},
-		...
-	],
-	"vehicles": [
-		{
-			"id": 4542214,
-			...
-		},
-		...
-	]
+    "id": 3387562,
+    "first_name": "John",
+    "last_name": "Doe",
+    "created_at": "2018-04-09T18:05:00+00:00",
+    "updated_at": "2018-04-09T18:07:00+00:00",
+    ...
+    "account": {
+        "id": 66,
+        ...
+    },
+    "advisor": {
+        "id": 51112,
+        ...
+    },
+    "emails": [
+        {
+            "id": 3664451,
+            ...
+        },
+        ...
+    ],
+    "phones": [
+        {
+            "id": 9465546,
+            ...
+        },
+        ...
+    ],
+    "vehicles": [
+        {
+            "id": 4542214,
+            ...
+        },
+        ...
+    ]
 }
 ```
 {% endapi-method-response-example %}
@@ -228,42 +228,42 @@ Should be application/json.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Body Example
+#### Body Example
 
 ```javascript
 {
-	"first_name": "John",
-	"last_name": "Doe",
-	"account_id": 44,
-	"lead_type": "email",
-	...
-	"advisor": {
-		"first_name": "John",
-		"last_name": "Doe"
-	},
-	"emails": [
-		{
-			"address": "hello@example.com"
-		},
-		...
-	],
-	"phones": [
-		{
-			"number": "+15144321214"
-			"extension": 12345,
-		},
-		...
-	],
-	"vehicles": [
-		{
-			"make": "Aston Martin",
-			"model": "DB11",
-			"year": 2018,
-			"type": "wanted"
-			...
-		},
-		...
-	]
+    "first_name": "John",
+    "last_name": "Doe",
+    "account_id": 44,
+    "lead_type": "email",
+    ...
+    "advisor": {
+        "first_name": "John",
+        "last_name": "Doe"
+    },
+    "emails": [
+        {
+            "address": "hello@example.com"
+        },
+        ...
+    ],
+    "phones": [
+        {
+            "number": "+15144321214"
+            "extension": 12345,
+        },
+        ...
+    ],
+    "vehicles": [
+        {
+            "make": "Aston Martin",
+            "model": "DB11",
+            "year": 2018,
+            "type": "wanted"
+            ...
+        },
+        ...
+    ]
 }
 ```
 
@@ -309,41 +309,41 @@ Should be application/json.
 
 ```javascript
 {
-	"id": 3387562,
-	"first_name": "John",
-	"last_name": "Doe",
-	"created_at": "2018-04-09T18:05:00+00:00",
-	"updated_at": "2018-04-09T18:07:00+00:00",
-	...
-	"account": {
-		"id": 66,
-		...
-	},
-	"advisor": {
-		"id": 51112,
-		...
-	},
-	"emails": [
-		{
-			"id": 3664451,
-			...
-		},
-		...
-	],
-	"phones": [
-		{
-			"id": 9465546,
-			...
-		},
-		...
-	],
-	"vehicles": [
-		{
-			"id": 4542214,
-			...
-		},
-		...
-	]
+    "id": 3387562,
+    "first_name": "John",
+    "last_name": "Doe",
+    "created_at": "2018-04-09T18:05:00+00:00",
+    "updated_at": "2018-04-09T18:07:00+00:00",
+    ...
+    "account": {
+        "id": 66,
+        ...
+    },
+    "advisor": {
+        "id": 51112,
+        ...
+    },
+    "emails": [
+        {
+            "id": 3664451,
+            ...
+        },
+        ...
+    ],
+    "phones": [
+        {
+            "id": 9465546,
+            ...
+        },
+        ...
+    ],
+    "vehicles": [
+        {
+            "id": 4542214,
+            ...
+        },
+        ...
+    ]
 }
 ```
 {% endapi-method-response-example %}
@@ -404,18 +404,18 @@ Should be application/json.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Body Example
+#### Body Example
 
 ```javascript
 {
-	"first_name": "John",
-	"last_name": "Doe",
-	...
-	"advisor": {
-		"first_name": "John",
-		"last_name": "Doe"
-	},
-	...
+    "first_name": "John",
+    "last_name": "Doe",
+    ...
+    "advisor": {
+        "first_name": "John",
+        "last_name": "Doe"
+    },
+    ...
 }
 ```
 

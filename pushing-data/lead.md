@@ -1,7 +1,6 @@
 # Lead
 
-Here is an example of request that Activix CRM can make to push data to an external web service.
-Refer to the [Lead object](https://docs.crm.activix.ca/objects/lead) documentation to see all the attributes that may be included in the request.
+Here is an example of request that Activix CRM can make to push data to an external web service. Refer to the [Lead object](https://docs.crm.activix.ca/objects/lead) documentation to see all the attributes that may be included in the request.
 
 All the responses in the example **must** be handled \(you may handle more if you want\).
 
@@ -37,7 +36,7 @@ Should be `application/json`.
 Lead successfully created.
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -69,59 +68,59 @@ Internal Server Error.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Body Example
+## Body Example
 
 ```javascript
 {
-	"id": 3387562,
-	"first_name": "John",
-	"last_name": "Doe",
-	"civility": "mr",
-	"second_contact": "ABC Motors",
-	"second_contact_civility": null,
-	"division": "new",
-	"type": "walk_in",
-	"source": "Lespacs",
-	"address_line1": "123 av. Riverwood",
-	"address_line2": "Suite 200",
-	"postal_code": "J1E4Y7",
-	"city": "Montreal",
-	"province": "QC",
-	"country": "CA",
-	"locale": "en",
-	"birth_date": "1990-04-10",
-	"gender": 1,
-	"account": {
-		"id": 66,
-		...
-	},
-	"advisor": {
-		"id": 51112,
-		...
-	},
-	"emails": [
-		{
-			"id": 3664451,
-			...
-		},
-		...
-	],
-	"phones": [
-		{
-			"id": 9465546,
-			...
-		},
-		...
-	],
-	"vehicles": [
-		{
-			"id": 4542214,
-			...
-		},
-		...
-	],
-	"created_at": "2018-04-09T18:05:00+00:00",
-	"updated_at": "2018-04-09T18:07:00+00:00"
+    "id": 3387562,
+    "first_name": "John",
+    "last_name": "Doe",
+    "civility": "mr",
+    "second_contact": "ABC Motors",
+    "second_contact_civility": null,
+    "division": "new",
+    "type": "walk_in",
+    "source": "Lespacs",
+    "address_line1": "123 av. Riverwood",
+    "address_line2": "Suite 200",
+    "postal_code": "J1E4Y7",
+    "city": "Montreal",
+    "province": "QC",
+    "country": "CA",
+    "locale": "en",
+    "birth_date": "1990-04-10",
+    "gender": 1,
+    "account": {
+        "id": 66,
+        ...
+    },
+    "advisor": {
+        "id": 51112,
+        ...
+    },
+    "emails": [
+        {
+            "id": 3664451,
+            ...
+        },
+        ...
+    ],
+    "phones": [
+        {
+            "id": 9465546,
+            ...
+        },
+        ...
+    ],
+    "vehicles": [
+        {
+            "id": 4542214,
+            ...
+        },
+        ...
+    ],
+    "created_at": "2018-04-09T18:05:00+00:00",
+    "updated_at": "2018-04-09T18:07:00+00:00"
 }
 ```
 

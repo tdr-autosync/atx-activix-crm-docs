@@ -17,5 +17,3 @@ YYYY-MM-DDTHH:MM:SSZ
 
 We use the UTC timezone for all timestamps.
 
-
-

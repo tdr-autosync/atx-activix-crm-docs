@@ -14,5 +14,3 @@ For us to send data to an external web service over HTTP, we require the followi
 
 We support two method of authentication ; [OAuth 2](https://oauth.net/2/) and [Basic Auth](https://en.wikipedia.org/wiki/Basic_access_authentication).
 
-
-

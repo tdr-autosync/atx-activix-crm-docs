@@ -56,7 +56,7 @@ Vehicle created successfully.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Body Example
+#### Body Example
 
 ```javascript
 {
@@ -123,7 +123,7 @@ Vehicle updated successfully.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Body Example
+#### Body Example
 
 ```javascript
 {
@@ -131,3 +131,4 @@ Vehicle updated successfully.
     ...
 }
 ```
+

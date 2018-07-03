@@ -14,5 +14,3 @@ You may learn more about how Activix CRM can push data to external web services 
 
 {% page-ref page="pushing-data/" %}
 
-
-
