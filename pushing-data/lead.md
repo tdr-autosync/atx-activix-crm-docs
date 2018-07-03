@@ -68,7 +68,7 @@ Internal Server Error.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-## Body Example
+#### Body Example
 
 ```javascript
 {
