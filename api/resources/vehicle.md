@@ -44,6 +44,7 @@ Vehicle created successfully.
         "id": 3387562,
         "created_at": "2018-04-09T18:05:00+00:00",
         "updated_at": "2018-04-09T18:07:00+00:00",
+        "lead_id": 3466512,
         "type": "wanted",
         "vin": "VIN333",
         ...
@@ -110,6 +111,7 @@ Vehicle updated successfully.
         "id": 3387562,
         "created_at": "2018-04-09T18:05:00+00:00",
         "updated_at": "2018-04-09T18:07:00+00:00",
+        "lead_id": 3466512,
         "type": "wanted",
         "vin": "VIN444",
         ...

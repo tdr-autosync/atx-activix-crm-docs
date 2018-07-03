@@ -1,3 +1,9 @@
+---
+description: >-
+  The following describes the available resources for a Phone. Check out the
+  Phone object documentation for a complete list of attributes.
+---
+
 # Phone
 
 {% api-method method="post" host="https://crm.activix.ca/api/v2" path="/lead-phones" %}
@@ -29,74 +35,18 @@ Should be application/json.
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-
+Phone created successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "id": 34566,
-    "created_at": "2018-04-09T18:05:00+00:00",
-    "extension": 555,
-    "lead": {
-        "id": 3387562,
+    "data": {
+        "id": 34566,
+        "created_at": "2018-04-09T18:05:00+00:00",
+        "updated_at": "2018-04-09T18:05:00+00:00",
+        "lead_id": 3466512,
+        "number": "+15141234455",
         ...
-    },
-    "mobile": false,
-    "number": "+15141234455",
-    "updated_at": "2018-04-09T18:05:00+00:00",
-    "valid": true
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Unauthenticated."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=403 %}
-{% api-method-response-example-description %}
-Could not find a cake matching this query.
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Duplicate phone."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=405 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Method not allowed."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=422 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "The given data was invalid.",
-    "errors": {
-        "lead_id": [
-            "The field lead_id is required."
-        ]
     }
 }
 ```
@@ -110,9 +60,9 @@ Could not find a cake matching this query.
 ```javascript
 {
     "lead_id": 3387562,
-    "extension": 555,
-    "mobile": false,
-    "number": "+15141234455"
+    "number": "+15141234455",
+    "type": "home",
+    ...
 }
 ```
 
@@ -122,14 +72,14 @@ Update a phone
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Update a phone. Returns the updated phone.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="integer" required=true %}
-The ID oh the phone to update
+The ID of the phone to update.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -151,86 +101,18 @@ Should be application/json.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+Phone updated successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "id": 34566,
-    "created_at": "2018-04-09T18:05:00+00:00",
-    "extension": null,
-    "lead": {
-        "id": 3387562,
+    "data": {
+        "id": 34566,
+        "created_at": "2018-04-09T18:05:00+00:00",
+        "updated_at": "2018-04-09T18:07:00+00:00",
+        "lead_id": 3466512,
+        "number": "+15141234455",
         ...
-    },
-    "mobile": true,
-    "number": "+15141234459",
-    "updated_at": "2018-04-09T18:05:00+00:00",
-    "valid": false
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Unauthenticated."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=403 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Duplicate phone."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "No query results for model LeadPhone."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=405 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Method not allowed."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=422 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "The given data was invalid.",
-    "errors": {
-        "number": [
-            "The number format is invalid."
-        ]
     }
 }
 ```
@@ -243,9 +125,8 @@ Should be application/json.
 
 ```javascript
 {
-    "extension": null,
-    "mobile": true,
-    "number": "+15141234459"
+    "number": "+15141234459",
+    "type": "home",
+    ...
 }
 ```
-

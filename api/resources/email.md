@@ -1,12 +1,18 @@
+---
+description: >-
+  The following describes the available resources for an Email. Check out the
+  Email object documentation for a complete list of attributes.
+---
+
 # Email
 
 {% api-method method="post" host="https://crm.activix.ca/api/v2" path="/lead-emails" %}
 {% api-method-summary %}
-Create a email
+Create an email
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a email. Returns the created email.
+Create an email. Returns the created email.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -29,72 +35,18 @@ Should be application/json.
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+Email created successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "id": 34566,
-    "address": "test@activix.ca",
-    "created_at": "2018-04-09T18:05:00+00:00",
-    "lead": {
-        "id": 3387562,
-        ...    
-    },
-    "updated_at": "2018-04-09T18:05:00+00:00",
-    "valid": true
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Could not find a cake matching this query.
-{% endapi-method-response-example-description %}
-
-```javascript
-{    
-    "message": "Unauthenticated."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=403 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Duplicate phone."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=405 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Method not allowed."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=422 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{    
-    "message": "The given data was invalid.",    
-    "errors": {        
-        "lead_id": [            
-            "The field lead_id is required."        
-        ]    
+    "data": {
+        "id": 34566,
+        "created_at": "2018-04-09T18:05:00+00:00",
+        "updated_at": "2018-04-09T18:05:00+00:00",
+        "lead_id": 3466512,
+        "address": "test@activix.ca",
+        ...
     }
 }
 ```
@@ -108,24 +60,26 @@ Could not find a cake matching this query.
 ```javascript
 {
     "lead_id": 3387562,
-    "address": "test@activix.ca"
+    "address": "test@activix.ca",
+    "type": "home",
+    ...
 }
 ```
 
-{% api-method method="put" host="https://crm.activix.ca/api/v2" path="/lead-phones/:id" %}
+{% api-method method="put" host="https://crm.activix.ca/api/v2" path="/lead-emails/:id" %}
 {% api-method-summary %}
-Update a email
+Update an email
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Update an email. Returns the updated email.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="integer" required=true %}
-The ID of the email to update
+The ID of the email to update.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -145,86 +99,20 @@ Should be application/json.
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=201 %}
+{% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+Email updated successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "id": 34566,
-    "address": "test@activix.ca",
-    "created_at": "2018-04-09T18:05:00+00:00",
-    "lead": {
-        "id": 3387562,
-        ...    
-    },
-    "updated_at": "2018-04-09T18:05:00+00:00",
-    "valid": true
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Unauthenticated."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=403 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Duplicate phone."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "No query results for model LeadEmail."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=405 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Method not allowed."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=422 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{    
-    "message": "The given data was invalid.",    
-    "errors": {        
-        "lead_id": [            
-            "The field lead_id is required."        
-        ]    
+    "data": {
+        "id": 34566,
+        "created_at": "2018-04-09T18:05:00+00:00",
+        "updated_at": "2018-04-09T18:07:00+00:00",
+        "lead_id": 3466512,
+        "address": "test@activix.ca",
+        ...
     }
 }
 ```
@@ -236,8 +124,9 @@ Should be application/json.
 #### Body Example
 
 ```javascript
-{    
-    "address": "test@activix.ca"
+{
+    "address": "test@activix.ca",
+    "type": "work",
+    ...
 }
 ```
-
