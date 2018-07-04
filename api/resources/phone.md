@@ -1,10 +1,6 @@
----
-description: >-
-  The following describes the available resources for a Phone. Check out the
-  Phone object documentation for a complete list of attributes.
----
-
 # Phone
+
+The following describes the available resources for a Phone. Check out the [Phone object](https://docs.crm.activix.ca/objects/phone) documentation for a complete list of attributes.
 
 {% api-method method="post" host="https://crm.activix.ca/api/v2" path="/lead-phones" %}
 {% api-method-summary %}

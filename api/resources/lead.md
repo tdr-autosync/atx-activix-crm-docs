@@ -31,10 +31,10 @@ The search query \(name, phone or email\).
     "data": [
         {
             "id": 3387562,
-            "first_name": "John",
-            "last_name": "Doe",
             "created_at": "2018-04-09T18:05:00+00:00",
             "updated_at": "2018-04-09T18:07:00+00:00",
+            "first_name": "John",
+            "last_name": "Doe",
             ...
             "account": {
                 "id": 66,
@@ -128,97 +128,46 @@ Should be application/json.
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-
+Lead created successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "id": 3387562,
-    "first_name": "John",
-    "last_name": "Doe",
-    "created_at": "2018-04-09T18:05:00+00:00",
-    "updated_at": "2018-04-09T18:07:00+00:00",
-    ...
-    "account": {
-        "id": 66,
+    "data": {
+        "id": 3387562,
+        "created_at": "2018-04-09T18:05:00+00:00",
+        "updated_at": "2018-04-09T18:07:00+00:00",
+        "first_name": "John",
+        "last_name": "Doe",
         ...
-    },
-    "advisor": {
-        "id": 51112,
-        ...
-    },
-    "emails": [
-        {
-            "id": 3664451,
+        "account": {
+            "id": 66,
             ...
         },
-        ...
-    ],
-    "phones": [
-        {
-            "id": 9465546,
+        "advisor": {
+            "id": 51112,
             ...
         },
-        ...
-    ],
-    "vehicles": [
-        {
-            "id": 4542214,
+        "emails": [
+            {
+                "id": 3664451,
+                ...
+            },
             ...
-        },
-        ...
-    ]
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Unauthenticated."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=403 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Duplicate lead."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=405 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Method not allowed."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=422 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "The given data was invalid.",
-    "errors": {
-        "account_id": [
-            "The field account_id is required."
+        ],
+        "phones": [
+            {
+                "id": 9465546,
+                ...
+            },
+            ...
+        ],
+        "vehicles": [
+            {
+                "id": 4542214,
+                ...
+            },
+            ...
         ]
     }
 }
@@ -232,9 +181,9 @@ Should be application/json.
 
 ```javascript
 {
+    "account_id": 44,
     "first_name": "John",
     "last_name": "Doe",
-    "account_id": 44,
     "lead_type": "email",
     ...
     "advisor": {
@@ -267,7 +216,7 @@ Should be application/json.
 }
 ```
 
-The `advisor, bdc, commercial, service_agent, service_advisor` object is only used to associate a user using : 1. there first name and last name, 2. his email or 3. his id.
+The `advisor`, `bdc`, `commercial`, `service_agent` and `service_advisor` objects are only used to associate a user using their `first_name`, `last_name`, `email` or `id`.
 
 {% api-method method="put" host="https://crm.activix.ca/api/v2" path="/leads/:id" %}
 {% api-method-summary %}
@@ -275,7 +224,7 @@ Update a lead
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Update a lead by it's ID. Returns the updated lead.
+Update a lead. Returns the updated lead.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -304,97 +253,46 @@ Should be application/json.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+Lead updated successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "id": 3387562,
-    "first_name": "John",
-    "last_name": "Doe",
-    "created_at": "2018-04-09T18:05:00+00:00",
-    "updated_at": "2018-04-09T18:07:00+00:00",
-    ...
-    "account": {
-        "id": 66,
+    "data": {
+        "id": 3387562,
+        "created_at": "2018-04-09T18:05:00+00:00",
+        "updated_at": "2018-04-09T18:07:00+00:00",
+        "first_name": "John",
+        "last_name": "Doe",
         ...
-    },
-    "advisor": {
-        "id": 51112,
-        ...
-    },
-    "emails": [
-        {
-            "id": 3664451,
+        "account": {
+            "id": 66,
             ...
         },
-        ...
-    ],
-    "phones": [
-        {
-            "id": 9465546,
+        "advisor": {
+            "id": 51112,
             ...
         },
-        ...
-    ],
-    "vehicles": [
-        {
-            "id": 4542214,
+        "emails": [
+            {
+                "id": 3664451,
+                ...
+            },
             ...
-        },
-        ...
-    ]
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Unauthenticated."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=403 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Duplicate lead."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=405 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Method not allowed."
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=422 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "The given data was invalid.",
-    "errors": {
-        "account_id": [
-            "The field account_id is required."
+        ],
+        "phones": [
+            {
+                "id": 9465546,
+                ...
+            },
+            ...
+        ],
+        "vehicles": [
+            {
+                "id": 4542214,
+                ...
+            },
+            ...
         ]
     }
 }
@@ -419,11 +317,10 @@ Should be application/json.
 }
 ```
 
-The `advisor, bdc, commercial, service_agent, service_advisor` object is only used to associate a user using : 1. there first name and last name, 2. his email or 3. his id.
+The `advisor`, `bdc`, `commercial`, `service_agent` and `service_advisor` objects are only used to associate a user using their `first_name`, `last_name`, `email` or `id`.
 
-At this time, the `phones` collection only appends new phone to the lead. We don't support updating or deleting a phone.
+The `phones` collection only appends phone to the lead. Go to the ["Phone" documentation](https://docs.crm.activix.ca/api/resources/phone) if you want to manage them.
 
-At this time, the `emails` collection only appends new email to the lead. We don't support updating or deleting a phone.
+The `emails` collection only appends email to the lead. Go to the ["Email" documentation](https://docs.crm.activix.ca/api/resources/email) if you want to manage them.
 
-At this time, the `vehicles` collection will update a vehicle if it the lead already have a vehicle with the same `vin` or `stock`. Otherwise, it will create one.
-
+The `vehicles` collection only appends vehicle to the lead. Go to the ["Vehicle" documentation](https://docs.crm.activix.ca/api/resources/vehicle) if you want to manage them.

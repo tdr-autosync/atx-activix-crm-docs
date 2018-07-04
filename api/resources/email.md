@@ -1,10 +1,6 @@
----
-description: >-
-  The following describes the available resources for an Email. Check out the
-  Email object documentation for a complete list of attributes.
----
-
 # Email
+
+The following describes the available resources for an Email. Check out the [Email object](https://docs.crm.activix.ca/objects/email) documentation for a complete list of attributes.
 
 {% api-method method="post" host="https://crm.activix.ca/api/v2" path="/lead-emails" %}
 {% api-method-summary %}
