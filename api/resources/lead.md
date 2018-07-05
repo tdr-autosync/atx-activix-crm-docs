@@ -324,3 +324,4 @@ The `phones` collection only appends phone to the lead. Go to the ["Phone" docum
 The `emails` collection only appends email to the lead. Go to the ["Email" documentation](https://docs.crm.activix.ca/api/resources/email) if you want to manage them.
 
 The `vehicles` collection only appends vehicle to the lead. Go to the ["Vehicle" documentation](https://docs.crm.activix.ca/api/resources/vehicle) if you want to manage them.
+
