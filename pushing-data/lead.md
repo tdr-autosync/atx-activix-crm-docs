@@ -90,10 +90,7 @@ Internal Server Error.
     "locale": "en",
     "birth_date": "1990-04-10",
     "gender": 1,
-    "account": {
-        "id": 66,
-        ...
-    },
+    "account_id": 44,
     "advisor": {
         "id": 51112,
         ...
