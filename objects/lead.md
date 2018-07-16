@@ -20,6 +20,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `city` | string | City/District/Suburb/Town/Village of the lead. |
 | `civility` | string | The social title of the lead. Possible values are **mr**, **ms**, **miss**, **dr**, **me**. |
 | `country` | string | Two-letter [ISO code](https://en.wikipedia.org/wiki/ISO_3166-2) representing the country of the lead. |
+| `created_method` | string | The method of creation of the lead. Possible values are **activix**, **auto\_renewal**, **cdk**, **ct\_wizard**, **ford\_direct**, **manual**, **manual\_import**, **n\_c\_i\_digital**, **niotext**, **phone\_system**, **porsche\_digital**, **scan**, **scraper**, **serti**. |
 | `csi_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the planned csi date. |
 | `delivered_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the vehicle delivered date. |
 | `delivery_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the vehicle delivery date. |
