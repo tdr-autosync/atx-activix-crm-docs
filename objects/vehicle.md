@@ -5,7 +5,7 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 ## The `Vehicle` Object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | integer | Unique identifier for the vehicle. |
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was created. |
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was last updated. |

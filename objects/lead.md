@@ -5,7 +5,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 ## The `Lead` Object
 
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `id` | integer | Unique identifier for the lead. |
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was created. |
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was last updated. |
@@ -38,6 +38,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `sale_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was sold. |
 | `second_contact` | string | Optional second contact for the lead. May be a person or a business. |
 | `second_contact_civility` | string | The social title of the second contact for the lead. Possible values are **mr**, **ms**, **miss**, **dr**, **me**. |
+| `sex` | string | The client sex. Possible values are **M, F**. |
 | `source` | string | The source where the lead came from. |
 | `status` | string | The lead status. Possible values are **duplicate**, **invalid** or **lost**. |
 | `take_over_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was taken over by a director. |

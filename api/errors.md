@@ -5,7 +5,7 @@ Activix uses conventional HTTP response codes to indicate the success or failure
 ## HTTP status code summary
 
 | `200` | `OK` - Everything worked as expected. |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | `400` | `Bad Request` - The request was unacceptable, often due to malformed request syntax. |
 | `401` | `Unauthorized` - No valid API key provided. |
 | `403` | `Forbidden` - The provided API key does not have access to the resource. |
