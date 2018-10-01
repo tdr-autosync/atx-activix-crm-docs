@@ -216,6 +216,8 @@ Lead created successfully.
 }
 ```
 
+The ONLY required field is the **type**.
+
 The `advisor`, `bdc`, `commercial`, `service_agent` and `service_advisor` objects are only used to associate a user using their `first_name`, `last_name`, `email` or `id`.
 
 {% api-method method="put" host="https://crm.activix.ca/api/v2" path="/leads/:id" %}
