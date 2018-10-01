@@ -184,7 +184,7 @@ Lead created successfully.
     "account_id": 44,
     "first_name": "John",
     "last_name": "Doe",
-    "lead_type": "email",
+    "type": "email",
     ...
     "advisor": {
         "first_name": "John",
