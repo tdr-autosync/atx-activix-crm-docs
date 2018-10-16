@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Objects](objects/README.md)
+  * [Product](objects/product.md)
   * [Lead](objects/lead.md)
   * [Phone](objects/phone.md)
   * [Email](objects/email.md)
