@@ -31,6 +31,7 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `fuel` | string | Fuel type used by the vehicle. Possible values are **gasoline**, **diesel**. |
 | `length_max` | integer | Maximum desired length in feets of the vehicle _\(wanted vehicle only\)_. |
 | `length_min` | integer | Minimum desired length in feets of the vehicle _\(wanted vehicle only\)_. |
+| `license_late` | string | Vehicle license plate. Max characters are 9. |
 | `make` | string | The make of the vehicle. |
 | `odometer` | string | Current odometer of the vehicle. |
 | `modality` | string | Modality payment for the vehicle. Possible values are **financing**, **cash**, **leasing**. |

@@ -17,11 +17,11 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `average_spending` | integer | The average spending per visit. |
 | `be_back_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the latest be back date. |
 | `birth_date` | string | [ISO date](https://en.wikipedia.org/wiki/ISO_8601) \(without time\) representing when the lead's birth date. |
-| `business` | boolean | The client has a business. |
+| `business` | boolean | Service filed meaning the service is for a compagny. |
 | `call_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the call date _\(for a phone up\)_. |
 | `city` | string | City/District/Suburb/Town/Village of the lead. |
 | `civility` | string | The social title of the lead. Possible values are **mr**, **ms**, **miss**, **dr**, **me**. |
-| `code` | string | Revival code. |
+| `code` | string | Service field. Code from the dealer about the work on the vehicle. |
 | `country` | string | Two-letter [ISO code](https://en.wikipedia.org/wiki/ISO_3166-2) representing the country of the lead. |
 | `created_method` | string | The method of creation of the lead. Possible values are **activix**, **auto\_renewal**, **cdk**, **ct\_wizard**, **ford\_direct**, **manual**, **manual\_import**, **n\_c\_i\_digital**, **niotext**, **phone\_system**, **porsche\_digital**, **scan**, **scraper**, **serti**. |
 | `csi_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the planned csi date. |
@@ -34,9 +34,9 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `last_name` | string | Last name of the lead. |
 | `last_presented_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the last presented date. |
 | `locale` | string | Two-letter [ISO code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) representing the locale \(language\) of the lead. |
-| `loyalty` | boolean |  |
+| `loyalty` | boolean | Presenting the loyalty program for service. |
 | `next_presented_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the next presented date. |
-| `odometer_last_visit` | integer | The last mileage  |
+| `odometer_last_visit` | integer | The last vehicle mileage. |
 | `open_work_order_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the service open work order date. |
 | `planned_pick_up_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the service planned pick up date. |
 | `postal_code` | string | Postal code of the lead. |
@@ -48,7 +48,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `reached_client` | boolean | The client is reached. |
 | `refinanced_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was refinanced. |
 | `repair_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was repaired. |
-| `repair_order` | string | The repair order number. |
+| `repair_order` | string | Service field. The repair order number. |
 | `road_test_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the road test date. |
 | `sale_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was sold. |
 | `second_contact` | string | Optional second contact for the lead. May be a person or a business. |
@@ -56,6 +56,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `segment` | string | The lead segment. Possible values are **conquest**, **promo**, **notSold**, **service**, **loyalty**, **reminder**, **endWarranty**, **endLcap**, **endLnette**, **csi**, **noShow**, **other.** |
 | `service_cleaning_car` | boolean | The vehicle has been cleaned for the service. |
 | `service_interval_km` | integer | The vehicle service interval in km. Possible values are **1000**, **5000**, **6000**, **8000**, **12000**, **16000**, **18000**, **20000**, **24000**, **25000.** |
+| `service_monthly_km` | integer | Kilometers allowed per month. |
 | `storage` | string | Information about where the vehicle is stored for the service. |
 | `sex` | string | The client sex. Possible values are **M, F**. |
 | `invoiced` | boolean | An invoice is created for the lead's vehicle services. |
