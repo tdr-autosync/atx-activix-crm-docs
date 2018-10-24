@@ -6,8 +6,8 @@ The representation of a product is called a `Product` object.
 
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was created. |
-| `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was last updated. |
+| `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the product was created. |
+| `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the product was last updated. |
 | `category` | string | The category of the product. |
 | `minutes` | integer | Time representing work duration \(service field\). |
 | `name` | string | Name of the product |
