@@ -11,12 +11,12 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was last updated. |
 | `lead_id` | integer | ID of the lead associated with the vehicle. |
 | `related_id` | integer | Related ID from the supplier. Used to link vehicle from the supplier with Activix CRM. |
-| `accessories` | integer | Amount of vehicle accessories sold. |
+| `accessories` | integer | Dollar value of accessories sold. |
 | `allowed_odometer` | string | Allowed odometer of the vehicle. |
 | `balance` | integer | Actual balance value of the vehicle. |
 | `budget_max` | integer | Maximum budget for the vehicle _\(wanted vehicle only\)_. |
 | `budget_min` | integer | Minimum budget for the wanted vehicle _\(wanted vehicle only\)_. |
-| `cash_down` | integer | Initial cash down for the vehicle. |
+| `cash_down` | integer | The down payment for the vehicle. |
 | `category` | string | Category of the vehicle. Possible values are **motorcycle**, **snowmobile**, **watercraft**, **boat**, **atv**, **van**, **truck**, **trsuvuck**, **automotive**, **motorized**, **utility**, **caravan**, **trailer**. |
 | `category_rv` | string | RV category of the vehicle. Possible values are **motorized\_a**, **motorized\_b**, **motorized\_c**, **travel\_trailer**, **fifth\_wheel**, **trailer\_park**, **tent\_trailer**. |
 | `client_number` | string | Vehicle client number. |

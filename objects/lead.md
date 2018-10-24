@@ -54,7 +54,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `second_contact` | string | Optional second contact for the lead. May be a person or a business. |
 | `second_contact_civility` | string | The social title of the second contact for the lead. Possible values are **mr**, **ms**, **miss**, **dr**, **me**. |
 | `segment` | string | The lead segment. Possible values are **conquest**, **promo**, **notSold**, **service**, **loyalty**, **reminder**, **endWarranty**, **endLcap**, **endLnette**, **csi**, **noShow**, **other.** |
-| `service_cleaning_car` | boolean | The vehicle has been cleaned for the service. |
+| `service_cleaned` | boolean | The vehicle has been cleaned for the service. |
 | `service_interval_km` | integer | The vehicle service interval in km. Possible values are **1000**, **5000**, **6000**, **8000**, **12000**, **16000**, **18000**, **20000**, **24000**, **25000.** |
 | `service_monthly_km` | integer | Kilometers allowed per month. |
 | `storage` | string | Information about where the vehicle is stored for the service. |
@@ -68,7 +68,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `unsubscribe_call_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the unsubcribe call date was set. |
 | `unsubscribe_email_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the unsubcribe email date was set. |
 | `unsubscribe_sms_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the unsubcribe sms date was set. |
-| `work_order` | string | The work order for the vehicle service. |
+| `work_order` | string | The work order number for the vehicle service. |
 | `account` | object | [​Account object](https://docs.crm.activix.ca/objects/account) representing the associated account. |
 | `advisor` | object | ​​[User object](https://docs.crm.activix.ca/objects/user) representing the associated advisor. |
 | `bdc` | object | [User object](https://docs.crm.activix.ca/objects/user) representing the associated BDC agent. |
