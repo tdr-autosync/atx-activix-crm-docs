@@ -32,16 +32,16 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
 | `first_name` | string | First name of the lead. |
 | `gender` | integer | Single-digit [ISO code](https://en.wikipedia.org/wiki/ISO/IEC_5218) representing the gender of the lead. |
 | `last_name` | string | Last name of the lead. |
-| `last_presented_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the last presented date. |
+| `last_visit_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the last visit date _\(for a service lead\)_. |
 | `locale` | string | Two-letter [ISO code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) representing the locale \(language\) of the lead. |
 | `loyalty` | boolean | Presenting the loyalty program for service. |
-| `next_presented_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the next presented date. |
+| `next_visit_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the next visit date _\(for a service lead\)_. |
 | `odometer_last_visit` | integer | The last vehicle mileage. |
-| `open_work_order_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the service open work order date. |
-| `planned_pick_up_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the service planned pick up date. |
+| `open_work_order_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the service open work order date _\(for a service lead\)_. |
+| `planned_pick_up_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the service planned pick up date _\(for a service lead\)_. |
 | `postal_code` | string | Postal code of the lead. |
 | `prepaid` | boolean | Client has paid for his vehicle service. |
-| `presented_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the lead was last updated. |
+| `presented_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the customer visited the dealer. |
 | `promised_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when promised date for the vehicle pick up. |
 | `province` | string | Two letter [ISO code](https://en.wikipedia.org/wiki/ISO_3166) representing the State/Province of the lead. |
 | `rating` | integer | Rating about the quality of the lead. |
