@@ -18,5 +18,6 @@
     * [Email](api/resources/email.md)
     * [Vehicle](api/resources/vehicle.md)
 * [Pushing Data](pushing-data/README.md)
+  * [Vehicle](pushing-data/vehicle.md)
   * [Lead](pushing-data/lead.md)
 
