@@ -6,7 +6,7 @@ All the responses in the example **must** be handled \(you may handle more if yo
 
 {% api-method method="post" host="https://your-url.com" path="/example" %}
 {% api-method-summary %}
-Create a lead
+Lead created
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -16,15 +16,11 @@ Create a lead
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-OAuth 2 or Basic Auth authentication credentials.
+{% api-method-parameter name="X-Signature-Activix" type="string" required=true %}
+Signature encoded in SHA-256 and compound with the body and the secure key.
 {% endapi-method-parameter %}
 
 {% api-method-parameter type="string" name="Content-Type" required=false %}
-Should be `application/json`.
-{% endapi-method-parameter %}
-
-{% api-method-parameter type="string" name="Accept" required=false %}
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
@@ -36,8 +32,10 @@ Should be `application/json`.
 Lead successfully created.
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+    "message": "Lead created successfully"
+}
 ```
 {% endapi-method-response-example %}
 

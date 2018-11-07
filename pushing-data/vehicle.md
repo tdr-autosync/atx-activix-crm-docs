@@ -2,11 +2,11 @@
 
 Here is an example of request that Activix CRM can make to push data to an external web service. Refer to the [Vehicle object](https://docs.crm.activix.ca/objects/vehicle) documentation to see all the attributes that may be included in the request.
 
-All the responses in the example **must** be handled \(you may handle more if you want\).\
+All the responses in the example **must** be handled \(you may handle more if you want\).
 
 {% api-method method="post" host="https://your-url.com" path="/example" %}
 {% api-method-summary %}
-Create a vehicle
+Vehicle created
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -16,16 +16,12 @@ Create a vehicle
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=false %}
-OAuth 2 or Basic Auth authentication credentials.
+{% api-method-parameter name="X-Signature-Activix" type="string" required=true %}
+ Signature encoded in SHA-256 and compound with the body and the secure key.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=false %}
 Should be `application/json`.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="Accept" type="string" required=false %}
-Should be `application/json`.Le
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -36,8 +32,10 @@ Should be `application/json`.Le
 Lead successfully created.
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+    "message": "Vehicle created successfully"
+}
 ```
 {% endapi-method-response-example %}
 
