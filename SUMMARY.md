@@ -17,7 +17,7 @@
     * [Phone](api/resources/phone.md)
     * [Email](api/resources/email.md)
     * [Vehicle](api/resources/vehicle.md)
-* [Webhooks](pushing-data/README.md)
-  * [Lead](pushing-data/lead.md)
-  * [Vehicle](pushing-data/vehicle.md)
+* [Webhooks](webhooks/README.md)
+  * [Lead](webhooks/lead.md)
+  * [Vehicle](webhooks/vehicle.md)
 

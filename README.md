@@ -12,5 +12,5 @@ You may learn more about Activix CRM API here:
 
 You may learn more about how Activix CRM can push data to external web services here:
 
-{% page-ref page="pushing-data/" %}
+{% page-ref page="webhooks/" %}
 
