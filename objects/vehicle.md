@@ -17,7 +17,7 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `budget_max` | numeric | Maximum budget for the vehicle _\(wanted vehicle only\)_. |
 | `budget_min` | numeric | Minimum budget for the wanted vehicle _\(wanted vehicle only\)_. |
 | `cash_down` | numeric | The down payment for the vehicle. |
-| `category` | string | Category of the vehicle. Possible values are **motorcycle**, **snowmobile**, **watercraft**, **boat**, **atv**, **van**, **truck**, **trsuvuck**, **automotive**, **motorized**, **utility**, **caravan**, **trailer**. |
+| `category` | string | Category of the vehicle. Possible values are **motorcycle**, **snowmobile**, **watercraft**, **boat**, **atv**, **van**, **truck**, **suv**, **automotive**, **motorized**, **utility**, **caravan**, **trailer, hybride, mechanical**. |
 | `category_rv` | string | RV category of the vehicle. Possible values are **motorized\_a**, **motorized\_b**, **motorized\_c**, **travel\_trailer**, **fifth\_wheel**, **trailer\_park**, **tent\_trailer**. |
 | `client_number` | string | Vehicle client number. |
 | `color_exterior` | string | Exterior color of the vehicle. |
