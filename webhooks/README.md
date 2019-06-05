@@ -31,7 +31,7 @@ _Body from Activix:_
     "lead_type": "web"  
 }`   
   
-Signature = _hash mac encrypted in SHA-256:_   
+_Signature = hash mac encrypted in SHA-256:_   
 `8bbc079a4c323565f113de0e84d5433ba4b8a399cfd4a07a54d6c524f61aae35`
 
 You will receive the signature in the header and the json lead object in the body.   

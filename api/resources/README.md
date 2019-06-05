@@ -10,11 +10,11 @@ All URLs in this section expects one of the following URLs as a base. All testin
 
 ### Development / Testing
 
-`https://dev.crm.activix.ca/api/v2`
+`https://api.dev.crm.activix.ca/v2`
 
 ### Production
 
-`https://crm.activix.ca/api/v2`
+`https://api.crm.activix.ca/v2`
 
 
 
