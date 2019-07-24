@@ -17,30 +17,30 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `budget_max` | numeric | Maximum budget for the vehicle _\(wanted vehicle only\)_. |
 | `budget_min` | numeric | Minimum budget for the wanted vehicle _\(wanted vehicle only\)_. |
 | `cash_down` | numeric | The down payment for the vehicle. |
-| `category` | string | Category of the vehicle. Possible values are **motorcycle**, **snowmobile**, **watercraft**, **boat**, **atv**, **van**, **truck**, **suv**, **automotive**, **motorized**, **utility**, **caravan**, **trailer, hybride, mechanical**. |
-| `category_rv` | string | RV category of the vehicle. Possible values are **motorized\_a**, **motorized\_b**, **motorized\_c**, **travel\_trailer**, **fifth\_wheel**, **trailer\_park**, **tent\_trailer**. |
+| `category` | string | Category of the vehicle. Possible values are **motorcycle**, **snowmobile**, **watercraft**, **boat**, **atv**, **van**, **truck**, **suv**, **automotive**, **motorized**, **utility**, **caravan**, **trailer**, **hybride** or **mechanical**. |
+| `category_rv` | string | RV category of the vehicle. Possible values are **motorized\_a**, **motorized\_b**, **motorized\_c**, **travel\_trailer**, **fifth\_wheel**, **trailer\_park** or **tent\_trailer**. |
 | `client_number` | string | Vehicle client number. |
 | `color_exterior` | string | Exterior color of the vehicle. |
 | `color_interior` | string | Interior color of the vehicle. |
 | `comment` | string | Comment about the vehicle. |
-| `condition` | string | Condition of the vehicle. Possible values are **rough**, **average**, **clean**, **extra\_clean**. |
+| `condition` | string | Condition of the vehicle. Possible values are **rough**, **average**, **clean** or **extra\_clean**. |
 | `end_contract_date` | string | [​​​ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the end contract date of the vehicle. |
 | `end_warranty_date` | string | [​​​ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the end warranty date of the vehicle. |
 | `engine` | string | Engine capacity of the vehicle. |
 | `extended_warranty` | string | Comment about the extended warranty for the vehicle. |
-| `fuel` | string | Fuel type used by the vehicle. Possible values are **gasoline**, **diesel**. |
+| `fuel` | string | Fuel type used by the vehicle. Possible values are **gasoline** or **diesel**. |
 | `length_max` | integer | Maximum desired length in feets of the vehicle _\(wanted vehicle only\)_. |
 | `length_min` | integer | Minimum desired length in feets of the vehicle _\(wanted vehicle only\)_. |
 | `license_plate` | string | Vehicle license plate. Max characters are 9. |
 | `make` | string | The make of the vehicle. |
 | `odometer` | string | Current odometer of the vehicle. |
-| `modality` | string | Modality payment for the vehicle. Possible values are **financing**, **cash**, **leasing**. |
+| `modality` | string | Modality payment for the vehicle. Possible values are **financing**, **cash** or **leasing**. |
 | `model` | string | The model of the vehicle. |
 | `offer_number` | string | The offer number of the vehicle. |
 | `option` | string | Comment about the options of the vehicle. |
 | `order_number` | string | Order number of the vehicle. |
 | `payment` | numeric | Periodic payment for the vehicle. |
-| `payment_frequency` | string | Payment frequency for the vehicle. Possible values are **monthly**, **two\_weeks**, **weekly**, **one\_payment**. |
+| `payment_frequency` | string | Payment frequency for the vehicle. Possible values are **monthly**, **two\_weeks**, **weekly** or **one\_payment**. |
 | `preparation` | numeric | Amount for the vehicle preparation. |
 | `price` | integer | The price for the vehicle. |
 | `profit` | numeric | The profit on the vehicle. |
@@ -55,22 +55,18 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `sold_by` | string | Name of the seller. |
 | `sold_date` | string | [​​​ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the sale date of the vehicle. |
 | `stock` | string | The dealers's stock \# of the vehicle. |
-| `stock_state` | string | The dealers's stock state of the vehicle. Possible values are **locate**, **notAvailable**, **order**, **stock**. |
+| `stock_state` | string | The dealers's stock state of the vehicle. Possible values are **locate**, **notAvailable**, **order** or **stock**. |
 | `term` | string | The term in months of the modality of the vehicle. |
 | `tire` | boolean | Determine if the vehicle came/come with spare tires. |
-| `transmission` | string | Transmission of the vehicle. Possbile values are **auto**, **manual**, **sequential**. |
+| `transmission` | string | Transmission of the vehicle. Possbile values are **auto**, **manual** or **sequential**. |
 | `trim` | string | The trim of the vehicle. |
 | `type` | string | The type of the vehicle. Possible values are **wanted** or **exchange**. |
 | `value` | numeric | The current value of the vehicle. |
 | `vin` | string | The VIN of the vehicle. |
 | `warranty` | string | Comment about the warranty for the vehicle. |
-| `weight` | string | Weight of the vehicle. |
+| `weight` | string | Weight of the vehicle. Possible values are **under\_3000**, **between\_3000\_5000** or **over\_5000**. |
 | `year` | string | Four-digit representing the year of the vehicle |
 | `year_max` | integer | Four-digit representing the maximum desired year of the vehicle _\(wanted vehicle only\)_. |
 | `year_min` | integer | Four-digit representing the minimum desired year of the vehicle _\(wanted vehicle only\)_. |
 | `verified_by` | object | [​​User object](https://docs.crm.activix.ca/objects/user) representing the user who verified the vehicle. |
-
-{% hint style="info" %}
-You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
-{% endhint %}
 

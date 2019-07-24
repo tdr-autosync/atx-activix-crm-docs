@@ -2,7 +2,7 @@
 
 The following describes the available resources for an Email. Check out the [Email object](https://docs.crm.activix.ca/objects/email) documentation for a complete list of attributes.
 
-{% api-method method="post" host="https://crm.activix.ca/api/v2" path="/lead-emails" %}
+{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/lead-emails" %}
 {% api-method-summary %}
 Create an email
 {% endapi-method-summary %}
@@ -62,7 +62,7 @@ Email created successfully.
 }
 ```
 
-{% api-method method="put" host="https://crm.activix.ca/api/v2" path="/lead-emails/:id" %}
+{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/lead-emails/:id" %}
 {% api-method-summary %}
 Update an email
 {% endapi-method-summary %}

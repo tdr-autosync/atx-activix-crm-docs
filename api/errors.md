@@ -13,5 +13,5 @@ Activix uses conventional HTTP response codes to indicate the success or failure
 | `404` | `Not Found` - The requested resource doesn't exist. |
 | `422` | `Unprocessable Entity` - One of the parameter is missing or invalid. |
 | `429` | `Too Many Requests` - Too many requests hit the API too quickly. We recommend an exponential backoff of your requests. |
-| `500, 502, 503, 504` | `Server Errors` - Something went wrong on Activix CRM's end. \(These are rare.\) |
+| `500, 502, 503, 504` | `Server Errors` - Something went wrong on Activix CRM's end \(we are notified for these\). |
 

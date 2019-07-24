@@ -148,7 +148,3 @@ A communication can be added or updated based on an existing lead ID.
 | `pending` | This is the default status when the call is first initiated using click-to-call. |
 | `unanswered` | The call was not answered by any user. Applicable for calls generated using click-to-call. |
 
-{% hint style="info" %}
-You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
-{% endhint %}
-

@@ -2,7 +2,7 @@
 
 The following describes the available resources for a Vehicle. Check out the [Vehicle object](https://docs.crm.activix.ca/objects/vehicle) documentation for a complete list of attributes.
 
-{% api-method method="post" host="https://crm.activix.ca/api/v2" path="/lead-vehicles" %}
+{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/lead-vehicles" %}
 {% api-method-summary %}
 Create a vehicle
 {% endapi-method-summary %}
@@ -63,7 +63,7 @@ Vehicle created successfully.
 }
 ```
 
-{% api-method method="put" host="https://crm.activix.ca/api/v2" path="/lead-vehicles/:id" %}
+{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/lead-vehicles/:id" %}
 {% api-method-summary %}
 Update a vehicle
 {% endapi-method-summary %}

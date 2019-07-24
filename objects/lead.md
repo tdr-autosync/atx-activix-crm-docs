@@ -523,7 +523,4 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left">Array of <a href="https://docs.crm.activix.ca/objects/vehicle">vehicle objects</a>.</td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
-You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
-{% endhint %}
-
+</table>

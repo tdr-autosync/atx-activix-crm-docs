@@ -13,7 +13,3 @@ The representation of a user is called a `User` object. Users are identified by 
 | `first_name` | string | First name of the user. |
 | `last_name` | string | Last name of the user. |
 
-{% hint style="info" %}
-You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
-{% endhint %}
-

@@ -2,7 +2,7 @@
 
 The following describes the available resources for a Communication. Check out the [Communication object](https://docs.crm.activix.ca/objects/communication) documentation for a complete list of attributes.
 
-{% api-method method="post" host="https://crm.activix.ca/api/v2" path="/communications" %}
+{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/communications" %}
 {% api-method-summary %}
 Create a communication
 {% endapi-method-summary %}
@@ -82,7 +82,7 @@ Communication created successfully.
 }
 ```
 
-{% api-method method="put" host="https://crm.activix.ca/api/v2" path="/communications/:id" %}
+{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/communications/:id" %}
 {% api-method-summary %}
 Update a communication
 {% endapi-method-summary %}
@@ -143,7 +143,7 @@ Communication updated successfully.
 }
 ```
 
-{% api-method method="post" host="https://crm.activix.ca/api/v2" path="/communications/:id/recording" %}
+{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/communications/:id/recording" %}
 {% api-method-summary %}
 Upload a recording
 {% endapi-method-summary %}

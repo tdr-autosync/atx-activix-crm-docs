@@ -14,7 +14,3 @@ The representation of an email is called an `Email` object. Emails are identifie
 | `type` | boolean | The type of email. Possible values are **home** or **work**. |
 | `valid` | boolean | Determines if the email is valid _\(read only\)_. |
 
-{% hint style="info" %}
-You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
-{% endhint %}
-

@@ -2,7 +2,7 @@
 
 The following describes the available resources for a Phone. Check out the [Phone object](https://docs.crm.activix.ca/objects/phone) documentation for a complete list of attributes.
 
-{% api-method method="post" host="https://crm.activix.ca/api/v2" path="/lead-phones" %}
+{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/lead-phones" %}
 {% api-method-summary %}
 Create a phone
 {% endapi-method-summary %}
@@ -62,7 +62,7 @@ Phone created successfully.
 }
 ```
 
-{% api-method method="put" host="https://crm.activix.ca/api/v2" path="/lead-phones/:id" %}
+{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/lead-phones/:id" %}
 {% api-method-summary %}
 Update a phone
 {% endapi-method-summary %}

@@ -13,7 +13,3 @@ At the moment an account may be a dealer or a group of dealer \(related to other
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the account was last updated. |
 | `name` | string | Name of the account. |
 
-{% hint style="info" %}
-You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
-{% endhint %}
-

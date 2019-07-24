@@ -2,7 +2,7 @@
 
 The following describes the available resources for a Lead. Check out the [Lead object](https://docs.crm.activix.ca/objects/lead) documentation for a complete list of attributes.
 
-{% api-method method="get" host="https://crm.activix.ca/api/v2" path="/leads/search" %}
+{% api-method method="get" host="https://api.crm.activix.ca/v2" path="/leads/search" %}
 {% api-method-summary %}
 Search a lead
 {% endapi-method-summary %}
@@ -99,7 +99,7 @@ Currently, the search try to find a matching result in these fields:
 * `number` in any of the phone objects
 * `address` in any of the email objects
 
-{% api-method method="post" host="https://crm.activix.ca/api/v2" path="/leads" %}
+{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/leads" %}
 {% api-method-summary %}
 Create a lead
 {% endapi-method-summary %}
@@ -220,7 +220,7 @@ The ONLY required field is the **type**.
 
 The `advisor`, `bdc`, `commercial`, `service_agent` and `service_advisor` objects are only used to associate a user using their `first_name`, `last_name`, `email` or `id`.
 
-{% api-method method="put" host="https://crm.activix.ca/api/v2" path="/leads/:id" %}
+{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/leads/:id" %}
 {% api-method-summary %}
 Update a lead
 {% endapi-method-summary %}

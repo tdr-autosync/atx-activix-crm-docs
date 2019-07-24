@@ -15,7 +15,3 @@ The representation of a phone is called a `Phone` object. Phones are identified 
 | `type` | boolean | The type of phone. Possible values are **home**, **work**, **mobile**. |
 | `valid` | boolean | Determines if the phone number is valid _\(read only\)_. |
 
-{% hint style="info" %}
-You may request additional attributes by contacting [Activix](https://activix.ca/en/contact-us).
-{% endhint %}
-
