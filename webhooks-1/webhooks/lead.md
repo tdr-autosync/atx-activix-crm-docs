@@ -71,24 +71,11 @@ Internal Server Error.
 ```javascript
 {
     "id": 3387562,
+    "created_at": "2018-04-09T18:05:00+00:00",
+    "updated_at": "2018-04-09T18:07:00+00:00",
     "first_name": "John",
     "last_name": "Doe",
-    "civility": "mr",
-    "second_contact": "ABC Motors",
-    "second_contact_civility": null,
-    "division": "new",
-    "type": "walk_in",
-    "source": "Lespacs",
-    "address_line1": "123 av. Riverwood",
-    "address_line2": "Suite 200",
-    "postal_code": "J1E4Y7",
-    "city": "Montreal",
-    "province": "QC",
-    "country": "CA",
-    "locale": "en",
-    "birth_date": "1990-04-10",
-    "gender": 1,
-    "account_id": 44,
+    ...
     "advisor": {
         "id": 51112,
         ...
@@ -113,9 +100,7 @@ Internal Server Error.
             ...
         },
         ...
-    ],
-    "created_at": "2018-04-09T18:05:00+00:00",
-    "updated_at": "2018-04-09T18:07:00+00:00"
+    ]
 }
 ```
 

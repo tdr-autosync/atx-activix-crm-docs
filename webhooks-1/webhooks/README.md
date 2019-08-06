@@ -1,6 +1,4 @@
-# Webhooks
-
-Activix CRM have many ways to send data to a third-party service. In this section, we'll explain how we can push data to a web service in real time.
+# Webhook Endpoints
 
 ## Requirements
 

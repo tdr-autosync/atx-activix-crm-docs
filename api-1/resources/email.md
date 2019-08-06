@@ -1,29 +1,29 @@
-# Phone
+# Email
 
-The following describes the available resources for a Phone. Check out the [Phone object](https://docs.crm.activix.ca/objects/phone) documentation for a complete list of attributes.
+The following describes the available resources for an Email. Check out the [Email object](https://docs.crm.activix.ca/objects/email) documentation for a complete list of attributes.
 
-{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/lead-phones" %}
+{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/lead-emails" %}
 {% api-method-summary %}
-Create a phone
+Create an email
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a phone. Returns the created phone.
+Creates an email. Returns the created email.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authentification" type="string" required=true %}
-OAuth 2 or Basic Auth authentification credentials.
+{% api-method-parameter name="Authentication" type="string" required=true %}
+OAuth 2 or Basic Auth credentials.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Content-type" type="string" required=false %}
-Should be application/json.
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Should be `application/json`.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Accept" type="string" required=false %}
-Should be application/json.
+{% api-method-parameter name="Accept" type="string" required=true %}
+Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -31,7 +31,7 @@ Should be application/json.
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-Phone created successfully.
+Email created successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -41,7 +41,7 @@ Phone created successfully.
         "created_at": "2018-04-09T18:05:00+00:00",
         "updated_at": "2018-04-09T18:05:00+00:00",
         "lead_id": 3466512,
-        "number": "+15141234455",
+        "address": "test@activix.ca",
         ...
     }
 }
@@ -56,40 +56,40 @@ Phone created successfully.
 ```javascript
 {
     "lead_id": 3387562,
-    "number": "+15141234455",
+    "address": "test@activix.ca",
     "type": "home",
     ...
 }
 ```
 
-{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/lead-phones/:id" %}
+{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/lead-emails/:id" %}
 {% api-method-summary %}
-Update a phone
+Update an email
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Update a phone. Returns the updated phone.
+Updates the specified email by setting the values of the parameters passed. Any parameters not provided will be left unchanged. The request returns the updated email.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="integer" required=true %}
-The ID of the phone to update.
+The ID of the email to update.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authentification" type="string" required=true %}
-OAuth 2 or Basic Auth authentification credentials.
+{% api-method-parameter name="Authentication" type="string" required=true %}
+OAuth 2 or Basic Auth credentials.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=false %}
-Should be application/json.
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Should be `application/json`.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Accept" type="string" required=false %}
-Should be application/json.
+{% api-method-parameter name="Accept" type="string" required=true %}
+Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -97,7 +97,7 @@ Should be application/json.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Phone updated successfully.
+Email updated successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -107,7 +107,7 @@ Phone updated successfully.
         "created_at": "2018-04-09T18:05:00+00:00",
         "updated_at": "2018-04-09T18:07:00+00:00",
         "lead_id": 3466512,
-        "number": "+15141234455",
+        "address": "test@activix.ca",
         ...
     }
 }
@@ -121,8 +121,8 @@ Phone updated successfully.
 
 ```javascript
 {
-    "number": "+15141234459",
-    "type": "home",
+    "address": "test@activix.ca",
+    "type": "work",
     ...
 }
 ```

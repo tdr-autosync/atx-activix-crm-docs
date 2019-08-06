@@ -9,7 +9,9 @@ At the moment an account may be a dealer or a group of dealer \(related to other
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | `id` | integer | Unique identifier for the account. |
+|  |  |  |
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the account was created. |
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the account was last updated. |
+|  |  |  |
 | `name` | string | Name of the account. |
 

@@ -8,46 +8,28 @@ Create a communication
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a communication. Returns the created communication.
+Creates a communication. Returns the created communication.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" type="string" required=true %}
-OAuth 2 or Basic Auth authentification credentials.
+OAuth 2 or Basic Auth credentials.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=true %}
 Should be `application/json`.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Accept" type="string" required=false %}
+{% api-method-parameter name="Accept" type="string" required=true %}
 Should be `application/json`.  
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="lead\_id" type="integer" required=true %}
-Refer to Communication object documentation.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="method" type="string" required=true %}
-Refer to Communication object documentation.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="status" type="string" required=true %}
-Refer to Communication object documentation.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="type" type="string" required=true %}
-Refer to Communication object documentation.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
 Communication created successfully.
 {% endapi-method-response-example-description %}
@@ -88,21 +70,27 @@ Update a communication
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Update a communication. Returns the updated communication.
+Updates the specified communication by setting the values of the parameters passed. Any parameters not provided will be left unchanged. The request returns the updated communication.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="integer" required=true %}
+The ID of the communication to update.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" type="string" required=true %}
-OAuth 2 or Basic Auth authentification credentials.
+OAuth 2 or Basic Auth credentials.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=true %}
 Should be `application/json`.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Accept" type="string" required=false %}
+{% api-method-parameter name="Accept" type="string" required=true %}
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
@@ -154,16 +142,22 @@ Upload a recording for an existing communication.
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="integer" required=true %}
+The ID of the communication of the recording.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" type="string" required=true %}
-OAuth 2 or Basic Auth authentification credentials.
+OAuth 2 or Basic Auth credentials.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-type" type="string" required=true %}
 Should be `multipart/form-data`.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Accept" type="string" required=false %}
+{% api-method-parameter name="Accept" type="string" required=true %}
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
@@ -178,7 +172,7 @@ Possible file types are **wav** and **mp3**.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+Recording uploaded successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -191,5 +185,7 @@ Possible file types are **wav** and **mp3**.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-Body must of type `multipart/form-data`.  Only one recording may be uploaded for a communication. If you re-upload a recording, it will overwrite the old one.
+Body **must** be of type `multipart/form-data`. 
+
+Only one recording may be uploaded for a communication. If you re-upload a recording, it will overwrite the old one.
 

@@ -2,15 +2,40 @@
 
 This documentation will help you understand how third-party services can interact with Activix CRM and vice-versa.
 
-Every piece of data in the CRM is represented as an object. Learn more here:
+This documentation is constantly updated to reflect the latest changes and features in Activix CRM. Breaking changes will only be introduced in new versions of the API.
 
-{% page-ref page="objects/" %}
+## API
 
-You may learn more about Activix CRM API here:
+The Activix CRM API is based on the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) standard. We try to follow the common standards for API communication as much as possible.
 
-{% page-ref page="api/" %}
+To get started quickly, we suggest reading the Resources documentation here:
 
-You may learn more about how Activix CRM can push data to external web services here:
+{% page-ref page="api-1/resources/" %}
 
-{% page-ref page="webhooks/" %}
+## Objects
+
+Every piece of data in the CRM is represented as an object \(also called `entity`\).  
+The `OBJECTS` section explains what each objects in the CRM consists of.
+
+### Blank fields
+
+Blank fields will always be included with the value `null` \(they are never omitted\).
+
+### Dates
+
+Unless otherwise specified, all timestamps are in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+
+```text
+YYYY-MM-DDTHH:MM:SSZ
+```
+
+We use the UTC timezone for all timestamps.
+
+## Webhooks
+
+Activix CRM have many ways to send data to a third-party service. In the `WEBHOOKS` section, we'll explain how we can push data to a web service in real time.
+
+{% page-ref page="webhooks-1/webhooks/" %}
+
+
 

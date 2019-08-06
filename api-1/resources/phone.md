@@ -1,29 +1,29 @@
-# Vehicle
+# Phone
 
-The following describes the available resources for a Vehicle. Check out the [Vehicle object](https://docs.crm.activix.ca/objects/vehicle) documentation for a complete list of attributes.
+The following describes the available resources for a Phone. Check out the [Phone object](https://docs.crm.activix.ca/objects/phone) documentation for a complete list of attributes.
 
-{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/lead-vehicles" %}
+{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/lead-phones" %}
 {% api-method-summary %}
-Create a vehicle
+Create a phone
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Create a vehicle. Returns the created vehicle.
+Creates a phone. Returns the created phone.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authentification" type="string" required=true %}
-OAuth 2 or Basic Auth authentification credentials.
+{% api-method-parameter name="Authentication" type="string" required=true %}
+OAuth 2 or Basic Auth credentials.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=false %}
-Should be application/json.
+{% api-method-parameter name="Content-type" type="string" required=true %}
+Should be `application/json`.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Accept" type="string" required=false %}
-Should be application/json.
+{% api-method-parameter name="Accept" type="string" required=true %}
+Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -31,18 +31,17 @@ Should be application/json.
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-Vehicle created successfully.
+Phone created successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
     "data": {
-        "id": 3387562,
+        "id": 34566,
         "created_at": "2018-04-09T18:05:00+00:00",
-        "updated_at": "2018-04-09T18:07:00+00:00",
-        "lead_id": 3466512,
-        "type": "wanted",
-        "vin": "VIN333",
+        "updated_at": "2018-04-09T18:05:00+00:00",
+        "lead_id": 3387562,
+        "number": "+15141234455",
         ...
     }
 }
@@ -56,41 +55,41 @@ Vehicle created successfully.
 
 ```javascript
 {
-    "lead_id": 3454440,
-    "type": "wanted",
-    "vin": "VIN333",
+    "lead_id": 3387562,
+    "number": "+15141234455",
+    "type": "home",
     ...
 }
 ```
 
-{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/lead-vehicles/:id" %}
+{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/lead-phones/:id" %}
 {% api-method-summary %}
-Update a vehicle
+Update a phone
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Update a vehicle. Returns the updated vehicle.
+Updates the specified phone by setting the values of the parameters passed. Any parameters not provided will be left unchanged. The request returns the updated phone.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=true %}
-The ID of the vehicle to update.
+{% api-method-parameter name="id" type="integer" required=true %}
+The ID of the phone to update.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authentification" type="string" required=true %}
-OAuth 2 or Basic Auth authentification credentials.
+{% api-method-parameter name="Authentication" type="string" required=true %}
+OAuth 2 or Basic Auth credentials.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=false %}
-Should be application/json.
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Should be `application/json`.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="Accept" type="string" required=false %}
-Shoud be application/json.
+{% api-method-parameter name="Accept" type="string" required=true %}
+Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -98,18 +97,17 @@ Shoud be application/json.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Vehicle updated successfully.
+Phone updated successfully.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
     "data": {
-        "id": 3387562,
+        "id": 34566,
         "created_at": "2018-04-09T18:05:00+00:00",
         "updated_at": "2018-04-09T18:07:00+00:00",
         "lead_id": 3466512,
-        "type": "wanted",
-        "vin": "VIN444",
+        "number": "+15141234459",
         ...
     }
 }
@@ -123,7 +121,8 @@ Vehicle updated successfully.
 
 ```javascript
 {
-    "vin": "VIN444",
+    "number": "+15141234459",
+    "type": "home",
     ...
 }
 ```
