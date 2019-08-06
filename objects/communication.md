@@ -63,46 +63,6 @@ A communication can be added or updated based on an existing lead ID.
       <td style="text-align:left">Possible values are <b>outgoing</b>, <b>incoming</b>.</td>
     </tr>
     <tr>
-      <td style="text-align:left"><code>email_subject</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The subject of the email.</p>
-        <p><em>For <b>email</b> communications only.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>email_body</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The body of the email.</p>
-        <p><em>For <b>email</b> communications only.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>email_client</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The client&apos;s email address.</p>
-        <p><em>For <b>email</b> communications only.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>email_user</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The user&apos;s email address.</p>
-        <p><em>For <b>email</b> communications only.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left"><code>call_duration</code>
       </td>
       <td style="text-align:left">integer</td>
