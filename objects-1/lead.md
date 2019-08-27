@@ -118,6 +118,13 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
         the vehicle delivery date.</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>paperwork_date</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+        when the paperwork for the customer is completed.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>presented_date</code>
       </td>
       <td style="text-align:left">string</td>
