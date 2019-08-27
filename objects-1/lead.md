@@ -241,7 +241,12 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left"><code>created_method</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The method of creation of the lead. Possible values are <b>activix</b>, <b>auto_renewal</b>, <b>cdk</b>, <b>ct_wizard</b>, <b>ford_direct</b>, <b>manual</b>, <b>manual_import</b>, <b>n_c_i_digital</b>, <b>niotext</b>, <b>phone_system</b>, <b>porsche_digital</b>, <b>scan</b>, <b>scraper</b>, <b>serti</b>.</td>
+      <td style="text-align:left">
+        <p>The method of creation of the lead. Possible values are <b>activix</b>, <b>auto_renewal</b>, <b>cdk</b>, <b>ct_wizard</b>, <b>ford_direct</b>, <b>manual</b>, <b>manual_import</b>, <b>n_c_i_digital</b>, <b>niotext</b>, <b>phone_system</b>, <b>porsche_digital</b>, <b>scan</b>, <b>scraper</b>, <b>serti, api</b>.</p>
+        <p></p>
+        <p>Automatically set to <b>api</b> when adding a lead ressource. Cannot be
+          updated.</p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>division</code>
