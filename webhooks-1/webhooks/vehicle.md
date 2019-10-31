@@ -16,7 +16,7 @@ Vehicle created
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="X-Signature-Activix" type="string" required=true %}
+{% api-method-parameter name="X-Activix-Signature" type="string" required=true %}
  Signature encoded in SHA-256 and compound with the body and the secure key.
 {% endapi-method-parameter %}
 
