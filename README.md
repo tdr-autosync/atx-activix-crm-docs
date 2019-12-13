@@ -15,7 +15,7 @@ To get started quickly, we suggest reading the Resources documentation here:
 ## Objects
 
 Every piece of data in the CRM is represented as an object \(also called `entity`\).  
-The `OBJECTS` section explains what each objects in the CRM consists of.
+The `OBJECTS` section explains what each object in the CRM consists of.
 
 ### Blank fields
 
