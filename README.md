@@ -33,7 +33,7 @@ We use the UTC timezone for all timestamps.
 
 ## Webhooks
 
-Activix CRM have many ways to send data to a third-party service. In the `WEBHOOKS` section, we'll explain how we can push data to a web service in real time.
+The Activix CRM has the ability to send data to third-party services in a variety of ways. The `WEBHOOKS` section explains how data can pushed to a web service in real time.
 
 {% page-ref page="webhooks-1/webhooks/" %}
 
