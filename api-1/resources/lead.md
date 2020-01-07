@@ -17,7 +17,7 @@ Creates a lead. Returns the created lead.
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" required=true type="string" %}
-OAuth 2 or Basic Auth credentials.
+Bearer token.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" required=true type="string" %}
@@ -89,23 +89,22 @@ Lead created successfully.
     "first_name": "John",
     "last_name": "Doe",
     "type": "email",
-    ...
     "advisor": {
-        "first_name": "John",
-        "last_name": "Doe"
+        "first_name": "Jane",
+        "last_name": "Smith"
     },
     "emails": [
         {
+						"type": "home",
             "address": "hello@example.com"
-        },
-        ...
+        }
     ],
     "phones": [
         {
-            "number": "+15144321214"
+            "number": "+15144321214",
             "extension": 12345,
-        },
-        ...
+						"type": "mobile"
+        }
     ],
     "vehicles": [
         {
@@ -113,9 +112,13 @@ Lead created successfully.
             "model": "DB11",
             "year": 2018,
             "type": "wanted"
-            ...
         },
-        ...
+			  {
+            "make": "DMC",
+            "model": "DeLorean",
+            "year": 1981,
+            "type": "exchange"
+        }
     ]
 }
 ```
@@ -128,7 +131,7 @@ Retrieve a lead
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Retrieves the details of an existing lead. You only need to supply the lead identifier that was returned upon lead creation.
+Retrieves the details of an existing lead. You only need to provide the lead identifier that was returned upon lead creation.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -141,7 +144,7 @@ The ID of the lead to retrieve.
 
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" type="string" required=true %}
-OAuth 2 or Basic Auth credentials.
+Bearer token.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Accept" type="string" required=true %}
@@ -200,7 +203,7 @@ The ID of the lead to update.
 
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" required=true type="string" %}
-OAuth 2 or Basic Auth credentials.
+Bearer token.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" required=true type="string" %}
@@ -299,7 +302,7 @@ Returns a list of your leads. The leads are returned sorted by creation date, wi
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" type="string" required=true %}
-OAuth 2 or Basic Auth credentials.
+Bearer token.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Accept" type="string" required=true %}

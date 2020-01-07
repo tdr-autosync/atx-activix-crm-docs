@@ -17,7 +17,7 @@ Searches for leads using the specified query. The leads are returned sorted by c
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" type="string" required=true %}
-OAuth 2 or Basic Auth credentials.
+Bearer token.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Accept" type="string" required=true %}

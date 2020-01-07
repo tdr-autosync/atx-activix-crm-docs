@@ -35,7 +35,7 @@ The response will also contain a `links` and `meta` section that will help you n
 | :--- | :--- |
 | `data` | Collection of objects representing the result of the request. |
 | `links` | Relevant links that you can directly use to navigate across pages. |
-| `meta` | Key informations about the results. Fairly self-explanatory. |
+| `meta` | Key information about the results. Fairly self-explanatory. |
 
 #### Response Example
 

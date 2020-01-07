@@ -10,28 +10,14 @@ For us to send data to an external web service over HTTP, we require the followi
 
 ## Authentication
 
-Activix will provide you a secure key to secure the request send by Activix. When you will receive the request from Activix, you have to verify if the request really comes from Activix. You will receive a signature and it's referer to a hash\_mac encrypted in SHA-256 compound with the secure key and the body sent. You have to compare the signature sent with the signature that you generated with the body and the secure key to verify that the request comes from Activix and it is not altered.
+For authentication purposes, Activix will provide you a secure key. Activix will use this key to generate a signature that will be included as the `X-Activix-Signature` header in the request.
 
-## Exemple
+To verify the webhook is originating from Activix CRM you need to:
 
-_Secure key provide by Activix:_ `DkHmA6h9Z4HZVxugCwE2QCTiOKaBwBxgz6QHCuztUZFsqvPovfa4lkLs2FprQe4QNghSfIjd8CD  
-wqLiIujanY9LcCDOLBuweQZ19cT7R3f4EvvUCIvXepmebIuVMAodzidqpKfxvGyVoWHSgspTlNv  
-cjlvlIPMK0sFGOomeoVr7H91SYt4A2Qk8RG4SPLCWaBbWeI1ZWxOi6jcuBF3YukH40B7LsOfWy9  
-dxMdtBWNszsOGChoXOSNxoevdAOdIMA`  
-  
-_Body from Activix:_  
- `{  
-   
-    "id": 465783,   
-    "account_id": 44,   
-    "first_name": "John",   
-    "last_name": "Doe",   
-    "lead_type": "web"  
-}`   
-  
-_Signature = hash mac encrypted in SHA-256:_   
-`8bbc079a4c323565f113de0e84d5433ba4b8a399cfd4a07a54d6c524f61aae35`
+* Encode the request body with the HMAC algorithm \(using the secure key and SHA256 digest mode\).
+* Compare the resulting hexdigest to the signature.
 
-You will receive the signature in the header and the json lead object in the body.   
-You have to compare the received signature with the signature generated from your side with the secure key provided and the body sent.
+The signature is for the exact content of the request body. Make sure that your processing code does not modify the body before checking the signature.
+
+The body of the request is in UTF-8 JSON format.
 

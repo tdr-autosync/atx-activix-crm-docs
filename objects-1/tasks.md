@@ -18,5 +18,5 @@ The representation of a task is called a `Task` object. Tasks are identified by 
 | `description` | string | The description of the task. |
 | `priority` | string | The priority of the task. Possible values are **normal**, **high**. |
 | `title` | string | The title of the event. |
-| `type` | string | The title of the event. Possible values are **call**, **email**, **sms**, **csi**. |
+| `type` | string | The type of the event. Possible values are **call**, **email**, **sms**, **csi**. |
 

@@ -5,10 +5,6 @@
 ## API <a id="api-1"></a>
 
 * [Authentication](api-1/authentication.md)
-* [Errors](api-1/errors.md)
-* [Filtering](api-1/filtering.md)
-* [Nested Objects](api-1/relations.md)
-* [Pagination](api-1/pagination.md)
 * [Resources](api-1/resources/README.md)
   * [Communication](api-1/resources/communication.md)
   * [Email](api-1/resources/email.md)
@@ -16,6 +12,10 @@
   * [Phone](api-1/resources/phone.md)
   * [Search](api-1/resources/search.md)
   * [Vehicle](api-1/resources/vehicle.md)
+* [Nested Objects](api-1/relations.md)
+* [Filtering](api-1/filtering.md)
+* [Pagination](api-1/pagination.md)
+* [Errors](api-1/errors.md)
 
 ## Objects <a id="objects-1"></a>
 

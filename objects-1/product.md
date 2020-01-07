@@ -47,7 +47,7 @@ The representation of a product is called a `Product` object.
       <td style="text-align:left">integer</td>
       <td style="text-align:left">
         <p>Time representing the work duration.</p>
-        <p><em>For <b>service</b> products only</em>
+        <p><em>For <b>service</b> products only.</em>
         </p>
       </td>
     </tr>
@@ -55,7 +55,7 @@ The representation of a product is called a `Product` object.
       <td style="text-align:left"><code>name</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">Name of the product</td>
+      <td style="text-align:left">Name of the product.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>notes</code>
@@ -73,7 +73,7 @@ The representation of a product is called a `Product` object.
       <td style="text-align:left"><code>price</code>
       </td>
       <td style="text-align:left">numeric</td>
-      <td style="text-align:left">Price of the product</td>
+      <td style="text-align:left">Price of the product.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>sold</code>

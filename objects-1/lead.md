@@ -33,11 +33,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left"><code>customer_id</code>
       </td>
       <td style="text-align:left">integer</td>
-      <td style="text-align:left">
-        <p>This is currently only used to associate leads together.</p>
-        <p><em>It is <code>null</code> if there is no associated leads.</em>
-        </p>
-      </td>
+      <td style="text-align:left">This is currently only used to associate leads together.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>source_id</code>
@@ -85,7 +81,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left">
         <p><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
           the call date.</p>
-        <p><em>Usefull for <b>phone up</b> only.</em>
+        <p><em>Only applicable for <b>phone up</b> leads.</em>
         </p>
       </td>
     </tr>
@@ -122,21 +118,21 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       </td>
       <td style="text-align:left">string</td>
       <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the paperwork for the customer is completed.</td>
+        when the customer&apos;s paperwork is completed.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>presented_date</code>
       </td>
       <td style="text-align:left">string</td>
       <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the customer visited the dealer.</td>
+        when the customer visited the dealership.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>promised_date</code>
       </td>
       <td style="text-align:left">string</td>
       <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when promised date for the vehicle pick up.</td>
+        when the vehicle is promised to be available for pick up.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>refinanced_date</code>
@@ -171,7 +167,8 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       </td>
       <td style="text-align:left">string</td>
       <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the &quot;Do not disturb&quot; date.</td>
+        the &quot;Do not disturb&quot; date (equivalent to unsubscribing simultaneously
+        from calls, emails and sms messages).</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>unsubscribe_call_date</code>
@@ -332,7 +329,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left"><code>source</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The source where the lead came from.</td>
+      <td style="text-align:left">The source where the lead originated from.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>status</code>
@@ -361,18 +358,18 @@ Leads of type `service` may have these additional attributes.
 | `repair_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was repaired. |
 |  |  |  |
 | `average_spending` | integer | The average spending per visit. |
-| `business` | boolean | Determine if the service is for a business. |
-| `code` | string | Code from the dealer about the work on the vehicle. |
-| `invoiced` | boolean | Determine if an invoice is created for the vehicle services. |
+| `business` | boolean | Determine if the lead is for a business. |
+| `code` | string | Code from the dealer about the work done on the vehicle. |
+| `invoiced` | boolean | Determine if an invoice is created for services performed on the vehicle. |
 | `loyalty` | boolean | Determine if the loyalty program was presented. |
-| `odometer_last_visit` | integer | The last vehicle mileage. |
-| `prepaid` | boolean | Client has paid for his vehicle service. |
+| `odometer_last_visit` | integer | The vehicle mileage at the clients last visit to the dealership. |
+| `prepaid` | boolean | Client has prepaid for the services to be done on his vehicle. |
 | `reached_client` | boolean | The lead has been reached. |
 | `repair_order` | string | The repair order number. |
 | `service_cleaned` | boolean | The vehicle has been cleaned for the service. |
 | `service_interval_km` | integer | The vehicle service interval in km. Possible values are **1000**, **5000**, **6000**, **8000**, **12000**, **16000**, **18000**, **20000**, **24000**, **25000.** |
 | `service_monthly_km` | integer | Kilometers allowed per month. |
-| `storage` | string | Information about where the vehicle is stored for the service. |
+| `storage` | string | Information about where the vehicle is stored for service. |
 | `work_order` | string | The work order number for the vehicle service. |
 
 

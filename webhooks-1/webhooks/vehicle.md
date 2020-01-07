@@ -1,6 +1,6 @@
 # Vehicle
 
-Here is an example of request that Activix CRM can make to push data to an external web service. Refer to the [Vehicle object](https://docs.crm.activix.ca/objects/vehicle) documentation to see all the attributes that may be included in the request.
+Here is an example of a request Activix CRM can make to push data to an external web service. Refer to the [Vehicle object](https://docs.crm.activix.ca/objects/vehicle) documentation to see all the attributes that may be included in the request.
 
 All the responses in the example **must** be handled \(you may handle more if you want\).
 

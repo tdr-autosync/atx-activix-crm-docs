@@ -1,6 +1,6 @@
 # Nested Objects
 
-Many objects have nested objects that can be returned with the results. For example a `Lead` may have an associated `Advisor` ID. Those objects can be includes using the `include` request parameter.
+Many resources have nested objects that can be returned with the results. For example a `Lead` may have an associated `Advisor`. Those objects can be included using the `include` request parameter.
 
 You can include multiple nested objects at once by identifying multiple items in the `include` array.
 

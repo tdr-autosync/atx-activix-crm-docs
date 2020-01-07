@@ -1,6 +1,6 @@
 # Email
 
-The representation of an email is called an `Email` object. Emails are identified by a unique incremental ID.
+The representation of an email is called an `Email` object. Emails are identified by a unique incremental ID.  Each `Lead` can only have one `Email` of each type.
 
 ## The `Email` Object
 

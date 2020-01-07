@@ -15,7 +15,7 @@ Creates a communication. Returns the created communication.
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" type="string" required=true %}
-OAuth 2 or Basic Auth credentials.
+Bearer token.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=true %}
@@ -83,7 +83,7 @@ The ID of the communication to update.
 
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" type="string" required=true %}
-OAuth 2 or Basic Auth credentials.
+Bearer token.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=true %}
@@ -150,7 +150,7 @@ The ID of the communication of the recording.
 
 {% api-method-headers %}
 {% api-method-parameter name="Authentication" type="string" required=true %}
-OAuth 2 or Basic Auth credentials.
+Bearer token.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-type" type="string" required=true %}

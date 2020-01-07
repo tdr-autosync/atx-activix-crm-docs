@@ -27,19 +27,19 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `color_exterior` | string | Exterior color of the vehicle. |
 | `color_interior` | string | Interior color of the vehicle. |
 | `comment` | text | Comment about the vehicle. |
-| `condition` | string | Condition of the vehicle. Possible values are **rough**, **average**, **clean** , **extra\_clean**. |
+| `condition` | string | Condition of the vehicle. Possible values are **rough**, **average**, **clean**, **extra\_clean**. |
 | `engine` | string | Engine capacity of the vehicle. |
 | `extended_warranty` | text | Comment about the extended warranty for the vehicle. |
-| `fuel` | string | Fuel type used by the vehicle. Possible values are **gasoline**, **diesel**. |
-| `license_plate` | string | Vehicle license plate. |
+| `fuel` | string | Fuel type used by the vehicle. Possible values are **gasoline** and **diesel**. |
+| `license_plate` | string | Vehicle license plate number. |
 | `make` | string | The make of the vehicle. |
 | `modality` | string | Modality payment for the vehicle. Possible values are **financing**, **cash**, **leasing**. |
 | `model` | string | The model of the vehicle. |
-| `odometer` | string | Current odometer of the vehicle. |
+| `odometer` | string | Current odometer value the vehicle. |
 | `offer_number` | string | The offer number of the vehicle. |
-| `option` | text | Options of the vehicle. May be formatted however you want. |
+| `option` | text | Options of the vehicle. May be formatted as you wish. |
 | `order_number` | string | Order number of the vehicle. |
-| `payment` | numeric | Periodic payment for the vehicle. |
+| `payment` | numeric | Periodic payment amount for the vehicle. |
 | `payment_frequency` | string | Payment frequency for the vehicle. Possible values are **monthly**, **two\_weeks**, **weekly**, **one\_payment**. |
 | `preparation` | numeric | Amount for the vehicle preparation. |
 | `price` | numeric | The price of the vehicle. |
@@ -55,14 +55,14 @@ The representation of a vehicle is called a `Vehicle` object. Vehicles are ident
 | `stock_state` | string | The dealers's stock state of the vehicle. Possible values are **locate**, **notAvailable**, **order** or **stock**. |
 | `term` | string | The term in months of the modality of the vehicle. |
 | `tire` | boolean | Determine if the vehicle comes/came with spare tires. |
-| `transmission` | string | Transmission of the vehicle. Possbile values are **auto**, **manual**, **sequential**. |
+| `transmission` | string | Transmission of the vehicle. Possible values are **auto**, **manual**, **sequential**. |
 | `trim` | string | The trim of the vehicle. |
 | `type` | string | The type of vehicle. Possible values are **wanted**, **exchange**. |
 | `value` | numeric | The current value of the vehicle. |
 | `vin` | string | The VIN of the vehicle. |
 | `warranty` | text | Comment about the warranty for the vehicle. |
 | `weight` | string | Weight of the vehicle. Possible values are **under\_3000**, **between\_3000\_5000**, **over\_5000**. |
-| `year` | integer | Four-digit representing the year of the vehicle |
+| `year` | integer | Four-digit number representing the year of the vehicle |
 
 ### Wanted vehicle attributes
 
@@ -73,9 +73,9 @@ Leads of type `wanted` may have these additional attributes.
 | `budget_max` | numeric | Maximum budget for the vehicle. |
 | `budget_min` | numeric | Minimum budget for the wanted vehicle. |
 | `length_max` | integer | Maximum desired length in feet of the vehicle. |
-| `length_min` | integer | Minimum desired length in feet of the vehicle _wanted vehicle only_. |
-| `year_max` | integer | Four-digit representing the maximum desired year of the vehicle. |
-| `year_min` | integer | Four-digit representing the minimum desired year of the vehicle. |
+| `length_min` | integer | Minimum desired length in feet of the vehicle \(_wanted vehicle only\)_. |
+| `year_max` | integer | Four-digit number representing the maximum desired year of the vehicle. |
+| `year_min` | integer | Four-digit number representing the minimum desired year of the vehicle. |
 
 
 
