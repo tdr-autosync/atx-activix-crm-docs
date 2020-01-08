@@ -26,6 +26,16 @@ Should be `application/json`.
 Should be `application/json`.  
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="type" type="string" required=true %}
+Possible values are **outgoing**, **incoming**.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="method" type="string" required=true %}
+Possible values are **phone**, **email**, **sms**. or sms
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
