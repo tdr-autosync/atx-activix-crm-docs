@@ -85,7 +85,7 @@ The representation of a product is called a `Product` object.
       <td style="text-align:left"><code>type</code>
       </td>
       <td style="text-align:left">integer</td>
-      <td style="text-align:left">The type of product. Possible values are <b>commercial</b>, <b>service</b>.</td>
+      <td style="text-align:left">The type of product. Possible values are <b>commercial</b> or <b>service</b>.</td>
     </tr>
   </tbody>
 </table>

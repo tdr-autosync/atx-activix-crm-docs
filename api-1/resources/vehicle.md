@@ -26,6 +26,16 @@ Should be `application/json`.
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="lead\_id" type="number" required=true %}
+The id of the lead associated with the vehicle.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+The type of vehicle. Possible values are **existing** or **exchange**.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -90,9 +100,19 @@ Should be `application/json`.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Accept" type="string" required=true %}
-Shoud be `application/json`.
+Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="lead\_id" type="number" required=true %}
+The ID of the lead associated with the vehicle.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+The type of vehicle. Possible values are **existing** or **exchange**.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}

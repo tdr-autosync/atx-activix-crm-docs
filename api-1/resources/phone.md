@@ -26,6 +26,16 @@ Should be `application/json`.
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="number" type="string" required=true %}
+The phone number.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+The type of phone number. Possible values are **home**, **work** or **mobile**.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -92,6 +102,16 @@ Should be `application/json`.
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="number" type="string" required=true %}
+The phone number.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+The type of phone number. Possible values are **home**, **work** or **mobile**.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}

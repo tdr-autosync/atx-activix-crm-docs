@@ -15,8 +15,8 @@ A communication can be added or updated based on an existing lead ID.
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the communication was created. |
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the communication was last updated. |
 |  |  |  |
-| `method` | string | Possible values are **phone**, **email**, **sms**. |
-| `type` | string | Possible values are **outgoing**, **incoming**. |
+| `method` | string | Possible values are **phone**, **email** or **sms**. |
+| `type` | string | Possible values are **outgoing** or **incoming**. |
 
 ### Call attributes
 
@@ -26,7 +26,7 @@ Communications with method `phone` may have these additional attributes.
 | :--- | :--- | :--- |
 | `call_duration` | integer | The duration of the call \(in seconds\). |
 | `call_phone` | string | The client's phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format. |
-| `call_status` | string | The current status of the call. Possible value are **answered**, **attempted**, **calling**, **error**, **interrupted**, **pending**, **unanswered** \(see below for more details\). |
+| `call_status` | string | The current status of the call. Possible value are **answered**, **attempted**, **calling**, **error**, **interrupted**, **pending** or **unanswered** \(see below for more details\). |
 
 ### Possible `call_status` values
 

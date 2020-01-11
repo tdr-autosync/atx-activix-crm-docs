@@ -225,7 +225,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left"><code>civility</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The social title of the lead. Possible values are <b>mr</b>, <b>ms</b>, <b>miss</b>, <b>dr</b>, <b>me</b>.</td>
+      <td style="text-align:left">The social title of the lead. Possible values are <b>mr</b>, <b>ms</b>, <b>miss</b>, <b>dr </b>or <b>me</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>country</code>
@@ -239,17 +239,16 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       </td>
       <td style="text-align:left">string</td>
       <td style="text-align:left">
-        <p>The method of creation of the lead. Possible values are <b>activix</b>, <b>auto_renewal</b>, <b>cdk</b>, <b>ct_wizard</b>, <b>ford_direct</b>, <b>manual</b>, <b>manual_import</b>, <b>n_c_i_digital</b>, <b>niotext</b>, <b>phone_system</b>, <b>porsche_digital</b>, <b>scan</b>, <b>scraper</b>, <b>serti, api</b>.</p>
+        <p>The method of creation of the lead. Possible values are <b>activix</b>, <b>auto_renewal</b>, <b>cdk</b>, <b>ct_wizard</b>, <b>ford_direct</b>, <b>manual</b>, <b>manual_import</b>, <b>n_c_i_digital</b>, <b>niotext</b>, <b>phone_system</b>, <b>porsche_digital</b>, <b>scan</b>, <b>scraper</b>, <b>serti</b> or <b>api</b>.</p>
         <p></p>
-        <p>Automatically set to <b>api</b> when adding a lead ressource. Cannot be
-          updated.</p>
+        <p>Automatically set to <b>api</b> when adding a lead resource. Cannot be updated.</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>division</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">Division of the lead. Possible values are <b>new</b>, <b>used</b>, <b>service</b>.</td>
+      <td style="text-align:left">Division of the lead. Possible values are <b>new</b>, <b>used </b>or <b>service</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>first_name</code>
@@ -301,8 +300,8 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       </td>
       <td style="text-align:left">string</td>
       <td style="text-align:left">
-        <p>The result of the lead. Possible values are <b>pending</b>, <b>attempted</b>, <b>reached</b>.
-          A <code>null</code> value is considered <b>pending</b>.</p>
+        <p>The result of the lead. Possible values are <b>pending</b>, <b>attempted</b> or <b>reached</b>.</p>
+        <p>A <code>null</code> value is considered <b>pending</b>.</p>
         <p><em>N.B. This value may be overridden by the result of a communication.</em>
         </p>
       </td>
@@ -317,13 +316,13 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left"><code>second_contact_civility</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The social title of the second contact for the lead. Possible values are <b>mr</b>, <b>ms</b>, <b>miss</b>, <b>dr</b>, <b>me</b>.</td>
+      <td style="text-align:left">The social title of the second contact for the lead. Possible values are <b>mr</b>, <b>ms</b>, <b>miss</b>, <b>dr</b> or <b>me</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>segment</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The lead segment. Possible values are <b>conquest</b>, <b>promo</b>, <b>notSold</b>, <b>service</b>, <b>loyalty</b>, <b>reminder</b>, <b>endWarranty</b>, <b>endLcap</b>, <b>endLnette</b>, <b>csi</b>, <b>noShow</b>, <b>other</b>.</td>
+      <td style="text-align:left">The lead segment. Possible values are <b>conquest</b>, <b>promo</b>, <b>notSold</b>, <b>service</b>, <b>loyalty</b>, <b>reminder</b>, <b>endWarranty</b>, <b>endLcap</b>, <b>endLnette</b>, <b>csi</b>, <b>noShow </b>or <b>other</b>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>source</code>
@@ -341,7 +340,7 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left"><code>type</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The type of lead. Possible values are <b>email</b>, <b>phone</b>, <b>walk_in</b>, <b>loyalty</b>, <b>renewal</b>, <b>sms</b>, <b>event</b> and <b>pre_booking</b>.</td>
+      <td style="text-align:left">The type of lead. Possible values are <b>email</b>, <b>phone</b>, <b>walk_in</b>, <b>loyalty</b>, <b>renewal</b>, <b>sms</b>, <b>event</b> or <b>pre_booking</b>.</td>
     </tr>
   </tbody>
 </table>### Service attributes
@@ -367,7 +366,7 @@ Leads of type `service` may have these additional attributes.
 | `reached_client` | boolean | The lead has been reached. |
 | `repair_order` | string | The repair order number. |
 | `service_cleaned` | boolean | The vehicle has been cleaned for the service. |
-| `service_interval_km` | integer | The vehicle service interval in km. Possible values are **1000**, **5000**, **6000**, **8000**, **12000**, **16000**, **18000**, **20000**, **24000**, **25000.** |
+| `service_interval_km` | integer | The vehicle service interval in km. Possible values are **1000**, **5000**, **6000**, **8000**, **12000**, **16000**, **18000**, **20000**, **24000** or **25000.** |
 | `service_monthly_km` | integer | Kilometers allowed per month. |
 | `storage` | string | Information about where the vehicle is stored for service. |
 | `work_order` | string | The work order number for the vehicle service. |

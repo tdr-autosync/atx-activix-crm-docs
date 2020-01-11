@@ -20,9 +20,9 @@ The representation of an event is called an `Event` object. Events are identifie
 | `confirmed` | boolean | Determine if the event is confirmed. |
 | `description` | string | The description of the event. |
 | `no_show` | boolean | Determine if the client didn't came. |
-| `priority` | string | The priority of the event. Possible values are **normal**, **high**. |
+| `priority` | string | The priority of the event. Possible values are **normal** or **high**. |
 | `title` | string | The title of the event. |
-| `type` | string | The title of the event. Possible values are **appointment**, **phone\_appointment**, **delivery**, **other**. |
+| `type` | string | The title of the event. Possible values are **appointment**, **phone\_appointment**, **delivery** or **other**. |
 
 
 

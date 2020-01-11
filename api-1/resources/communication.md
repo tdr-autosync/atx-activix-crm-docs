@@ -28,12 +28,16 @@ Should be `application/json`.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=true %}
-Possible values are **outgoing**, **incoming**.
+{% api-method-parameter name="lead\_id" type="integer" required=true %}
+ID of the Lead associated with the communication.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="method" type="string" required=true %}
-Possible values are **phone**, **email**, **sms**. or sms
+Possible values are **phone**, **email** or **sms**.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+Possible values are **outgoing** or **incoming**.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -104,6 +108,20 @@ Should be `application/json`.
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="lead\_id" type="integer" required=true %}
+ID of the Lead associated with the communication.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="method" type="string" required=true %}
+Possible values are **phone**, **email** or **sms**.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+Possible values are **outgoing** or **incoming**.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -174,7 +192,7 @@ Should be `application/json`.
 
 {% api-method-form-data-parameters %}
 {% api-method-parameter name="recording" type="string" required=true %}
-Possible file types are **wav** and **mp3**.
+Possible file types are **wav** or **mp3**.
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}

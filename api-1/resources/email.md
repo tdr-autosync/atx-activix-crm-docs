@@ -26,6 +26,16 @@ Should be `application/json`.
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="address" type="string" required=true %}
+The email address.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+The type of email. Possible values are **home** or **work**.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -92,6 +102,16 @@ Should be `application/json`.
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="address" type="string" required=true %}
+The email address.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+The type of email. Possible values are **home** or **work**.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}

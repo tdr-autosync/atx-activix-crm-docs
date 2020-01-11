@@ -28,6 +28,12 @@ Should be `application/json`.
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="type" type="string" required=true %}
+The type of lead possible values are **email**, **phone**, **walk\_in**, **loyalty**, **renewal**, **sms**, **event** or **pre\_booking**.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -151,12 +157,6 @@ Bearer token.
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="include" type="array" required=false %}
-The nested objects to include.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}

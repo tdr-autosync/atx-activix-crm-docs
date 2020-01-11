@@ -16,7 +16,7 @@ The representation of a task is called a `Task` object. Tasks are identified by 
 |  |  |  |
 | `completed` | boolean | Determine if the task is completed. |
 | `description` | string | The description of the task. |
-| `priority` | string | The priority of the task. Possible values are **normal**, **high**. |
+| `priority` | string | The priority of the task. Possible values are **normal** or **high**. |
 | `title` | string | The title of the event. |
-| `type` | string | The type of the event. Possible values are **call**, **email**, **sms**, **csi**. |
+| `type` | string | The type of the event. Possible values are **call**, **email**, **sms** or **csi**. |
 
