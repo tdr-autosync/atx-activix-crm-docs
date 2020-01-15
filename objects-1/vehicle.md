@@ -87,3 +87,12 @@ The `Vehicle` object may have the following [nested objects](../api-1/relations.
 | :--- | :--- | :--- |
 | `verified_by` | object | [​​User object](user.md) representing the user who verified the vehicle. |
 
+## Custom values
+
+The `vehicle`'s customs values are only available to be updated in `customs`object.
+
+| Attribute | Type | Description |
+| :--- | :--- | :--- |
+| `amount_evaluation_value` | float | Evaluation value from calculator. |
+| `appraiser` | string | Evaluation appraiser from calculator |
+
