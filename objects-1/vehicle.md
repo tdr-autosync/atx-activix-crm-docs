@@ -89,7 +89,7 @@ The `Vehicle` object may have the following [nested objects](../api-1/relations.
 
 ## Custom values
 
-The `vehicle`'s customs values are only available to be updated in `customs`object.
+The `Vehicle` object may have custom values for specific use cases. The custom values are declared in a sub-object named `customs`.
 
 | Attribute | Type | Description |
 | :--- | :--- | :--- |
