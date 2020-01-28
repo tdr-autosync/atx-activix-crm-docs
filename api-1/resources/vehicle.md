@@ -14,7 +14,7 @@ Creates a vehicle. Returns the created vehicle.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% api-method-parameter name="Authentication" type="string" required=true %}
 Bearer token.
 {% endapi-method-parameter %}
 
@@ -91,7 +91,7 @@ The ID of the vehicle to update.
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% api-method-parameter name="Authentication" type="string" required=true %}
 Bearer token.
 {% endapi-method-parameter %}
 

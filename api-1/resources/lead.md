@@ -460,7 +460,7 @@ The user DID \(normally a number in E.164 format\)
 
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
     "message": "The screen pop was triggered successfully."
 }

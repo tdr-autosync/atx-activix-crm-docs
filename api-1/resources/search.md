@@ -16,12 +16,8 @@ Searches for leads using the specified query. The leads are returned sorted by c
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=false %}
+{% api-method-parameter name="Authentication" type="string" required=true %}
 Bearer token.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="Content-Type" type="string" required=true %}
-Should be `application/json`.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Accept" type="string" required=true %}
