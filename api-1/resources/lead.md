@@ -16,7 +16,7 @@ Creates a lead. Returns the created lead.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" required=true type="string" %}
+{% api-method-parameter name="Authorization" required=true type="string" %}
 Bearer token.
 {% endapi-method-parameter %}
 
@@ -149,8 +149,12 @@ The ID of the lead to retrieve.
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 Bearer token.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Should be `application/json`.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Accept" type="string" required=true %}
@@ -202,7 +206,7 @@ The ID of the lead to update.
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" required=true type="string" %}
+{% api-method-parameter name="Authorization" required=true type="string" %}
 Bearer token.
 {% endapi-method-parameter %}
 
@@ -302,7 +306,7 @@ Returns a list of your leads. The leads are returned sorted by creation date, wi
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 Bearer token.
 {% endapi-method-parameter %}
 
@@ -405,4 +409,70 @@ You may narrow the results based on specific parameters. See [here](../filtering
 | `phone` | string | Filter on any of the associated [Phone](../../objects-1/phone.md) objects. | ✅ | ❌ |
 | `created` | date | Filter on the creation date of the lead. | ❌ | ✅ |
 | `updated` | date | Filter on the last update date of the lead. | ❌ | ✅ |
+
+{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/screenpop" %}
+{% api-method-summary %}
+Screen pop
+{% endapi-method-summary %}
+
+{% api-method-description %}
+This endpoint serves a unique purpose. It is used to open a dialog displaying information for a call simultaneously sent to the user's telephone.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer token.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Should be `application/json`.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Accept" type="string" required=true %}
+Should be `application/json`.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="lead\_id" type="string" required=false %}
+The lead ID.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="lead\_did" type="string" required=false %}
+The lead DID \(normally a number in E.164 format\).
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="user\_id" type="string" required=false %}
+The user ID.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="user\_did" type="string" required=false %}
+The user DID \(normally a number in E.164 format\)
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "message": "The screen pop was triggered successfully."
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+You _must_ provide a `lead_id` or `lead_did` _and_ a `user_id` or `user_did`.
+
+{% hint style="info" %}
+N.B. The endpoint is available, but the feature is not yet implemented in Activix CRM.
+{% endhint %}
 
