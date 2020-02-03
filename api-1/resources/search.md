@@ -16,8 +16,12 @@ Searches for leads using the specified query. The leads are returned sorted by c
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
+{% api-method-parameter name="Authorization" type="string" required=false %}
 Bearer token.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Should be `application/json`.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Accept" type="string" required=true %}
@@ -109,4 +113,18 @@ Currently, the search tries to find a matching result across these fields:
 * `second_contact`
 * `number` in any of the phone objects
 * `address` in any of the email objects
+
+## Examples
+
+```text
+/leads/search?query=john_doe
+```
+
+```text
+/leads/search?query=5147894561
+```
+
+```text
+/leads/search?query=myemail@activix.ca
+```
 

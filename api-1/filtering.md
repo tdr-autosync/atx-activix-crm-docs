@@ -30,6 +30,17 @@ Some filters support the `%` wildcard. This wildcard matches any sequence of zer
 The use of wildcards may impact the performance of the request. We **strongly** suggest to only use wildcards at the end of the filter to make the request as fast as possible.
 {% endhint %}
 
+## Filterable fields
+
+| Field Name | Description |
+| :--- | :--- |
+| `name` | Client name or second contact name |
+| `email` | Lead email address |
+| `phone` | Lead phone number |
+| `driving_number` | Lead driver's license number |
+| `created` | Created at date |
+| `updated` | Updated at date |
+
 ## Examples
 
 _List all leads created between the 1st and 10th September 2019_
@@ -45,4 +56,6 @@ _List all leads updated on September 15, 2019_
 ```text
 /leads?filter[updated]=2019-09-15
 ```
+
+
 
