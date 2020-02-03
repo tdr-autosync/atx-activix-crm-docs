@@ -114,7 +114,7 @@ Currently, the search tries to find a matching result across these fields:
 * `number` in any of the phone objects
 * `address` in any of the email objects
 
-## Examples
+### Examples
 
 ```text
 /leads/search?query=john_doe
