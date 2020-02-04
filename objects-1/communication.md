@@ -6,27 +6,27 @@ A communication can be added or updated based on an existing lead ID.
 
 ## The `Communication` Object
 
-| **Attribute** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| `id` | integer | Unique identifier for the communication. |
-| `lead_id` | integer | ID of the [lead](lead.md) associated with the communication. |
-| `user_id` | integer | ID of the [user](user.md) associated with the communication. |
-|  |  |  |
-| `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the communication was created. |
-| `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the communication was last updated. |
-|  |  |  |
-| `method` | string | Possible values are **phone**, **email** or **sms**. |
-| `type` | string | Possible values are **outgoing** or **incoming**. |
+| **Attribute** | **Type** | **Description** | Values may be added over time |
+| :--- | :--- | :--- | :--- |
+| `id` | integer | Unique identifier for the communication. |  |
+| `lead_id` | integer | ID of the [lead](lead.md) associated with the communication. |  |
+| `user_id` | integer | ID of the [user](user.md) associated with the communication. |  |
+|  |  |  |  |
+| `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the communication was created. |  |
+| `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the communication was last updated. |  |
+|  |  |  |  |
+| `method` | string | Possible values are **phone**, **email, messenger** or **sms**. | Yes |
+| `type` | string | Possible values are **outgoing** or **incoming**. |  |
 
 ### Call attributes
 
 Communications with method `phone` may have these additional attributes.
 
-| **Attribute** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| `call_duration` | integer | The duration of the call \(in seconds\). |
-| `call_phone` | string | The client's phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format. |
-| `call_status` | string | The current status of the call. Possible value are **answered**, **attempted**, **calling**, **error**, **interrupted**, **pending** or **unanswered** \(see below for more details\). |
+| **Attribute** | **Type** | **Description** | Values may be added over time |
+| :--- | :--- | :--- | :--- |
+| `call_duration` | integer | The duration of the call \(in seconds\). |  |
+| `call_phone` | string | The client's phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format. |  |
+| `call_status` | string | The current status of the call. Possible value are **answered**, **attempted**, **calling**, **error**, **interrupted**, **pending** or **unanswered** \(see below for more details\). | Yes |
 
 ### Possible `call_status` values
 

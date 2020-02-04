@@ -1,6 +1,6 @@
 # Errors
 
-Activix uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the
+Activix uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the 
 
 * `2xx` range indicate success
 * `4xx` range indicate an error that failed given the information provided \(e.g., a required parameter was omitted, a charge failed, etc.\)
@@ -11,7 +11,7 @@ Activix uses conventional HTTP response codes to indicate the success or failure
 | Code | Description |
 | :--- | :--- |
 | `200` | `OK` - Everything worked as expected. |
-| `400` | `Bad Request` - The request was unacceptable, often due to malformed request syntax. |
+| `400` | `Bad Request new` - The request was unacceptable, often due to malformed request syntax. |
 | `401` | `Unauthorized` - No valid API key provided. |
 | `403` | `Forbidden` - The provided API key does not have access to the resource. |
 | `404` | `Not Found` - The requested resource doesn't exist. |
