@@ -1,6 +1,6 @@
 # Errors
 
-Activix uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the 
+Activix uses conventional HTTP response codes to indicate the success or failure of an API request. In general, codes in the
 
 * `2xx` range indicate success
 * `4xx` range indicate an error that failed given the information provided \(e.g., a required parameter was omitted, a charge failed, etc.\)
