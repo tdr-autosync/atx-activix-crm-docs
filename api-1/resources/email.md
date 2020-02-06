@@ -14,7 +14,7 @@ Creates an email. Returns the created email.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 Bearer token.
 {% endapi-method-parameter %}
 
@@ -90,7 +90,7 @@ The ID of the email to update.
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 Bearer token.
 {% endapi-method-parameter %}
 

@@ -472,5 +472,15 @@ The `Lead` object may have the following [nested objects](../api-1/relations.md)
       <td style="text-align:left">array</td>
       <td style="text-align:left">Array of <a href="vehicle.md">vehicle objects</a>.</td>
     </tr>
+    <tr>
+      <td style="text-align:left"><code>communications</code>
+      </td>
+      <td style="text-align:left">array</td>
+      <td style="text-align:left">Array of <a href="communication.md">communications objects.</a>
+      </td>
+    </tr>
   </tbody>
 </table>
+
+
+
