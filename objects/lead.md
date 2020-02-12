@@ -529,7 +529,7 @@ Leads of type `service` may have these additional attributes.
 
 ## Nested Objects
 
-The `Lead` object may have the following [nested objects](../api-1/nested-objects.md).
+The `Lead` object may have the following [nested objects](../api/nested-objects.md).
 
 <table>
   <thead>
@@ -596,7 +596,7 @@ The `Lead` object may have the following [nested objects](../api-1/nested-object
       <td style="text-align:left"><code>events</code>
       </td>
       <td style="text-align:left">array</td>
-      <td style="text-align:left">Array of <a href="events.md">event objects</a>.</td>
+      <td style="text-align:left">Array of <a href="event.md">event objects</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>phones</code>
@@ -618,7 +618,7 @@ The `Lead` object may have the following [nested objects](../api-1/nested-object
       <td style="text-align:left"><code>tasks</code>
       </td>
       <td style="text-align:left">array</td>
-      <td style="text-align:left">Array of <a href="tasks.md">task objects</a>.</td>
+      <td style="text-align:left">Array of <a href="task.md">task objects</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>vehicles</code>

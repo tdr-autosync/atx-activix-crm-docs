@@ -10,7 +10,7 @@ The Activix CRM API is based on the [REST](https://en.wikipedia.org/wiki/Represe
 
 To get started quickly, we suggest reading the Resources documentation here:
 
-{% page-ref page="api-1/resources/" %}
+{% page-ref page="api/resources/" %}
 
 ## Objects
 
@@ -35,7 +35,7 @@ We use the UTC timezone for all timestamps.
 
 The Activix CRM has the ability to send data to third-party services in a variety of ways. The `WEBHOOKS` section explains how data can pushed to a web service in real time.
 
-{% page-ref page="webhooks-1/webhooks/" %}
+{% page-ref page="webhooks/endpoints/" %}
 
 
 

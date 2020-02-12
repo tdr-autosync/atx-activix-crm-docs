@@ -3,37 +3,37 @@
 * [Introduction](README.md)
 * [Version Information](version-information.md)
 
-## API <a id="api-1"></a>
+## API
 
-* [Authentication](api-1/authentication.md)
-* [Resources](api-1/resources/README.md)
-  * [Communication](api-1/resources/communication.md)
-  * [Email](api-1/resources/email.md)
-  * [Lead](api-1/resources/lead.md)
-  * [Phone](api-1/resources/phone.md)
-  * [Search](api-1/resources/search.md)
-  * [Vehicle](api-1/resources/vehicle.md)
-* [Nested Objects](api-1/nested-objects.md)
-* [Filtering](api-1/filtering.md)
-* [Pagination](api-1/pagination.md)
-* [Errors](api-1/errors.md)
+* [Authentication](api/authentication.md)
+* [Resources](api/resources/README.md)
+  * [Communication](api/resources/communication.md)
+  * [Email](api/resources/email.md)
+  * [Lead](api/resources/lead.md)
+  * [Phone](api/resources/phone.md)
+  * [Search](api/resources/search.md)
+  * [Vehicle](api/resources/vehicle.md)
+* [Nested Objects](api/nested-objects.md)
+* [Filtering](api/filtering.md)
+* [Pagination](api/pagination.md)
+* [Errors](api/errors.md)
 
-## Objects <a id="objects-1"></a>
+## Objects
 
-* [Account](objects-1/account.md)
-* [Communication](objects-1/communication.md)
-* [Email](objects-1/email.md)
-* [Event](objects-1/events.md)
-* [Lead](objects-1/lead.md)
-* [Phone](objects-1/phone.md)
-* [Product](objects-1/product.md)
-* [Task](objects-1/tasks.md)
-* [User](objects-1/user.md)
-* [Vehicle](objects-1/vehicle.md)
+* [Account](objects/account.md)
+* [Communication](objects/communication.md)
+* [Email](objects/email.md)
+* [Event](objects/event.md)
+* [Lead](objects/lead.md)
+* [Phone](objects/phone.md)
+* [Product](objects/product.md)
+* [Task](objects/task.md)
+* [User](objects/user.md)
+* [Vehicle](objects/vehicle.md)
 
-## Webhooks <a id="webhooks-1"></a>
+## Webhooks
 
-* [Webhook Endpoints](webhooks-1/webhooks/README.md)
-  * [Lead](webhooks-1/webhooks/lead.md)
-  * [Vehicle](webhooks-1/webhooks/vehicle.md)
+* [Webhook Endpoints](webhooks/endpoints/README.md)
+  * [Lead](webhooks/endpoints/lead.md)
+  * [Vehicle](webhooks/endpoints/vehicle.md)
 

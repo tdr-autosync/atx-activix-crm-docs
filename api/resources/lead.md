@@ -186,7 +186,7 @@ Lead retrieved successfully.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-The list of available nested objects for a `Lead` is available [here](../../objects-1/lead.md#nested-objects).
+The list of available nested objects for a `Lead` is available [here](../../objects/lead.md#nested-objects).
 
 {% api-method method="put" host="https://api.crm.activix.ca/v2" path="/leads/:id" %}
 {% api-method-summary %}
@@ -398,15 +398,15 @@ The filters you wish to apply.
 
 This endpoint supports [pagination](../pagination.md) so you can request more objects, or iterate through all results.
 
-The list of available nested objects for a `Lead` is available [here](../../objects-1/lead.md#nested-objects).
+The list of available nested objects for a `Lead` is available [here](../../objects/lead.md#nested-objects).
 
 You may narrow the results based on specific parameters. See [here](../filtering.md) to learn more on filtering.
 
 | Parameter | Type | Description | [Wildcards](../filtering.md#wildcards) | [Operators](../filtering.md#operators) |
 | :--- | :--- | :--- | :--- | :--- |
 | `name` | string | Filter on the name or second contact of the lead. | ✅ | ❌ |
-| `email` | string | Filter on any of the associated [Email](../../objects-1/email.md) objects. | ✅ | ❌ |
-| `phone` | string | Filter on any of the associated [Phone](../../objects-1/phone.md) objects. | ✅ | ❌ |
+| `email` | string | Filter on any of the associated [Email](../../objects/email.md) objects. | ✅ | ❌ |
+| `phone` | string | Filter on any of the associated [Phone](../../objects/phone.md) objects. | ✅ | ❌ |
 | `created` | date | Filter on the creation date of the lead. | ❌ | ✅ |
 | `updated` | date | Filter on the last update date of the lead. | ❌ | ✅ |
 
