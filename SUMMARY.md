@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Version Information](version-information.md)
 
 ## API <a id="api-1"></a>
 

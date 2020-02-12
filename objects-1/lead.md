@@ -225,7 +225,11 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left"><code>civility</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The social title of the lead. Possible values are <b>mr</b>, <b>ms</b>, <b>miss</b>, <b>dr </b>or <b>me</b>.</td>
+      <td style="text-align:left">
+        <p>The social title of the lead. Possible values are <b>mr</b>, <b>ms</b>, <b>miss</b>, <b>dr </b>or <b>me</b>.</p>
+        <p><em>New values might be added in the future</em>
+        </p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>country</code>
@@ -242,13 +246,20 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
         <p>The method of creation of the lead. Possible values are <b>activix</b>, <b>auto_renewal</b>, <b>cdk</b>, <b>ct_wizard</b>, <b>ford_direct</b>, <b>manual</b>, <b>manual_import</b>, <b>n_c_i_digital</b>, <b>niotext</b>, <b>phone_system</b>, <b>porsche_digital</b>, <b>scan</b>, <b>scraper</b>, <b>serti</b> or <b>api</b>.</p>
         <p></p>
         <p>Automatically set to <b>api</b> when adding a lead resource. Cannot be updated.</p>
+        <p></p>
+        <p><em>New values might be added in the future</em>
+        </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>division</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">Division of the lead. Possible values are <b>new</b>, <b>used </b>or <b>service</b>.</td>
+      <td style="text-align:left">
+        <p>Division of the lead. Possible values are <b>new</b>, <b>used </b>or <b>service</b>.</p>
+        <p><em>New values might be added in the future</em>
+        </p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>first_name</code>
@@ -304,6 +315,8 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
         <p>A <code>null</code> value is considered <b>pending</b>.</p>
         <p><em>N.B. This value may be overridden by the result of a communication.</em>
         </p>
+        <p><em>New values might be added in the future</em>
+        </p>
       </td>
     </tr>
     <tr>
@@ -316,13 +329,21 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left"><code>second_contact_civility</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The social title of the second contact for the lead. Possible values are <b>mr</b>, <b>ms</b>, <b>miss</b>, <b>dr</b> or <b>me</b>.</td>
+      <td style="text-align:left">
+        <p>The social title of the second contact for the lead. Possible values are <b>mr</b>, <b>ms</b>, <b>miss</b>, <b>dr</b> or <b>me</b>.</p>
+        <p><em>New values might be added in the future</em>
+        </p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>segment</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The lead segment. Possible values are <b>conquest</b>, <b>promo</b>, <b>notSold</b>, <b>service</b>, <b>loyalty</b>, <b>reminder</b>, <b>endWarranty</b>, <b>endLcap</b>, <b>endLnette</b>, <b>csi</b>, <b>noShow </b>or <b>other</b>.</td>
+      <td style="text-align:left">
+        <p>The lead segment. Possible values are <b>conquest</b>, <b>promo</b>, <b>notSold</b>, <b>service</b>, <b>loyalty</b>, <b>reminder</b>, <b>endWarranty</b>, <b>endLcap</b>, <b>endLnette</b>, <b>csi</b>, <b>noShow </b>or <b>other</b>.</p>
+        <p><em>New values might be added in the future</em>
+        </p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>source</code>
@@ -334,44 +355,177 @@ The representation of a lead is called a `Lead` object. Leads are identified by 
       <td style="text-align:left"><code>status</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The lead status. Possible values are <b>duplicate</b>, <b>invalid</b> or <b>lost</b>.</td>
+      <td style="text-align:left">
+        <p>The lead status. Possible values are <b>duplicate</b>, <b>invalid</b> or <b>lost</b>.</p>
+        <p><em>New values might be added in the future</em>
+        </p>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>type</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The type of lead. Possible values are <b>email</b>, <b>phone</b>, <b>walk_in</b>, <b>loyalty</b>, <b>renewal</b>, <b>sms</b>, <b>event</b> or <b>pre_booking</b>.</td>
+      <td style="text-align:left">
+        <p>The type of lead. Possible values are <b>email</b>, <b>phone</b>, <b>walk_in</b>, <b>loyalty</b>, <b>renewal</b>, <b>sms</b>, <b>event</b> or <b>pre_booking</b>.</p>
+        <p><em>New values might be added in the future</em>
+        </p>
+      </td>
     </tr>
   </tbody>
 </table>### Service attributes
 
 Leads of type `service` may have these additional attributes.
 
-| **Attribute** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| `end_service_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing the end service date. |
-| `last_visit_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the last visit date. |
-| `next_visit_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the next visit date. |
-| `open_work_order_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the service open work order date. |
-| `planned_pick_up_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) presenting the service planned pick up date. |
-| `repair_date` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the vehicle was repaired. |
-|  |  |  |
-| `average_spending` | integer | The average spending per visit. |
-| `business` | boolean | Determine if the lead is for a business. |
-| `code` | string | Code from the dealer about the work done on the vehicle. |
-| `invoiced` | boolean | Determine if an invoice is created for services performed on the vehicle. |
-| `loyalty` | boolean | Determine if the loyalty program was presented. |
-| `odometer_last_visit` | integer | The vehicle mileage at the clients last visit to the dealership. |
-| `prepaid` | boolean | Client has prepaid for the services to be done on his vehicle. |
-| `reached_client` | boolean | The lead has been reached. |
-| `repair_order` | string | The repair order number. |
-| `service_cleaned` | boolean | The vehicle has been cleaned for the service. |
-| `service_interval_km` | integer | The vehicle service interval in km. Possible values are **1000**, **5000**, **6000**, **8000**, **12000**, **16000**, **18000**, **20000**, **24000** or **25000.** |
-| `service_monthly_km` | integer | Kilometers allowed per month. |
-| `storage` | string | Information about where the vehicle is stored for service. |
-| `work_order` | string | The work order number for the vehicle service. |
-
-
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>Attribute</b>
+      </th>
+      <th style="text-align:left"><b>Type</b>
+      </th>
+      <th style="text-align:left"><b>Description</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>end_service_date</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+        the end service date.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>last_visit_date</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
+        the last visit date.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>next_visit_date</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
+        the next visit date.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>open_work_order_date</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
+        the service open work order date.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>planned_pick_up_date</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
+        the service planned pick up date.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>repair_date</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+        when the vehicle was repaired.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>average_spending</code>
+      </td>
+      <td style="text-align:left">integer</td>
+      <td style="text-align:left">The average spending per visit.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>business</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">Determine if the lead is for a business.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>code</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">Code from the dealer about the work done on the vehicle.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>invoiced</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">Determine if an invoice is created for services performed on the vehicle.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>loyalty</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">Determine if the loyalty program was presented.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>odometer_last_visit</code>
+      </td>
+      <td style="text-align:left">integer</td>
+      <td style="text-align:left">The vehicle mileage at the clients last visit to the dealership.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>prepaid</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">Client has prepaid for the services to be done on his vehicle.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>reached_client</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">The lead has been reached.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>repair_order</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">The repair order number.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>service_cleaned</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">The vehicle has been cleaned for the service.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>service_interval_km</code>
+      </td>
+      <td style="text-align:left">integer</td>
+      <td style="text-align:left">
+        <p>The vehicle service interval in km. Possible values are <b>1000</b>, <b>5000</b>, <b>6000</b>, <b>8000</b>, <b>12000</b>, <b>16000</b>, <b>18000</b>, <b>20000</b>, <b>24000</b> or <b>25000.</b>
+        </p>
+        <p><em>New values might be added in the future</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>service_monthly_km</code>
+      </td>
+      <td style="text-align:left">integer</td>
+      <td style="text-align:left">Kilometers allowed per month.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>storage</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">Information about where the vehicle is stored for service.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>work_order</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">The work order number for the vehicle service.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Nested Objects
 

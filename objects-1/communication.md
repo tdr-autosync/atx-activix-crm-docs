@@ -15,20 +15,50 @@ A communication can be added or updated based on an existing lead ID.
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the communication was created. |
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the communication was last updated. |
 |  |  |  |
-| `method` | string | Possible values are **phone**, **email** or **sms**. |
+| `method` | string | Possible values are **phone**, **email** or **sms**.  _New values might be added in the future_ |
 | `type` | string | Possible values are **outgoing** or **incoming**. |
 
 ### Call attributes
 
 Communications with method `phone` may have these additional attributes.
 
-| **Attribute** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| `call_duration` | integer | The duration of the call \(in seconds\). |
-| `call_phone` | string | The client's phone number in [E.164](https://www.twilio.com/docs/glossary/what-e164) format. |
-| `call_status` | string | The current status of the call. Possible value are **answered**, **attempted**, **calling**, **error**, **interrupted**, **pending** or **unanswered** \(see below for more details\). |
-
-### Possible `call_status` values
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b>Attribute</b>
+      </th>
+      <th style="text-align:left"><b>Type</b>
+      </th>
+      <th style="text-align:left"><b>Description</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>call_duration</code>
+      </td>
+      <td style="text-align:left">integer</td>
+      <td style="text-align:left">The duration of the call (in seconds).</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>call_phone</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">The client&apos;s phone number in <a href="https://www.twilio.com/docs/glossary/what-e164">E.164</a> format.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>call_status</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">
+        <p>The current status of the call. Possible value are <b>answered</b>, <b>attempted</b>, <b>calling</b>, <b>error</b>, <b>interrupted</b>, <b>pending </b>or <b>unanswered</b> (see
+          below for more details).</p>
+        <p><em>New values might be added in the future</em>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>### Possible `call_status` values
 
 | Value | Description |
 | :--- | :--- |
