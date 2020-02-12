@@ -13,7 +13,7 @@
   * [Phone](api-1/resources/phone.md)
   * [Search](api-1/resources/search.md)
   * [Vehicle](api-1/resources/vehicle.md)
-* [Nested Objects](api-1/relations.md)
+* [Nested Objects](api-1/nested-objects.md)
 * [Filtering](api-1/filtering.md)
 * [Pagination](api-1/pagination.md)
 * [Errors](api-1/errors.md)

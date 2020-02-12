@@ -421,7 +421,7 @@ Leads of type `wanted` may have these additional attributes.
 
 ## Nested Objects
 
-The `Vehicle` object may have the following [nested objects](../api-1/relations.md).
+The `Vehicle` object may have the following [nested objects](../api-1/nested-objects.md).
 
 | **Attribute** | **Type** | **Description** |
 | :--- | :--- | :--- |

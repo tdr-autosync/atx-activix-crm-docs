@@ -2,13 +2,7 @@
 
 This documentation will help you understand how third-party services can interact with Activix CRM and vice-versa.
 
-This documentation is constantly updated to reflect the latest changes and features in Activix CRM. Breaking changes will only be introduced in new versions of the API.
-
-When a new version is introduced, a new section of the documentation will be added with a release date, an upgrade guide from the previous version as well as any changes between it and the previous version
-
-API users will be notified of the new version and of the deprecation date of the previous version\(s\). It is our intent to provide support for previous versions for at least 6 months.   
-  
-Users that have access to a version will automatically gain access to the most recent one but will not have access to previous one \(unless specifically granted for special circumstances\). This means that if a user was added when v3 is the main version, the user will have access to v4, v5 etc, but will never have access to v2.
+This documentation is updated to reflect the latest changes and features in Activix CRM. Breaking changes will only be introduced in new versions of the API. Go [here](version-information.md) to learn more.
 
 ## API
 

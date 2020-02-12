@@ -529,7 +529,7 @@ Leads of type `service` may have these additional attributes.
 
 ## Nested Objects
 
-The `Lead` object may have the following [nested objects](../api-1/relations.md).
+The `Lead` object may have the following [nested objects](../api-1/nested-objects.md).
 
 <table>
   <thead>
