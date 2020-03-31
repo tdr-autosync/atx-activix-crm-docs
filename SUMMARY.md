@@ -2,8 +2,8 @@
 
 * [Introduction](README.md)
 * [Version Information](version-information.md)
-* [Integration Guidelines](integrations-examples/README.md)
-  * [Phone system](integrations-examples/phone-system.md)
+* [Integration Guidelines](integration-guidelines/README.md)
+  * [Phone system](integration-guidelines/phone-system.md)
 
 ## API
 
