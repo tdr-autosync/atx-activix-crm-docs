@@ -23,8 +23,8 @@ List of custom tags for the provider category.
 | :--- | :--- | :--- |
 | `<form>` | free text | Name of the form that the lead filled to generate the request. |
 | `<referer>` | free text | Name of the website \(or service\) that referred the lead. E.g. Google |
-| `<term>` | free text | Exact word or set of words that the lead searched. |
-| `<keywork>` | free text | Word or set of words that matched the searched term. |
+| `<searchterm>` | free text | Exact word or set of words that the lead searched. |
+| `<keyword>` | free text | Word or set of words that matched the searched term. |
 | `<navigationhistory>` | free text | Navigation history of the lead across the website |
 
 ## Example
@@ -120,7 +120,7 @@ This is an example that may help you better understand the format of the ADF sta
             <url>https://abcmotors.com/volvo/xc90</url>
             <form>Financing request</form>
             <referer>Google</referer>
-            <term>Volvo XC</term>
+            <searchterm>Volvo XC</searchterm>
             <keyword>Volvo Laval</keyword>
             <navigationhistory>
                 04/28/2020 - 22:10:25 - https://abcmotors.com
