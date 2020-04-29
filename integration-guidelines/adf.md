@@ -63,8 +63,7 @@ List of custom tags for the finance sub-category that is part of the vehicle cat
       <td style="text-align:left"><code>&lt;mileageallowance&gt;</code>
       </td>
       <td style="text-align:left"></td>
-      <td style="text-align:left"><em>number</em>
-      </td>
+      <td style="text-align:left">number</td>
       <td style="text-align:left">Allowable mileage for a one year period.</td>
       <td style="text-align:left">April 2020</td>
     </tr>
@@ -90,7 +89,7 @@ List of custom tags for the provider category.
 | `<referer>` | free text | Name of the website \(or service\) that referred the lead. E.g. Google | April 2020 |
 | `<searchterm>` | free text | Exact word or set of words that the lead searched. | April 2020 |
 | `<keyword>` | free text | Word or set of words that matched the searched term. | April 2020 |
-| `<navigationhistory>` | free text | Navigation history of the lead across the website | April 2020 |
+| `<navigationhistory>` | free text | Navigation history of the lead across the website. | April 2020 |
 
 ## Example
 
