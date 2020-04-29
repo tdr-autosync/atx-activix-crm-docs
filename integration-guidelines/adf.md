@@ -31,7 +31,7 @@ List of custom tags for the provider category.
 
 This is an example that may help you better understand the format of the ADF standard.
 
-```text
+```markup
 <?xml version="1.0" encoding="utf-8"?>
 <?adf version="1.0"?>
 <adf>
@@ -123,13 +123,11 @@ This is an example that may help you better understand the format of the ADF sta
             <term>Volvo XC</term>
             <keyword>Volvo Laval</keyword>
             <navigationhistory>
-                04/28/2020 - 22:10:25 - /
+                04/28/2020 - 22:10:25 - https://abcmotors.com
                 04/28/2020 - 22:11:03 - [Popup open] EMAILID_AvailabilityUsed
                 04/28/2020 - 22:11:03 - [Popup close] EMAILID_AvailabilityUsed
                 04/28/2020 - 22:11:03 - /new/xc90 MENU_clicked_URL
             </navigationhistory>
-            <email>support@activix.ca</email>
-            <phone type="phone" time="day">+18664306767</phone>
         </provider>
     </prospect>
 </adf>
