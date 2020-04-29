@@ -141,6 +141,7 @@ This is an example that may help you better understand the format of the ADF sta
                 <term>24</term>
                 <rate>3.9</rate>
                 <frequency>bi-weekly</frequency>
+                <mileageallowance units="km">20000</mileageallowance>
             </finance>
             <comments>Demo car</comments>
         </vehicle>
