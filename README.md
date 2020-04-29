@@ -1,41 +1,35 @@
 # Introduction
 
-This documentation will help you understand how third-party services can interact with Activix CRM and vice-versa.
+This documentation will help you understand how third-party services can interact with Activix CRM.
 
-This documentation is updated to reflect the latest changes and features in Activix CRM. Breaking changes will only be introduced in new versions of the API. Go [here](version-information.md) to learn more.
+This documentation is updated to reflect the latest changes and features in Activix CRM.  
+Breaking changes will **only** be introduced in new versions of the API.
+
+{% page-ref page="version-information.md" %}
 
 ## API
 
-The Activix CRM API is based on the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) standard. We try to follow the common standards for API communication as much as possible.
+The Activix CRM API is organized around the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) standard.  
+It is the recommended way to interact with the CRM.
 
-To get started quickly, we suggest reading the Resources documentation here:
+To get started quickly, we suggest reading the [Resources](api/resources/) section.
 
 {% page-ref page="api/resources/" %}
 
-## Objects
+### Webhooks
 
-Every piece of data in the CRM is represented as an object \(also called `entity`\).  
-The `OBJECTS` section explains what each object in the CRM consists of.
+The Activix CRM has the ability to send data to third-party services in a variety of ways.  
+The [Webhooks](api/webhooks/) section explains how data can pushed to a web service in real time.
 
-### Blank fields
+{% page-ref page="api/webhooks/" %}
 
-Blank fields will always be included with the value `null` \(they are never omitted\).
+## Integration Guidelines
 
-### Dates
+There is a few alternative methods to integrate with Activix CRM. We provide guidelines for each of these methods in the Integration Guidelines section.
 
-Unless otherwise specified, all timestamps are in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+{% page-ref page="integration-guidelines/adf.md" %}
 
-```text
-YYYY-MM-DDTHH:MM:SSZ
-```
-
-We use the UTC timezone for all timestamps.
-
-## Webhooks
-
-The Activix CRM has the ability to send data to third-party services in a variety of ways. The `WEBHOOKS` section explains how data can pushed to a web service in real time.
-
-{% page-ref page="webhooks/endpoints/" %}
+{% page-ref page="integration-guidelines/phone-system.md" %}
 
 
 

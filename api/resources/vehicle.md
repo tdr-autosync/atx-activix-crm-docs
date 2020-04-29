@@ -1,6 +1,6 @@
 # Vehicle
 
-The following describes the available resources for a Vehicle. Check out the [Vehicle object](../../objects/vehicle.md) documentation for a complete list of attributes.
+The following describes the available resources for a Vehicle. Check out the [Vehicle object](../objects/vehicle.md) documentation for a complete list of attributes.
 
 {% api-method method="post" host="https://api.crm.activix.ca/v2" path="/lead-vehicles" %}
 {% api-method-summary %}

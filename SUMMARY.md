@@ -2,12 +2,11 @@
 
 * [Introduction](README.md)
 * [Version Information](version-information.md)
-* [Integration Guidelines](integration-guidelines/README.md)
-  * [Phone system](integration-guidelines/phone-system.md)
 
-## API
+## API Reference <a id="api"></a>
 
 * [Authentication](api/authentication.md)
+* [Errors](api/errors.md)
 * [Resources](api/resources/README.md)
   * [Communication](api/resources/communication.md)
   * [Email](api/resources/email.md)
@@ -15,27 +14,26 @@
   * [Phone](api/resources/phone.md)
   * [Search](api/resources/search.md)
   * [Vehicle](api/resources/vehicle.md)
+* [Objects](api/objects/README.md)
+  * [Account](api/objects/account.md)
+  * [Communication](api/objects/communication.md)
+  * [Email](api/objects/email.md)
+  * [Event](api/objects/event.md)
+  * [Lead](api/objects/lead.md)
+  * [Phone](api/objects/phone.md)
+  * [Product](api/objects/product.md)
+  * [Task](api/objects/task.md)
+  * [User](api/objects/user.md)
+  * [Vehicle](api/objects/vehicle.md)
 * [Nested Objects](api/nested-objects.md)
 * [Filtering](api/filtering.md)
 * [Pagination](api/pagination.md)
-* [Errors](api/errors.md)
+* [Webhooks](api/webhooks/README.md)
+  * [Lead](api/webhooks/lead.md)
+  * [Vehicle](api/webhooks/vehicle.md)
 
-## Objects
+## Integration Guidelines
 
-* [Account](objects/account.md)
-* [Communication](objects/communication.md)
-* [Email](objects/email.md)
-* [Event](objects/event.md)
-* [Lead](objects/lead.md)
-* [Phone](objects/phone.md)
-* [Product](objects/product.md)
-* [Task](objects/task.md)
-* [User](objects/user.md)
-* [Vehicle](objects/vehicle.md)
-
-## Webhooks
-
-* [Webhook Endpoints](webhooks/endpoints/README.md)
-  * [Lead](webhooks/endpoints/lead.md)
-  * [Vehicle](webhooks/endpoints/vehicle.md)
+* [Auto-lead Data Format \(ADF\)](integration-guidelines/adf.md)
+* [Phone system](integration-guidelines/phone-system.md)
 
