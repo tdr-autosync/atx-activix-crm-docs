@@ -15,17 +15,82 @@ The official specifications for the format may be found [here](http://adfxml.inf
 We added a few tags to add support for data that is not normally included in the format.  
 You will find details about theses tags in the following tables.
 
-#### Provider information
+#### Finance information
+
+List of custom tags for the finance sub-category that is part of the vehicle category.
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Tag</th>
+      <th style="text-align:left">Parameters</th>
+      <th style="text-align:left">Valid Values</th>
+      <th style="text-align:left">Purpose</th>
+      <th style="text-align:left">Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>&lt;term&gt;</code>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">number</td>
+      <td style="text-align:left">Length of the finance agreement in months.</td>
+      <td style="text-align:left">April 2020</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>&lt;rate&gt;</code>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">number</td>
+      <td style="text-align:left">Annual percentage rate of the finance agreement.</td>
+      <td style="text-align:left">April 2020</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>&lt;frequency&gt;</code>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p><em>monthly</em>
+          <br />semi-monthly
+          <br />bi-weekly</p>
+        <p>weekly</p>
+      </td>
+      <td style="text-align:left">Payment frequency of the finance agreement.</td>
+      <td style="text-align:left">April 2020</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>&lt;mileageallowance&gt;</code>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"><em>number</em>
+      </td>
+      <td style="text-align:left">Allowable mileage for a one year period.</td>
+      <td style="text-align:left">April 2020</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">units</td>
+      <td style="text-align:left">
+        <p><em>km</em>
+        </p>
+        <p>mi</p>
+      </td>
+      <td style="text-align:left">Unit for the allowable mileage.</td>
+      <td style="text-align:left">April 2020</td>
+    </tr>
+  </tbody>
+</table>#### Provider information
 
 List of custom tags for the provider category.
 
-| Tag | Valid Values | Purpose |
-| :--- | :--- | :--- |
-| `<form>` | free text | Name of the form that the lead filled to generate the request. |
-| `<referer>` | free text | Name of the website \(or service\) that referred the lead. E.g. Google |
-| `<searchterm>` | free text | Exact word or set of words that the lead searched. |
-| `<keyword>` | free text | Word or set of words that matched the searched term. |
-| `<navigationhistory>` | free text | Navigation history of the lead across the website |
+| Tag | Valid Values | Purpose | Updated |
+| :--- | :--- | :--- | :--- |
+| `<form>` | free text | Name of the form that the lead filled to generate the request. | April 2018 |
+| `<referer>` | free text | Name of the website \(or service\) that referred the lead. E.g. Google | April 2020 |
+| `<searchterm>` | free text | Exact word or set of words that the lead searched. | April 2020 |
+| `<keyword>` | free text | Word or set of words that matched the searched term. | April 2020 |
+| `<navigationhistory>` | free text | Navigation history of the lead across the website | April 2020 |
 
 ## Example
 
@@ -60,8 +125,6 @@ This is an example that may help you better understand the format of the ADF sta
                 <exteriorcolor>Gray</exteriorcolor>
                 <preference>2</preference>
             </colorcombination>
-            <price type="quote" currency="CAD">59999.99</price>
-            <pricecomments>Anniversary Edition</pricecomments>
             <option>
                 <optionname>Sport seats</optionname>
                 <manufacturercode>F0823343</manufacturercode>
@@ -69,10 +132,15 @@ This is an example that may help you better understand the format of the ADF sta
                 <weighting>+50</weighting>
                 <price type="msrp" currency="CAD">1460.99</price>
             </option>
+            <price type="msrp" currency="CAD">59999.99</price>
+            <pricecomments>Anniversary Edition</pricecomments>
             <finance>
                 <method>finance</method>
                 <amount type="downpayment" currency="CAD">10000</amount>
-                <amount type="monthly" currency="CAD">850.25</amount>
+                <amount type="monthly" currency="CAD">425.25</amount>
+                <term>24</term>
+                <rate>3.9</rate>
+                <frequency>bi-weekly</frequency>
             </finance>
             <comments>Demo car</comments>
         </vehicle>
