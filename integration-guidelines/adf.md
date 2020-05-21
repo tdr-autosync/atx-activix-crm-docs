@@ -46,7 +46,7 @@ List of custom parameters for the parent prospect tag \(in addition to the exist
         </p>
         <p>order</p>
       </td>
-      <td style="text-align:left">Type of request. Order requests are managed separately from quote request.</td>
+      <td style="text-align:left">Type of request. Order requests are managed separately from quote requests.</td>
       <td
       style="text-align:left">May 2020</td>
     </tr>
@@ -137,7 +137,7 @@ This is an example that may help you better understand the format of the ADF sta
 <?xml version="1.0" encoding="utf-8"?>
 <?adf version="1.0"?>
 <adf>
-    <prospect status="new">
+    <prospect status="new" type="quote">
         <id sequence="1" source="Activix">12345</id>
         <requestdate>2020-04-28T15:30:20-05:00</requestdate>
         <vehicle interest="buy" status="new">
