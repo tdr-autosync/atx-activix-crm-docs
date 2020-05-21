@@ -15,6 +15,44 @@ The official specifications for the format may be found [here](http://adfxml.inf
 We added a few tags to add support for data that is not normally included in the format.  
 You will find details about theses tags in the following tables.
 
+#### Prospect information
+
+List of custom parameters for the parent prospect tag \(in addition to the existing `status` parameter\).
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Tag</th>
+      <th style="text-align:left">Parameter</th>
+      <th style="text-align:left">Valid Values</th>
+      <th style="text-align:left">Purpose</th>
+      <th style="text-align:left">Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>&lt;prospect&gt;</code>
+      </td>
+      <td style="text-align:left">*</td>
+      <td style="text-align:left">*</td>
+      <td style="text-align:left">*</td>
+      <td style="text-align:left">*</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">type</td>
+      <td style="text-align:left">
+        <p><em>quote</em>
+        </p>
+        <p>order</p>
+      </td>
+      <td style="text-align:left">Type of request. Order requests are managed separately from quote request.</td>
+      <td
+      style="text-align:left">May 2020</td>
+    </tr>
+  </tbody>
+</table>_\* See official specifications_
+
 #### Finance information
 
 List of custom tags for the finance sub-category that is part of the vehicle category.
@@ -83,13 +121,13 @@ List of custom tags for the finance sub-category that is part of the vehicle cat
 
 List of custom tags for the provider category.
 
-| Tag | Valid Values | Purpose | Updated |
-| :--- | :--- | :--- | :--- |
-| `<form>` | free text | Name of the form that the lead filled to generate the request. | April 2018 |
-| `<referer>` | free text | Name of the website \(or service\) that referred the lead. E.g. Google | April 2020 |
-| `<searchterm>` | free text | Exact word or set of words that the lead searched. | April 2020 |
-| `<keyword>` | free text | Word or set of words that matched the searched term. | April 2020 |
-| `<navigationhistory>` | free text | Navigation history of the lead across the website. | April 2020 |
+| Tag | Parameters | Valid Values | Purpose | Updated |
+| :--- | :--- | :--- | :--- | :--- |
+| `<form>` |  | free text | Name of the form that the lead filled to generate the request. | April 2018 |
+| `<referer>` |  | free text | Name of the website \(or service\) that referred the lead. E.g. Google | April 2020 |
+| `<searchterm>` |  | free text | Exact word or set of words that the lead searched. | April 2020 |
+| `<keyword>` |  | free text | Word or set of words that matched the searched term. | April 2020 |
+| `<navigationhistory>` |  | free text | Navigation history of the lead across the website. | April 2020 |
 
 ## Example
 
