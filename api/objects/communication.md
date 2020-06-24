@@ -59,7 +59,9 @@ Communications with method `phone` may have these additional attributes.
       </td>
     </tr>
   </tbody>
-</table>### Possible `call_status` values
+</table>
+
+### Possible `call_status` values
 
 | Value | Description |
 | :--- | :--- |

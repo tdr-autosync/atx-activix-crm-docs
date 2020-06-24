@@ -31,7 +31,9 @@ The response will also contain a `links` and `meta` section that will help you n
       </td>
     </tr>
   </tbody>
-</table>| Response Sections |  |
+</table>
+
+| Response Sections |  |
 | :--- | :--- |
 | `data` | Collection of objects representing the result of the request. |
 | `links` | Relevant links that you can directly use to navigate across pages. |

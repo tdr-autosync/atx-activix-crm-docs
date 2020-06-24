@@ -51,7 +51,9 @@ List of custom parameters for the parent prospect tag \(in addition to the exist
       style="text-align:left">May 2020</td>
     </tr>
   </tbody>
-</table>_\* See official specifications_
+</table>
+
+_\* See official specifications_
 
 #### Finance information
 
@@ -117,7 +119,9 @@ List of custom tags for the finance sub-category that is part of the vehicle cat
       <td style="text-align:left">April 2020</td>
     </tr>
   </tbody>
-</table>#### Provider information
+</table>
+
+#### Provider information
 
 List of custom tags for the provider category.
 

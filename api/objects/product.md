@@ -93,3 +93,4 @@ The representation of a product is called a `Product` object.
     </tr>
   </tbody>
 </table>
+

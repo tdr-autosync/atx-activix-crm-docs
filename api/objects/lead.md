@@ -367,13 +367,15 @@ Leads are identified by a unique incremental ID.
       </td>
       <td style="text-align:left">string</td>
       <td style="text-align:left">
-        <p>The type of lead. Possible values are <b>email</b>, <b>phone</b>, <b>walk_in</b>, <b>loyalty</b>, <b>renewal</b>, <b>sms</b>, <b>event</b> or <b>pre_booking</b>.</p>
+        <p>The type of lead. Possible values are <b>email</b>, <b>phone</b>, <b>walk_in</b>, <b>loyalty</b>, <b>renewal</b>, <b>sms</b>, <b>event,</b>  <b>pre_booking </b>or<b> web_order</b>.</p>
         <p><em>New values might be added in the future.</em>
         </p>
       </td>
     </tr>
   </tbody>
-</table>### Service attributes
+</table>
+
+### Service attributes
 
 Leads of type `service` may have these additional attributes.
 
@@ -528,6 +530,8 @@ Leads of type `service` may have these additional attributes.
   </tbody>
 </table>
 
+
+
 ## Nested Objects
 
 The `Lead` object may have the following [nested objects](../nested-objects.md).
@@ -636,6 +640,8 @@ The `Lead` object may have the following [nested objects](../nested-objects.md).
     </tr>
   </tbody>
 </table>
+
+
 
 
 

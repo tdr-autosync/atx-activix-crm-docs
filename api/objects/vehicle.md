@@ -405,7 +405,9 @@ Vehicles are identified by a unique incremental ID.
       <td style="text-align:left">Four-digit number representing the year of the vehicle</td>
     </tr>
   </tbody>
-</table>### Wanted vehicle attributes
+</table>
+
+### Wanted vehicle attributes
 
 Leads of type `wanted` may have these additional attributes.
 

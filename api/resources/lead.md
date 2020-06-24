@@ -31,7 +31,7 @@ Should be `application/json`.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-The type of lead possible values are **email**, **phone**, **walk\_in**, **loyalty**, **renewal**, **sms**, **event** or **pre\_booking**.
+The type of lead possible values are **email**, **phone**, **walk\_in**, **loyalty**, **renewal**, **sms**, **event,** **pre\_booking** or **web\_order**.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
