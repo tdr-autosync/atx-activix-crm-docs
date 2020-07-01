@@ -44,5 +44,3 @@ _List all leads updated on September 15, 2019_
 /leads?filter[updated]=2019-09-15
 ```
 
-
-

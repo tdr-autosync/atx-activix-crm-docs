@@ -409,6 +409,7 @@ You may narrow the results based on specific parameters. See [here](../filtering
 | `phone` | string | Filter on any of the associated [Phone](../objects/phone.md) objects. | ✅ | ❌ |
 | `created` | date | Filter on the creation date of the lead. | ❌ | ✅ |
 | `updated` | date | Filter on the last update date of the lead. | ❌ | ✅ |
+| `sale_date` | date | Filter on the sale date of the lead. | ❌ | ✅ |
 
 {% api-method method="post" host="https://api.crm.activix.ca/v2" path="/screenpop" %}
 {% api-method-summary %}
