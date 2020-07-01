@@ -115,6 +115,13 @@ Leads are identified by a unique incremental ID.
         the vehicle delivery date.</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>home_presented_date</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+        when the customer received a home visit from the dealership.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>paperwork_date</code>
       </td>
       <td style="text-align:left">string</td>
