@@ -407,8 +407,8 @@ You may narrow the results based on specific parameters. See [here](../filtering
 | `name` | string | Filter on the name or second contact of the lead. | ✅ | ❌ |
 | `email` | string | Filter on any of the associated [Email](../objects/email.md) objects. | ✅ | ❌ |
 | `phone` | string | Filter on any of the associated [Phone](../objects/phone.md) objects. | ✅ | ❌ |
-| `created` | date | Filter on the creation date of the lead. | ❌ | ✅ |
-| `updated` | date | Filter on the last update date of the lead. | ❌ | ✅ |
+| `created_at` | date | Filter on the creation date of the lead. | ❌ | ✅ |
+| `updated_at` | date | Filter on the last update date of the lead. | ❌ | ✅ |
 | `sale_date` | date | Filter on the sale date of the lead. | ❌ | ✅ |
 
 {% api-method method="post" host="https://api.crm.activix.ca/v2" path="/screenpop" %}

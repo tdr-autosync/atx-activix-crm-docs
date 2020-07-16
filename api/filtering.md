@@ -35,12 +35,12 @@ The use of wildcards may impact the performance of the request. We **strongly** 
 _List all leads created between the 1st and 10th September 2019_
 
 ```text
-/leads?filter[created][gte]=2019-09-01&filter[created][lte]=2019-09-10
+/leads?filter[created_at][gte]=2019-09-01&filter[created][lte]=2019-09-10
 ```
 
 _List all leads updated on September 15, 2019_
 
 ```text
-/leads?filter[updated]=2019-09-15
+/leads?filter[updated_at]=2019-09-15
 ```
 
