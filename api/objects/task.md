@@ -106,3 +106,12 @@ The representation of a task is called a `Task` object. Tasks are identified by 
   </tbody>
 </table>
 
+## Nested Objects
+
+The `Task` object may have the following [nested objects](../nested-objects.md).
+
+| Attribute | Type | Description |
+| :--- | :--- | :--- |
+| lead | object | [Lead object](lead.md) representing the associated lead. |
+| owner | object | [User object](user.md) representing the associated task owner. |
+

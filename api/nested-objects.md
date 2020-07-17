@@ -6,7 +6,7 @@ You can include multiple nested objects at once by identifying multiple items in
 
 #### Usage Example
 
-In the following example, the nested advisor and phones objects will be included in the resulted leads.
+In the following example, the nested emails and phones objects will be included in the resulted leads.
 
 ```text
 /leads?include[]=emails&include[]=phones

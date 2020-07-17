@@ -132,5 +132,12 @@ Events are identified by a unique incremental ID.
   </tbody>
 </table>
 
+## Nested Objects
 
+The `Event` object may have the following [nested objects](../nested-objects.md).
+
+| Attribute | Type | Description |
+| :--- | :--- | :--- |
+| lead | object | [Lead object](lead.md) representing the associated lead. |
+| owner | object | [User object](user.md) representing the associated event owner. |
 
