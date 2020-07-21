@@ -21,7 +21,7 @@ A communication can be added or updated based on an existing lead ID.
 
 ### Call attributes
 
-Communications with method `phone` may have these additional attributes.
+Communications with method `phone` may have these additional attributes:
 
 <table>
   <thead>
@@ -61,7 +61,53 @@ Communications with method `phone` may have these additional attributes.
   </tbody>
 </table>
 
-### Possible `call_status` values
+### Email attributes
+
+Communications with method `email` may have these additional attributes:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Attribute</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>email_subject</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">
+        <p>The subject of the email.</p>
+        <p><em>Can&apos;t be retrieved for privacy reasons.</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>email_body</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">
+        <p>The body of the email.</p>
+        <p><em>Can&apos;t be retrieved for privacy reasons.</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>email_user</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">
+        <p>The user&apos;s email address used in the email.</p>
+        <p><em>Can&apos;t be retrieved for privacy reasons.</em>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Possible `call_status` values
 
 | Value | Description |
 | :--- | :--- |
