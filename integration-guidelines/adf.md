@@ -128,7 +128,7 @@ List of custom tags for the provider category.
 | Tag | Parameters | Valid Values | Purpose | Updated |
 | :--- | :--- | :--- | :--- | :--- |
 | `<form>` |  | free text | Name of the form that the lead filled to generate the request. | April 2018 |
-| `<referer>` |  | free text | Name of the website \(or service\) that referred the lead. E.g. Google | April 2020 |
+| `<referrer>` |  | free text | Name of the website \(or service\) that referred the lead. E.g. Google | April 2020 |
 | `<searchterm>` |  | free text | Exact word or set of words that the lead searched. | April 2020 |
 | `<keyword>` |  | free text | Word or set of words that matched the searched term. | April 2020 |
 | `<navigationhistory>` |  | free text | Navigation history of the lead across the website. | April 2020 |
@@ -229,7 +229,7 @@ This is an example that may help you better understand the format of the ADF sta
             <phone type="phone" time="day">+18664306767</phone>
             <url>https://abcmotors.com/volvo/xc90</url>
             <form>Financing request</form>
-            <referer>Google</referer>
+            <referrer>Google</referrer>
             <searchterm>Volvo XC</searchterm>
             <keyword>Volvo Laval</keyword>
             <navigationhistory>
