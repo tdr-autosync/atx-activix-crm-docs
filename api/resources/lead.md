@@ -29,9 +29,16 @@ Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
+{% api-method-query-parameters %}
+{% api-method-parameter name="trigger\_alerts" type="boolean" required=false %}
+If `true`, triggers the new lead alert \(like a normal request would\).  
+Default is `false`.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+
 {% api-method-body-parameters %}
 {% api-method-parameter name="type" type="string" required=true %}
-The type of lead possible values are **email**, **phone**, **walk\_in**, **loyalty**, **renewal**, **sms**, **event,** **pre\_booking** or **web\_order**.
+The type of lead possible values are **email**, **phone**, **walk\_in**, **loyalty**, **renewal**, **sms**, **event**, **pre\_booking** or **web\_order**.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
