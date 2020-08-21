@@ -14,7 +14,12 @@ New API users will automatically gain access to the most recent version but will
 | v1 | March 2, 2016 | October 31, 2018 |
 | v2 | April 10, 2018 | - |
 
+### Backwards-compatible changes
 
+Activix considers the following changes to be backwards-compatible:
 
-
+* Adding new API resources.
+* Adding new optional request parameters to existing API methods.
+* Adding new properties to existing API responses.
+* Changing the order of properties in existing API responses.
 
