@@ -283,6 +283,12 @@ Leads are identified by a unique incremental ID.
         the gender of the lead.</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>keyword</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">Keyword used to acquire the lead from a search campaign.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>last_name</code>
       </td>
       <td style="text-align:left">string</td>
@@ -294,6 +300,12 @@ Leads are identified by a unique incremental ID.
       <td style="text-align:left">string</td>
       <td style="text-align:left">Two-letter <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO code</a> representing
         the locale (language) of the lead.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>navigation_history</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">Navigation history of the lead before filling the form.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>postal_code</code>
@@ -315,6 +327,12 @@ Leads are identified by a unique incremental ID.
       <td style="text-align:left">Rating about the quality of the lead. Must be between 1-5.</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>referrer</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">Referrer of the lead (e.g., Google)</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>result</code>
       </td>
       <td style="text-align:left">string</td>
@@ -328,10 +346,18 @@ Leads are identified by a unique incremental ID.
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>search_term</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">Specific words that the lead typed in the search input that led him to
+        fill the form.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>second_contact</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">Optional second contact for the lead. May be a person or a business.</td>
+      <td style="text-align:left">Optional second contact for the lead. May be the name of a person or a
+        business.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>second_contact_civility</code>
