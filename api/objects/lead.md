@@ -224,6 +224,12 @@ Leads are identified by a unique incremental ID.
       <td style="text-align:left">Address (line 2).</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>campaign</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">The ad campaign of the lead.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>city</code>
       </td>
       <td style="text-align:left">string</td>

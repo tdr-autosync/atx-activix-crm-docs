@@ -63,7 +63,7 @@ List of custom tags for the finance sub-category that is part of the vehicle cat
   <thead>
     <tr>
       <th style="text-align:left">Tag</th>
-      <th style="text-align:left">Parameters</th>
+      <th style="text-align:left">Params</th>
       <th style="text-align:left">Valid Values</th>
       <th style="text-align:left">Purpose</th>
       <th style="text-align:left">Updated</th>
@@ -125,13 +125,14 @@ List of custom tags for the finance sub-category that is part of the vehicle cat
 
 List of custom tags for the provider category.
 
-| Tag | Parameters | Valid Values | Purpose | Updated |
+| Tag | Params | Valid Values | Purpose | Updated |
 | :--- | :--- | :--- | :--- | :--- |
 | `<form>` |  | free text | Name of the form that the lead filled to generate the request. | April 2018 |
 | `<referrer>` |  | free text | Name of the website \(or service\) that referred the lead. E.g. Google | April 2020 |
 | `<searchterm>` |  | free text | Exact word or set of words that the lead searched. | April 2020 |
 | `<keyword>` |  | free text | Word or set of words that matched the searched term. | April 2020 |
 | `<navigationhistory>` |  | free text | Navigation history of the lead across the website. | April 2020 |
+| `<campaign>` |  | free text | Name of the ad campaign \(SEM\) that generated the lead. | Sept. 2020 |
 
 ## Example
 
@@ -230,6 +231,7 @@ This is an example that may help you better understand the format of the ADF sta
             <url>https://abcmotors.com/volvo/xc90</url>
             <form>Financing request</form>
             <referrer>Google</referrer>
+            <campaign>Red Tag Sale</campaign>
             <searchterm>Volvo XC</searchterm>
             <keyword>Volvo Laval</keyword>
             <navigationhistory>
