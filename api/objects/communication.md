@@ -16,7 +16,7 @@ A communication can be added or updated based on an existing lead ID.
 | `created_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the communication was created. |
 | `updated_at` | string | [ISO datetime](https://en.wikipedia.org/wiki/ISO_8601) representing when the communication was last updated. |
 |  |  |  |
-| `method` | string | Possible values are **phone**, **email** or **sms**.  _New values might be added in the future._ |
+| `method` | string | Possible values are **phone**, **email**, **sms** or **video**.  _New values might be added in the future._ |
 | `type` | string | Possible values are **outgoing** or **incoming**. |
 
 ### Call attributes
