@@ -21,7 +21,7 @@ A communication can be added or updated based on an existing lead ID.
 
 ### Call attributes
 
-Communications with method `phone` may have these additional attributes:
+Communications with the method `phone` may have these additional attributes:
 
 <table>
   <thead>
@@ -63,7 +63,7 @@ Communications with method `phone` may have these additional attributes:
 
 ### Email attributes
 
-Communications with method `email` may have these additional attributes:
+Communications with the method `email` may have these additional attributes:
 
 <table>
   <thead>
@@ -100,6 +100,32 @@ Communications with method `email` may have these additional attributes:
       <td style="text-align:left">string</td>
       <td style="text-align:left">
         <p>The user&apos;s email address used in the email.</p>
+        <p><em>Can&apos;t be retrieved for privacy reasons.</em>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Video attributes
+
+Communications with the method `video` may have these additional attributes:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Attribute</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>url</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">
+        <p>The URL of the video.</p>
         <p><em>Can&apos;t be retrieved for privacy reasons.</em>
         </p>
       </td>
