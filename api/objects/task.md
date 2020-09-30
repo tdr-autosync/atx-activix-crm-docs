@@ -40,6 +40,13 @@ The representation of a task is called a `Task` object. Tasks are identified by 
       <td style="text-align:left"></td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>completed_at</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+        when the task was completed.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>created_at</code>
       </td>
       <td style="text-align:left">string</td>

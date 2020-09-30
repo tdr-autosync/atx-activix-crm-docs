@@ -61,7 +61,7 @@ The title of the event.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
-Possible values are **appointment**, **phone\_appointment**, **delivery** or other.
+Possible values are **appointment**, **phone\_appointment**, **delivery** or **other**.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -196,12 +196,6 @@ Should be `application/json`.
 Should be `application/json`.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="title" type="string" required=false %}
-The title of the event.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -222,6 +216,7 @@ Event updated successfully.
         "type": "appointment",
         "start_at": "2020-06-04T15:15:00-04:00",
         "end_at": "2020-06-04T16:45:00-04:00",
+        "completed_at": "2020-06-04T17:15:00-04:00",
         ...
     }
 }
@@ -236,6 +231,7 @@ Event updated successfully.
 ```javascript
 {
     "title": "Updated Appointment for John",
+    "completed_at": "2020-06-04T17:15:00-04:00"
     ...
 }
 ```
