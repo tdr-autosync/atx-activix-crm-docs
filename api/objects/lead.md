@@ -269,7 +269,7 @@ Leads are identified by a unique incremental ID.
       <td style="text-align:left"><code>dealer_tour</code>
       </td>
       <td style="text-align:left">boolean</td>
-      <td style="text-align:left">Indicate if the lead has done the dealer tour.</td>
+      <td style="text-align:left">Indicate if the lead has completed the dealer tour.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>division</code>
@@ -422,6 +422,12 @@ Leads are identified by a unique incremental ID.
         <p><em>New values might be added in the future.</em>
         </p>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>walk_around</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">Indicate if the lead has completed the walk around.</td>
     </tr>
   </tbody>
 </table>
