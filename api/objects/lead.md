@@ -266,6 +266,12 @@ Leads are identified by a unique incremental ID.
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>dealer_tour</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">Indicate if the lead has done the dealer tour.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>division</code>
       </td>
       <td style="text-align:left">string</td>
@@ -325,6 +331,12 @@ Leads are identified by a unique incremental ID.
       <td style="text-align:left">string</td>
       <td style="text-align:left">Two letter <a href="https://en.wikipedia.org/wiki/ISO_3166">ISO code</a> representing
         the State/Province of the lead.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>qualification</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">Details about the qualification of the lead.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>rating</code>
