@@ -649,6 +649,12 @@ The `Lead` object may have the following [nested objects](../nested-objects.md).
       <td style="text-align:left"></td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>communications</code>
+      </td>
+      <td style="text-align:left">array</td>
+      <td style="text-align:left">Array of <a href="communication.md">communications objects</a>.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>emails</code>
       </td>
       <td style="text-align:left">array</td>
@@ -687,13 +693,6 @@ The `Lead` object may have the following [nested objects](../nested-objects.md).
       </td>
       <td style="text-align:left">array</td>
       <td style="text-align:left">Array of <a href="vehicle.md">vehicle objects</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>communications</code>
-      </td>
-      <td style="text-align:left">array</td>
-      <td style="text-align:left">Array of <a href="communication.md">communications objects.</a>
-      </td>
     </tr>
   </tbody>
 </table>
