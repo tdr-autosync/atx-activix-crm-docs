@@ -480,7 +480,3 @@ The user DID \(normally a number in E.164 format\)
 
 You _must_ provide a `lead_id` or `lead_did` _and_ a `user_id` or `user_did`.
 
-{% hint style="info" %}
-N.B. The endpoint is available, but the feature is not yet implemented in Activix CRM.
-{% endhint %}
-

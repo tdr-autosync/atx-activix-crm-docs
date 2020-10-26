@@ -649,10 +649,22 @@ The `Lead` object may have the following [nested objects](../nested-objects.md).
       <td style="text-align:left"></td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>associated_leads</code>
+      </td>
+      <td style="text-align:left">array</td>
+      <td style="text-align:left">An array of all the <code>Lead</code> IDs that are associated with the object.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>communications</code>
       </td>
       <td style="text-align:left">array</td>
       <td style="text-align:left">Array of <a href="communication.md">communications objects</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>custom_fields</code>
+      </td>
+      <td style="text-align:left">array</td>
+      <td style="text-align:left">Array of <a href="custom-fields.md">custom fields objects</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>emails</code>

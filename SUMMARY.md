@@ -19,6 +19,7 @@
 * [Objects](api/objects/README.md)
   * [Account](api/objects/account.md)
   * [Communication](api/objects/communication.md)
+  * [Custom Fields](api/objects/custom-fields.md)
   * [Email](api/objects/email.md)
   * [Event](api/objects/event.md)
   * [Lead](api/objects/lead.md)
