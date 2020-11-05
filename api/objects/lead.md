@@ -644,6 +644,13 @@ The `Lead` object may have the following [nested objects](../nested-objects.md).
       <td style="text-align:left"><a href="user.md">User object</a> representing the associated service agent.</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>takeover_director</code>
+      </td>
+      <td style="text-align:left">object</td>
+      <td style="text-align:left"><a href="user.md">User object</a> representing the associated take over
+        director.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"></td>
       <td style="text-align:left"></td>
       <td style="text-align:left"></td>
