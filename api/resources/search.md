@@ -113,6 +113,10 @@ Currently, the search tries to find a matching result across these fields:
 * `second_contact`
 * `number` in any of the phone objects
 * `address` in any of the email objects
+* `postal_code in the lead object` 
+  * must be 3 or 6 characters 
+  * must not include spaces
+  * search is case insensitive
 
 ### Examples
 
@@ -126,5 +130,13 @@ Currently, the search tries to find a matching result across these fields:
 
 ```text
 /leads/search?query=myemail@activix.ca
+```
+
+```text
+/leads/search?query=h2p
+```
+
+```text
+/leads/search?query=h2p3h7
 ```
 
