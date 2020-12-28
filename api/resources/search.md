@@ -113,7 +113,7 @@ Currently, the search tries to find a matching result across these fields:
 * `second_contact`
 * `number` in any of the phone objects
 * `address` in any of the email objects
-* `postal_code in the lead object` 
+* `postal_code` 
   * must be 3 or 6 characters 
   * must not include spaces
   * search is case insensitive
