@@ -133,6 +133,12 @@ Vehicles are identified by a unique incremental ID.
       </td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>certified</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">Determine if the vehicle is a certified pre-owned</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>client_number</code>
       </td>
       <td style="text-align:left">string</td>
