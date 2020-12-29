@@ -44,3 +44,9 @@ _List all leads updated on September 15, 2019_
 /leads?filter[updated_at]=2019-09-15
 ```
 
+_List all leads matching the first 3 characters of postal code h3c_
+
+```text
+/leads?filter[postal_code]=h3c
+```
+

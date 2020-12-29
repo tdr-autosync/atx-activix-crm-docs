@@ -414,6 +414,7 @@ You may narrow the results based on specific parameters. See [here](../filtering
 | `name` | string | Filter on the name or second contact of the lead. | ✅ | ❌ |
 | `email` | string | Filter on any of the associated [Email](../objects/email.md) objects. | ✅ | ❌ |
 | `phone` | string | Filter on any of the associated [Phone](../objects/phone.md) objects. | ✅ | ❌ |
+| `postal_code` | string | Filter on the postal code of the lead. | ❌ | ❌ |
 | `created_at` | date | Filter on the creation date of the lead. | ❌ | ✅ |
 | `updated_at` | date | Filter on the last update date of the lead. | ❌ | ✅ |
 | `sale_date` | date | Filter on the sale date of the lead. | ❌ | ✅ |
