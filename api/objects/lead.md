@@ -459,29 +459,29 @@ Leads of type `service` may have these additional attributes.
       <td style="text-align:left"><code>last_visit_date</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
         the last visit date.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>next_visit_date</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
         the next visit date.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>open_work_order_date</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
-        the service open work order date.</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+        the work order open date.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>planned_pick_up_date</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
-        the service planned pick up date.</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+        the planned pick up date.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>repair_date</code>
@@ -489,6 +489,20 @@ Leads of type `service` may have these additional attributes.
       <td style="text-align:left">string</td>
       <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
         when the vehicle was repaired.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>work_order_partial_closure_date</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+        the work order posted date.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>work_order_closure_date</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+        the work order closed date.</td>
     </tr>
     <tr>
       <td style="text-align:left"></td>
