@@ -45,7 +45,7 @@ Communications with the method `phone` may have these additional attributes:
       <td style="text-align:left"><code>call_phone</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left">The client&apos;s phone number in <a href="https://www.twilio.com/docs/glossary/what-e164">E.164</a> format.</td>
+      <td style="text-align:left">The customer&apos;s phone number in <a href="https://www.twilio.com/docs/glossary/what-e164">E.164</a> format.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>call_status</code>
@@ -135,13 +135,59 @@ Communications with the method `video` may have these additional attributes:
 
 ## Possible `call_status` values
 
-| Value | Description |
-| :--- | :--- |
-| `answered` | The client answered the call. This confirms that the call is completed. |
-| `attempted` | The user attempted to reach the client, but he didn't answer. |
-| `calling` | The user is currently talking with the client. |
-| `error` | An error occurred while trying to call the client. This is normally due to a server problem. |
-| `interrupted` | The call was interrupted by the client. This happens when a client hangs up before the user can pick up. Applicable for incoming calls only. |
-| `pending` | This is the default status when the call is first initiated using click-to-call. |
-| `unanswered` | The call was not answered by any user. Applicable for calls generated using click-to-call. |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Value</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>answered</code>
+      </td>
+      <td style="text-align:left">The customer answered the call. This confirms that the call is completed.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>attempted</code>
+      </td>
+      <td style="text-align:left">The user attempted to reach the customer, but he didn&apos;t answer.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>calling</code>
+      </td>
+      <td style="text-align:left">The user is currently talking with the customer.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>error</code>
+      </td>
+      <td style="text-align:left">An error occurred while trying to call the customer. This is normally
+        due to a server problem.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>interrupted</code>
+      </td>
+      <td style="text-align:left">The call was interrupted by the customer. This happens when a customer
+        hangs up before the user can pick up.
+        <br /><em>Applicable for incoming calls only.</em>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>pending</code>
+      </td>
+      <td style="text-align:left">
+        <p>This is the default status when the call is first initiated using click-to-call.</p>
+        <p><em>Applicable for click-to-call only.</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>unanswered</code>
+      </td>
+      <td style="text-align:left">The call was not answered by any user.
+        <br /><em>Applicable for click-to-call only.</em>
+      </td>
+    </tr>
+  </tbody>
+</table>
 

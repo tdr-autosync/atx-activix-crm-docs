@@ -459,29 +459,29 @@ Leads of type `service` may have these additional attributes.
       <td style="text-align:left"><code>last_visit_date</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
         the last visit date.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>next_visit_date</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
         the next visit date.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>open_work_order_date</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the work order open date.</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
+        the service open work order date.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>planned_pick_up_date</code>
       </td>
       <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the planned pick up date.</td>
+      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
+        the service planned pick up date.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>repair_date</code>
@@ -489,20 +489,6 @@ Leads of type `service` may have these additional attributes.
       <td style="text-align:left">string</td>
       <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
         when the vehicle was repaired.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>work_order_partial_closure_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the work order posted date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>work_order_closure_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the work order closed date.</td>
     </tr>
     <tr>
       <td style="text-align:left"></td>
@@ -543,19 +529,19 @@ Leads of type `service` may have these additional attributes.
       <td style="text-align:left"><code>odometer_last_visit</code>
       </td>
       <td style="text-align:left">integer</td>
-      <td style="text-align:left">The vehicle mileage at the clients last visit to the dealership.</td>
+      <td style="text-align:left">The vehicle mileage at the customers last visit to the dealership.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>prepaid</code>
       </td>
       <td style="text-align:left">boolean</td>
-      <td style="text-align:left">Client has prepaid for the services to be done on his vehicle.</td>
+      <td style="text-align:left">The customer has prepaid for the services to be done on his vehicle.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>reached_client</code>
       </td>
       <td style="text-align:left">boolean</td>
-      <td style="text-align:left">The lead has been reached.</td>
+      <td style="text-align:left">The customer has been reached.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>repair_order</code>

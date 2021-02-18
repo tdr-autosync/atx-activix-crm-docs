@@ -108,7 +108,7 @@ Events are identified by a unique incremental ID.
       <td style="text-align:left"><code>no_show</code>
       </td>
       <td style="text-align:left">boolean</td>
-      <td style="text-align:left">Determine if the client didn&apos;t came.</td>
+      <td style="text-align:left">Determine if the customer didn&apos;t came.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>priority</code>
