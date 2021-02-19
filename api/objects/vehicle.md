@@ -95,6 +95,12 @@ Vehicles are identified by a unique incremental ID.
       <td style="text-align:left">Dollar value of accessories sold.</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>actual_value</code>
+      </td>
+      <td style="text-align:left">numeric</td>
+      <td style="text-align:left">Dollar value of the vehicle.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>allowed_odometer</code>
       </td>
       <td style="text-align:left">string</td>
