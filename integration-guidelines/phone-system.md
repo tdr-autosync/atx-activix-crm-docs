@@ -8,6 +8,7 @@ We expect the phone system to integrate with Activix CRM's API to ensure the sam
 
 * The in-house system must be able to provide call information in **real time**.
 * In order for the integration to be as seamless as possible, we recommend using Activix CRM's user ID in order to assign the communication to the correct user.
+* The in-house system **must use** the provided API for call loggings to facilitate the integration with Activix CRM's
 
 ## Features
 
@@ -17,11 +18,11 @@ In order to integrate with the click-to-call feature, the in-house system must p
 
 The system must update the CRM with the call information when the call ends.
 
-{% file src="../.gitbook/assets/activix-api-outgoing-call-flow.pdf" caption="Outgoing call flow" %}
-
-
+{% file src="../.gitbook/assets/activix-api-outgoing-call-flow \(1\).pdf" caption="Outgoing call flow" %}
 
 ### Phone Up \(incoming\)
 
-{% file src="../.gitbook/assets/activix-api-incoming-call-flow.pdf" caption="Incoming call flow" %}
+In order to integrate with the phone-up feature, the in-house system must use the provided API endpoints for call logs in order to update the CRM in **realtime**.
+
+{% file src="../.gitbook/assets/activix-api-incoming-call-flow \(1\).pdf" caption="Incoming call flow" %}
 
