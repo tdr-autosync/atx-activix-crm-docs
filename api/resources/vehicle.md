@@ -110,7 +110,7 @@ The ID of the lead associated with the vehicle.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
-The type of vehicle. Possible values are **existing** or **exchange**.
+The type of vehicle. Possible values are **wanted** or **exchange**.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
