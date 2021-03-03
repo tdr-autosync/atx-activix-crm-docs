@@ -418,7 +418,7 @@ Leads are identified by a unique incremental ID.
       </td>
       <td style="text-align:left">string</td>
       <td style="text-align:left">
-        <p>The type of lead. Possible values are <b>email</b>, <b>phone</b>, <b>walk_in</b>, <b>loyalty</b>, <b>renewal</b>, <b>sms</b>, <b>event</b> or <b>pre_booking</b>.</p>
+        <p>The type of lead. Possible values are <b>email</b>, <b>phone</b>, <b>walk_in</b>, <b>loyalty</b>, <b>renewal</b>, <b>sms</b>, <b>event, web_order</b> or <b>pre_booking</b>.</p>
         <p><em>New values might be added in the future.</em>
         </p>
       </td>
