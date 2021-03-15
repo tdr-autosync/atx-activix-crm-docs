@@ -217,8 +217,7 @@ This is an example that may help you better understand the format of the ADF sta
         <vendor>
             <vendorname>ABC Motors</vendorname>
             <contact>
-                <name part="first">Jane</name>
-                <name part="last">Doe</name>
+                <name part="full">Jane Doe</name>
                 <email>jane@abcmotors.com</email>
                 <phone type="cellphone">+15144447859</phone>
             </contact>
