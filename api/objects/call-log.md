@@ -105,6 +105,12 @@ A call log is used to store a call that occurred on an external system.
         </p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><code>media_url</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">The web URL of the media file of the call. Possible file types are <b>wav</b> or <b>mp3</b>.</td>
+    </tr>
   </tbody>
 </table>
 
