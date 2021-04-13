@@ -429,6 +429,12 @@ Leads are identified by a unique incremental ID.
       <td style="text-align:left">boolean</td>
       <td style="text-align:left">Indicate if the lead has completed the walk around.</td>
     </tr>
+    <tr>
+      <td style="text-align:left"><code>comment</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">The comment that the lead has made in the initial request</td>
+    </tr>
   </tbody>
 </table>
 
