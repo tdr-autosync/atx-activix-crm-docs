@@ -224,6 +224,18 @@ Leads are identified by a unique incremental ID.
       <td style="text-align:left">Address (line 2).</td>
     </tr>
     <tr>
+      <td style="text-align:left"><code>business</code>
+      </td>
+      <td style="text-align:left">boolean</td>
+      <td style="text-align:left">Determine if the lead is for a business.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>business_name</code>
+      </td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">Business name of the lead</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><code>campaign</code>
       </td>
       <td style="text-align:left">string</td>
@@ -506,12 +518,6 @@ Leads of type `service` may have these additional attributes.
       </td>
       <td style="text-align:left">integer</td>
       <td style="text-align:left">The average spending per visit.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>business</code>
-      </td>
-      <td style="text-align:left">boolean</td>
-      <td style="text-align:left">Determine if the lead is for a business.</td>
     </tr>
     <tr>
       <td style="text-align:left"><code>code</code>
