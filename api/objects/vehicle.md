@@ -263,7 +263,7 @@ Vehicles are identified by a unique incremental ID.
       </td>
       <td style="text-align:left">string</td>
       <td style="text-align:left">
-        <p>Payment frequency for the vehicle. Possible values are <b>monthly</b>, <b>two_weeks</b>, <b>weekly</b> or <b>one_payment</b>.</p>
+        <p>Payment frequency for the vehicle. Possible values are <b>monthly</b>, <b>bi_monthly</b>, <b>two_weeks</b>, <b>weekly</b> or <b>one_payment</b>.</p>
         <p><em>New values might be added in the future.</em>
         </p>
       </td>
