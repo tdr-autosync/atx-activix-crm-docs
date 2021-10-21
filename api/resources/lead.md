@@ -4,51 +4,89 @@ The following describes the available resources for a Lead. Check out the [Lead 
 
 If you wish to run a full-text search to retrieve a lead, please see the [Search](search.md#search-leads) section of the documentation.
 
-{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/leads" %}
-{% api-method-summary %}
-Create a lead
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.crm.activix.ca/v2" path="/leads" method="post" summary="Create a lead" %}
+{% swagger-description %}
 Creates a lead. Returns the created lead.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" required=true type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-Type" required=true type="string" %}
-Should be `application/json`.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
+Should be 
 
-{% api-method-parameter name="Accept" required=true type="string" %}
-Should be `application/json`.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+`application/json`
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="trigger\_alerts" type="boolean" required=false %}
-If `true`, triggers the new lead alert \(like a normal request would\).  
-Default is `false`.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+.
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="type" type="string" required=true %}
-The type of lead possible values are **email**, **phone**, **walk\_in**, **loyalty**, **renewal**, **sms**, **event**, **pre\_booking** or **web\_order**.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Should be 
 
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-Lead created successfully.
-{% endapi-method-response-example-description %}
+`application/json`
 
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="trigger_alerts" type="boolean" %}
+If 
+
+`true`
+
+, triggers the new lead alert (like a normal request would).
+
+\
+
+
+Default is 
+
+`false`
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="type" type="string" %}
+The type of lead possible values are 
+
+**email**
+
+, 
+
+**phone**
+
+, 
+
+**walk_in**
+
+, 
+
+**loyalty**
+
+, 
+
+**renewal**
+
+, 
+
+**sms**
+
+, 
+
+**event**
+
+, 
+
+**pre_booking**
+
+ or 
+
+**web_order**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-response status="201" description="Lead created successfully." %}
 ```javascript
 {
     "data": {
@@ -90,10 +128,8 @@ Lead created successfully.
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 #### Body Example
 
@@ -138,44 +174,36 @@ Lead created successfully.
 
 The `advisor`, `bdc`, `commercial`, `service_agent` and `service_advisor` objects are only used to associate a user using their `first_name`, `last_name`, `email` or `id`.
 
-{% api-method method="get" host="https://api.crm.activix.ca/v2" path="/leads/:id" %}
-{% api-method-summary %}
-Retrieve a lead
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.crm.activix.ca/v2" path="/leads/:id" method="get" summary="Retrieve a lead" %}
+{% swagger-description %}
 Retrieves the details of an existing lead. You only need to provide the lead identifier that was returned upon lead creation.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="integer" required=true %}
+{% swagger-parameter in="path" name="id" type="integer" %}
 The ID of the lead to retrieve.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
+Should be 
 
-{% api-method-parameter name="Accept" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+`application/json`
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Lead retrieved successfully.
-{% endapi-method-response-example-description %}
+.
+{% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Should be 
+
+`application/json`
+
+.
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Lead retrieved successfully." %}
 ```javascript
 {
     "data": {
@@ -188,51 +216,41 @@ Lead retrieved successfully.
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 The list of available nested objects for a `Lead` is available [here](../objects/lead.md#nested-objects).
 
-{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/leads/:id" %}
-{% api-method-summary %}
-Update a lead
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.crm.activix.ca/v2" path="/leads/:id" method="put" summary="Update a lead" %}
+{% swagger-description %}
 Updates the specified lead by setting the values of the parameters passed. Any parameters not provided will be left unchanged. The request returns the updated lead.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="integer" required=true %}
+{% swagger-parameter in="path" name="id" type="integer" %}
 The ID of the lead to update.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" required=true type="string" %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-Type" required=true type="string" %}
-Should be `application/json`.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
+Should be 
 
-{% api-method-parameter name="Accept" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+`application/json`
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Lead updated successfully.
-{% endapi-method-response-example-description %}
+.
+{% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Should be 
+
+`application/json`
+
+.
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Lead updated successfully." %}
 ```javascript
 {
     "data": {
@@ -274,10 +292,8 @@ Lead updated successfully.
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 #### Body Example
 
@@ -297,56 +313,44 @@ Lead updated successfully.
 
 The `advisor`, `bdc`, `commercial`, `service_agent` and `service_advisor` objects are only used to associate a user using their `first_name`, `last_name`, `email` or `id`.
 
-The `phones` collection only appends phone to the lead. See [here](phone.md) if you want to manage them.  
-The `emails` collection only appends email to the lead. See [here](email.md) if you want to manage them.  
+The `phones` collection only appends phone to the lead. See [here](phone.md) if you want to manage them.\
+The `emails` collection only appends email to the lead. See [here](email.md) if you want to manage them.\
 The `vehicles` collection only appends vehicle to the lead. See [here](vehicle.md) if you want to manage them.
 
-{% api-method method="get" host="https://api.crm.activix.ca/v2" path="/leads" %}
-{% api-method-summary %}
-List all leads
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.crm.activix.ca/v2" path="/leads" method="get" summary="List all leads" %}
+{% swagger-description %}
 Returns a list of your leads. The leads are returned sorted by creation date, with the most recent leads appearing first.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Accept" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Should be 
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="page" type="integer" required=false %}
+`application/json`
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="page" type="integer" %}
 The page result you wish to see.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="per\_page" type="integer" required=false %}
+{% swagger-parameter in="query" name="per_page" type="integer" %}
 The number of desired results.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="include" type="array" required=false %}
+{% swagger-parameter in="query" name="include" type="array" %}
 The nested objects to include.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="filter" type="array" required=false %}
+{% swagger-parameter in="query" name="filter" type="array" %}
 The filters you wish to apply.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
     "data": [
@@ -398,10 +402,8 @@ The filters you wish to apply.
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 This endpoint supports [pagination](../pagination.md) so you can request more objects, or iterate through all results.
 
@@ -409,75 +411,84 @@ The list of available nested objects for a `Lead` is available [here](../objects
 
 You may narrow the results based on specific parameters. See [here](../filtering.md) to learn more on filtering.
 
-| Parameter | Type | Description | [Wildcards](../filtering.md#wildcards) | [Operators](../filtering.md#operators) |
-| :--- | :--- | :--- | :--- | :--- |
-| `name` | string | Filter on the name or second contact of the lead. | ✅ | ❌ |
-| `email` | string | Filter on any of the associated [Email](../objects/email.md) objects. | ✅ | ❌ |
-| `phone` | string | Filter on any of the associated [Phone](../objects/phone.md) objects. | ✅ | ❌ |
-| `postal_code` | string | Filter on the postal code of the lead. | ❌ | ❌ |
-| `created_at` | date | Filter on the creation date of the lead. | ❌ | ✅ |
-| `updated_at` | date | Filter on the last update date of the lead. | ❌ | ✅ |
-| `sale_date` | date | Filter on the sale date of the lead. | ❌ | ✅ |
+| Parameter     | Type   | Description                                                             | [Wildcards](../filtering.md#wildcards) | [Operators](../filtering.md#operators) |
+| ------------- | ------ | ----------------------------------------------------------------------- | -------------------------------------- | -------------------------------------- |
+| `name`        | string | Filter on the name or second contact of the lead.                       | ✅                                      | ❌                                      |
+| `email`       | string | Filter on any of the associated [Email](../objects/email.md) objects.   | ✅                                      | ❌                                      |
+| `phone`       | string | Filter on any of the associated [Phone](../objects/phone.md) objects.   | ✅                                      | ❌                                      |
+| `postal_code` | string | Filter on the postal code of the lead.                                  | ❌                                      | ❌                                      |
+| `created_at`  | date   | Filter on the creation date of the lead.                                | ❌                                      | ✅                                      |
+| `updated_at`  | date   | Filter on the last update date of the lead.                             | ❌                                      | ✅                                      |
+| `sale_date`   | date   | Filter on the sale date of the lead.                                    | ❌                                      | ✅                                      |
+| `division`    | enum   | <p>Filter on the division of the lead.</p><p>See below for details.</p> | ❌                                      |                                        |
 
-{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/screenpop" %}
-{% api-method-summary %}
-Screen pop
-{% endapi-method-summary %}
+###
 
-{% api-method-description %}
+#### Division filter
+
+Leads can be filtered by `division` using the following values:
+
+* new
+* used
+* service
+* none
+
+The division filtering uses the `or` operator. Multiple values can be filtered simultaneously by using comma separated values (i.e. `used,none`).
+
+You may find usage examples [here](https://docs.crm.activix.ca/api/filtering#examples).
+
+{% hint style="warning" %}
+The use of division filters may impact the performance of the request. We **strongly** suggest including this filter after a date filter has been applied to optimize the efficiency of the request.
+{% endhint %}
+
+{% swagger baseUrl="https://api.crm.activix.ca/v2" path="/screenpop" method="post" summary="Screen pop" %}
+{% swagger-description %}
 This endpoint serves a unique purpose. It is used to open a dialog displaying information for a call simultaneously sent to the user's telephone.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
+Should be 
 
-{% api-method-parameter name="Accept" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+`application/json`
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="lead\_id" type="string" required=false %}
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Should be 
+
+`application/json`
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="lead_id" type="string" %}
 The lead ID.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="lead\_did" type="string" required=false %}
-The lead DID \(normally a number in E.164 format\).
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="lead_did" type="string" %}
+The lead DID (normally a number in E.164 format).
+{% endswagger-parameter %}
 
-{% api-method-parameter name="user\_id" type="string" required=false %}
+{% swagger-parameter in="body" name="user_id" type="string" %}
 The user ID.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="user\_did" type="string" required=false %}
-The user DID \(normally a number in E.164 format\)
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="body" name="user_did" type="string" %}
+The user DID (normally a number in E.164 format)
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
     "message": "The screen pop was triggered successfully."
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 You _must_ provide a `lead_id` or `lead_did` _and_ a `user_id` or `user_did`.
-
