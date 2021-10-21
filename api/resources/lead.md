@@ -420,7 +420,7 @@ You may narrow the results based on specific parameters. See [here](../filtering
 | `created_at`  | date   | Filter on the creation date of the lead.                                | ❌                                      | ✅                                      |
 | `updated_at`  | date   | Filter on the last update date of the lead.                             | ❌                                      | ✅                                      |
 | `sale_date`   | date   | Filter on the sale date of the lead.                                    | ❌                                      | ✅                                      |
-| `division`    | enum   | <p>Filter on the division of the lead.</p><p>See below for details.</p> | ❌                                      |                                        |
+| `division`    | enum   | <p>Filter on the division of the lead.</p><p>See below for details.</p> | ❌                                      | ❌                                      |
 
 ###
 
