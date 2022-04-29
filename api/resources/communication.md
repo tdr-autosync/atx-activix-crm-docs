@@ -2,52 +2,81 @@
 
 The following describes the available resources for a Communication. Check out the [Communication object](https://docs.crm.activix.ca/objects/communication) documentation for a complete list of attributes.
 
-{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/communications" %}
-{% api-method-summary %}
-Create a communication
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.crm.activix.ca/v2" path="/communications" method="post" summary="Create a communication" %}
+{% swagger-description %}
 Creates a communication. Returns the created communication.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
+Should be 
 
-{% api-method-parameter name="Accept" type="string" required=true %}
-Should be `application/json`.  
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+`application/json`
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="lead\_id" type="integer" required=true %}
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Should be 
+
+`application/json`
+
+.
+
+\
+
+
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="lead_id" type="integer" %}
 ID of the Lead associated with the communication.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="method" type="string" required=true %}
-Possible values are **phone**, **email** or **sms**.
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="method" type="string" %}
+Possible values are 
 
-{% api-method-parameter name="type" type="string" required=true %}
-Possible values are **outgoing** or **incoming**.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+**phone**
 
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-Communication created successfully.
-{% endapi-method-response-example-description %}
+, 
 
+**email**
+
+ or 
+
+**sms**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="type" type="string" %}
+Possible values are 
+
+**outgoing**
+
+ or 
+
+**incoming**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="executed_at" type="string" %}
+ISO 8601 datetime representing the date the communication took place. 
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="executed_by" type="integer" %}
+The ID of that that performed the communication.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="description" %}
+Text describing the communication.
+{% endswagger-parameter %}
+
+{% swagger-response status="201" description="Communication created successfully." %}
 ```javascript
 {
     "data": {
@@ -61,10 +90,8 @@ Communication created successfully.
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 **Body Example**
 
@@ -74,62 +101,75 @@ Communication created successfully.
     "method": "phone",
     "type": "outgoing",
     "call_status": "calling",
+    "description": "Call made to customer, reached voicemeail.",
+    "executed_at": "2022-01-22T01:00:00-05:00",
+    "executed_by": 5000,
     ...
 }
 ```
 
-{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/communications/:id" %}
-{% api-method-summary %}
-Update a communication
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.crm.activix.ca/v2" path="/communications/:id" method="put" summary="Update a communication" %}
+{% swagger-description %}
 Updates the specified communication by setting the values of the parameters passed. Any parameters not provided will be left unchanged. The request returns the updated communication.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="integer" required=true %}
+{% swagger-parameter in="path" name="id" type="integer" %}
 The ID of the communication to update.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
+Should be 
 
-{% api-method-parameter name="Accept" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+`application/json`
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="lead\_id" type="integer" required=true %}
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Should be 
+
+`application/json`
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="lead_id" type="integer" %}
 ID of the Lead associated with the communication.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="method" type="string" required=true %}
-Possible values are **phone**, **email** or **sms**.
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="method" type="string" %}
+Possible values are 
 
-{% api-method-parameter name="type" type="string" required=true %}
-Possible values are **outgoing** or **incoming**.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+**phone**
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Communication updated successfully.
-{% endapi-method-response-example-description %}
+, 
 
+**email**
+
+ or 
+
+**sms**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="type" type="string" %}
+Possible values are 
+
+**outgoing**
+
+ or 
+
+**incoming**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Communication updated successfully." %}
 ```javascript
 {
     "data": {
@@ -144,10 +184,8 @@ Communication updated successfully.
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 **Body Example**
 
@@ -159,61 +197,56 @@ Communication updated successfully.
 }
 ```
 
-{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/communications/:id/recording" %}
-{% api-method-summary %}
-Upload a recording
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.crm.activix.ca/v2" path="/communications/:id/recording" method="post" summary="Upload a recording" %}
+{% swagger-description %}
 Upload a recording for an existing communication.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="integer" required=true %}
+{% swagger-parameter in="path" name="id" type="integer" %}
 The ID of the communication of the recording.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-type" type="string" required=true %}
-Should be `multipart/form-data`.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Content-type" type="string" %}
+Should be 
 
-{% api-method-parameter name="Accept" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+`multipart/form-data`
 
-{% api-method-form-data-parameters %}
-{% api-method-parameter name="recording" type="string" required=true %}
-Possible file types are **wav** or **mp3**.
-{% endapi-method-parameter %}
-{% endapi-method-form-data-parameters %}
-{% endapi-method-request %}
+.
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Recording uploaded successfully.
-{% endapi-method-response-example-description %}
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Should be 
 
+`application/json`
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="recording" type="string" %}
+Possible file types are 
+
+**wav**
+
+ or 
+
+**mp3**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Recording uploaded successfully." %}
 ```javascript
 {
     "message": "Recording uploaded successfully."
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-Body **must** be of type `multipart/form-data`. 
+Body **must** be of type `multipart/form-data`.&#x20;
 
 Only one recording may be uploaded for a communication. If you re-upload a recording, it will overwrite the old one.
-

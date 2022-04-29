@@ -1,603 +1,100 @@
 # Lead
 
-The representation of a lead is called a `Lead` object.  
+The representation of a lead is called a `Lead` object.\
 Leads are identified by a unique incremental ID.
 
 ## The `Lead` Object
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>Attribute</b>
-      </th>
-      <th style="text-align:left"><b>Type</b>
-      </th>
-      <th style="text-align:left"><b>Description</b>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>id</code>
-      </td>
-      <td style="text-align:left">integer</td>
-      <td style="text-align:left">Unique identifier for the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>account_id</code>
-      </td>
-      <td style="text-align:left">integer</td>
-      <td style="text-align:left">ID of the <a href="account.md#the-account-object">account</a> associated
-        with the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>customer_id</code>
-      </td>
-      <td style="text-align:left">integer</td>
-      <td style="text-align:left">This is currently only used to associate leads together.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>source_id</code>
-      </td>
-      <td style="text-align:left">integer</td>
-      <td style="text-align:left">ID of the source associated with the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>appointment_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">&#x200B;ISO datetime</a> representing
-        the appointment date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>available_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">&#x200B;&#x200B;&#x200B;<a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the wanted vehicle is available.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>be_back_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the latest be back date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>birth_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO date</a> (without
-        time) representing the lead&apos;s birth date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>call_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-          the call date.</p>
-        <p><em>Only applicable for <b>phone up</b> leads.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>created_at</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the lead was created.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>csi_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the planned CSI date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>delivered_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the vehicle delivered date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>delivery_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the vehicle delivery date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>home_presented_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the customer received a home visit from the dealership.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>paperwork_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the customer&apos;s paperwork is completed.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>presented_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the customer visited the dealership.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>promised_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the vehicle is promised to be available for pick up.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>refinanced_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the vehicle was refinanced.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>road_test_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the road test date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>sale_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the lead was sold.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>take_over_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the lead was taken over by a director.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>unsubscribe_all_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the &quot;Do not disturb&quot; date (equivalent to unsubscribing simultaneously
-        from calls, emails and sms messages).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>unsubscribe_call_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the unsubscribe call date was set.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>unsubscribe_email_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the unsubscribe email date was set.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>unsubscribe_sms_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the unsubscribe sms date was set.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>updated_at</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the lead was last updated.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>address_line1</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Address (line 1).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>address_line2</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Address (line 2).</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>business</code>
-      </td>
-      <td style="text-align:left">boolean</td>
-      <td style="text-align:left">Determine if the lead is for a business.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>business_name</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Business name of the lead</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>campaign</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">The ad campaign of the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>city</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">City of the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>civility</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The social title of the lead. Possible values are <b>mr</b>, <b>ms</b>, <b>miss</b>, <b>dr </b>or <b>me</b>.</p>
-        <p><em>New values might be added in the future.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>country</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Two-letter <a href="https://en.wikipedia.org/wiki/ISO_3166-2">ISO code</a> representing
-        the country of the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>created_method</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The method of creation of the lead. Possible values are <b>activix</b>, <b>auto_renewal</b>, <b>cdk</b>, <b>ct_wizard</b>, <b>ford_direct</b>, <b>manual</b>, <b>manual_import</b>, <b>n_c_i_digital</b>, <b>niotext</b>, <b>phone_system</b>, <b>porsche_digital</b>, <b>scan</b>, <b>scraper</b>, <b>serti</b> or <b>api</b>.</p>
-        <p></p>
-        <p>Automatically set to <b>api</b> when adding a lead resource. Cannot be updated.</p>
-        <p></p>
-        <p><em>New values might be added in the future.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>dealer_tour</code>
-      </td>
-      <td style="text-align:left">boolean</td>
-      <td style="text-align:left">Indicate if the lead has completed the dealer tour.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>division</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>Division of the lead. Possible values are <b>new</b>, <b>used </b>or <b>service</b>.</p>
-        <p><em>New values might be added in the future.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>first_name</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">First name of the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>gender</code>
-      </td>
-      <td style="text-align:left">integer</td>
-      <td style="text-align:left">Single-digit <a href="https://en.wikipedia.org/wiki/ISO/IEC_5218">ISO code</a> representing
-        the gender of the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>keyword</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Keyword used to acquire the lead from a search campaign.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>last_name</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Last name of the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>locale</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Two-letter <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO code</a> representing
-        the locale (language) of the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>navigation_history</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Navigation history of the lead before filling the form.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>postal_code</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Postal code of the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>province</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Two letter <a href="https://en.wikipedia.org/wiki/ISO_3166">ISO code</a> representing
-        the State/Province of the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>qualification</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Details about the qualification of the lead.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>rating</code>
-      </td>
-      <td style="text-align:left">integer</td>
-      <td style="text-align:left">Rating about the quality of the lead. Must be between 1-5.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>referrer</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Referrer of the lead (e.g., Google)</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>result</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The result of the lead. Possible values are <b>pending</b>, <b>attempted</b> or <b>reached</b>.</p>
-        <p>A <code>null</code> value is considered <b>pending</b>.
-          <br />
-        </p>
-        <p><em>N.B. This value may be overridden by the result of a communication.<br />New values might be added in the future.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>search_term</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Specific words that the lead typed in the search input that led him to
-        fill the form.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>second_contact</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Optional second contact for the lead. May be the name of a person or a
-        business.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>second_contact_civility</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The social title of the second contact for the lead. Possible values are <b>mr</b>, <b>ms</b>, <b>miss</b>, <b>dr</b> or <b>me</b>.</p>
-        <p><em>New values might be added in the future.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>segment</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The lead segment. Possible values are <b>conquest</b>, <b>promo</b>, <b>notSold</b>, <b>service</b>, <b>loyalty</b>, <b>reminder</b>, <b>endWarranty</b>, <b>endLcap</b>, <b>endLnette</b>, <b>csi</b>, <b>noShow </b>or <b>other</b>.</p>
-        <p><em>New values might be added in the future.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>source</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">The source where the lead originated from.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>status</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The lead status. Possible values are <b>duplicate</b>, <b>invalid</b> or <b>lost</b>.</p>
-        <p><em>New values might be added in the future.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>type</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">
-        <p>The type of lead. Possible values are <b>email</b>, <b>phone</b>, <b>walk_in</b>, <b>loyalty</b>, <b>renewal</b>, <b>sms</b>, <b>event, web_order</b> or <b>pre_booking</b>.</p>
-        <p><em>New values might be added in the future.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>walk_around</code>
-      </td>
-      <td style="text-align:left">boolean</td>
-      <td style="text-align:left">Indicate if the lead has completed the walk around.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>comment</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">The comment that the lead has made in the initial request</td>
-    </tr>
-  </tbody>
-</table>
+| **Attribute**             | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `id`                      | integer  | Unique identifier for the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `account_id`              | integer  | ID of the [account](account.md#the-account-object) associated with the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `customer_id`             | integer  | This is currently only used to associate leads together.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `source_id`               | integer  | ID of the source associated with the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                           |          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `appointment_date`        | string   | [​ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing the appointment date.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `available_date`          | string   | ​​​[ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the wanted vehicle is available.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `be_back_date`            | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing the latest be back date.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `birth_date`              | string   | [ISO date](https://en.wikipedia.org/wiki/ISO\_8601) (without time) representing the lead's birth date.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `call_date`               | string   | <p><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing the call date.</p><p><em>Only applicable for <strong>phone up</strong> leads.</em></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `created_at`              | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the lead was created.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `csi_date`                | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing the planned CSI date.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `delivered_date`          | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing the vehicle delivered date.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `delivery_date`           | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing the vehicle delivery date.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `home_presented_date`     | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the customer received a home visit from the dealership.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `paperwork_date`          | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the customer's paperwork is completed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `presented_date`          | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the customer visited the dealership.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `promised_date`           | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the vehicle is promised to be available for pick up.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `refinanced_date`         | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the vehicle was refinanced.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `road_test_date`          | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing the road test date.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `sale_date`               | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the lead was sold.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `take_over_date`          | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the lead was taken over by a director.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `unsubscribe_all_date`    | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing the "Do not disturb" date (equivalent to unsubscribing simultaneously from calls, emails and sms messages).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `unsubscribe_call_date`   | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the unsubscribe call date was set.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `unsubscribe_email_date`  | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the unsubscribe email date was set.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `unsubscribe_sms_date`    | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the unsubscribe sms date was set.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `updated_at`              | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the lead was last updated.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                           |          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `address_line1`           | string   | Address (line 1).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `address_line2`           | string   | Address (line 2).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `business`                | boolean  | Determine if the lead is for a business.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `business_name`           | string   | Business name of the lead                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `campaign`                | string   | The ad campaign of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `city`                    | string   | City of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `civility`                | string   | <p>The social title of the lead. Possible values are <strong>mr</strong>, <strong>ms</strong>, <strong>miss</strong>, <strong>dr</strong> or <strong>me</strong>.</p><p><em>New values might be added in the future.</em></p>                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `country`                 | string   | Two-letter [ISO code](https://en.wikipedia.org/wiki/ISO\_3166-2) representing the country of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `created_method`          | string   | <p>The method of creation of the lead. Possible values are <strong>activix</strong>, <strong>auto_renewal</strong>, <strong>cdk</strong>, <strong>ct_wizard</strong>, <strong>ford_direct</strong>, <strong>manual</strong>, <strong>manual_import</strong>, <strong>n_c_i_digital</strong>, <strong>niotext</strong>, <strong>phone_system</strong>, <strong>porsche_digital</strong>, <strong>scan</strong>, <strong>scraper</strong>, <strong>serti</strong> or <strong>api</strong>.</p><p></p><p>Automatically set to <strong>api</strong> when adding a lead resource. Cannot be updated.</p><p></p><p><em>New values might be added in the future.</em></p> |
+| `dealer_tour`             | boolean  | Indicate if the lead has completed the dealer tour.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `division`                | string   | <p>Division of the lead. Possible values are <strong>new</strong>, <strong>used</strong> or <strong>service</strong>.</p><p><em>New values might be added in the future.</em></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `first_name`              | string   | First name of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `form`                    | string   | The form name of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `gender`                  | integer  | Single-digit [ISO code](https://en.wikipedia.org/wiki/ISO/IEC\_5218) representing the gender of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `keyword`                 | string   | Keyword used to acquire the lead from a search campaign.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `last_name`               | string   | Last name of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `locale`                  | string   | Two-letter [ISO code](https://en.wikipedia.org/wiki/List\_of\_ISO\_639-1\_codes) representing the locale (language) of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `navigation_history`      | string   | Navigation history of the lead before filling the form.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `postal_code`             | string   | Postal code of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `province`                | string   | Two letter [ISO code](https://en.wikipedia.org/wiki/ISO\_3166) representing the State/Province of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `qualification`           | string   | Details about the qualification of the lead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `rating`                  | integer  | Rating about the quality of the lead. Must be between 1-5.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `referrer`                | string   | Referrer of the lead (e.g., Google)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `result`                  | string   | <p>The result of the lead. Possible values are <strong>pending</strong>, <strong>attempted</strong> or <strong>reached</strong>.</p><p>A <code>null</code> value is considered <strong>pending</strong>.<br></p><p><em>N.B. This value may be overridden by the result of a communication.</em><br><em>New values might be added in the future.</em></p>                                                                                                                                                                                                                                                                                                           |
+| `search_term`             | string   | Specific words that the lead typed in the search input that led him to fill the form.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `second_contact`          | string   | Optional second contact for the lead. May be the name of a person or a business.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `second_contact_civility` | string   | <p>The social title of the second contact for the lead. Possible values are <strong>mr</strong>, <strong>ms</strong>, <strong>miss</strong>, <strong>dr</strong> or <strong>me</strong>.</p><p><em>New values might be added in the future.</em></p>                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `segment`                 | string   | <p>The lead segment. Possible values are <strong>conquest</strong>, <strong>promo</strong>, <strong>notSold</strong>, <strong>service</strong>, <strong>loyalty</strong>, <strong>reminder</strong>, <strong>endWarranty</strong>, <strong>endLcap</strong>, <strong>endLnette</strong>, <strong>csi</strong>, <strong>noShow</strong> or <strong>other</strong>.</p><p><em>New values might be added in the future.</em></p>                                                                                                                                                                                                                                      |
+| `source`                  | string   | The source where the lead originated from.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `status`                  | string   | <p>The lead status. Possible values are <strong>duplicate</strong>, <strong>invalid</strong> or <strong>lost</strong>.</p><p><em>New values might be added in the future.</em></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `type`                    | string   | <p>The type of lead. Possible values are <strong>email</strong>, <strong>phone</strong>, <strong>walk_in</strong>, <strong>loyalty</strong>, <strong>renewal</strong>, <strong>sms</strong>, <strong>event, web_order</strong> or <strong>pre_booking</strong>.</p><p><em>New values might be added in the future.</em></p>                                                                                                                                                                                                                                                                                                                                        |
+| `walk_around`             | boolean  | Indicate if the lead has completed the walk around.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `comment`                 | string   | The comment that the lead has made in the initial request                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ### Service attributes
 
 Leads of type `service` may have these additional attributes.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>Attribute</b>
-      </th>
-      <th style="text-align:left"><b>Type</b>
-      </th>
-      <th style="text-align:left"><b>Description</b>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>end_service_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        the end service date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>last_visit_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
-        the last visit date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>next_visit_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
-        the next visit date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>open_work_order_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
-        the service open work order date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>planned_pick_up_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> presenting
-        the service planned pick up date.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>repair_date</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left"><a href="https://en.wikipedia.org/wiki/ISO_8601">ISO datetime</a> representing
-        when the vehicle was repaired.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>average_spending</code>
-      </td>
-      <td style="text-align:left">integer</td>
-      <td style="text-align:left">The average spending per visit.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>code</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Code from the dealer about the work done on the vehicle.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>invoiced</code>
-      </td>
-      <td style="text-align:left">boolean</td>
-      <td style="text-align:left">Determine if an invoice is created for services performed on the vehicle.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>loyalty</code>
-      </td>
-      <td style="text-align:left">boolean</td>
-      <td style="text-align:left">Determine if the loyalty program was presented.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>odometer_last_visit</code>
-      </td>
-      <td style="text-align:left">integer</td>
-      <td style="text-align:left">The vehicle mileage at the customers last visit to the dealership.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>prepaid</code>
-      </td>
-      <td style="text-align:left">boolean</td>
-      <td style="text-align:left">The customer has prepaid for the services to be done on his vehicle.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>reached_client</code>
-      </td>
-      <td style="text-align:left">boolean</td>
-      <td style="text-align:left">The customer has been reached.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>repair_order</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">The repair order number.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>service_cleaned</code>
-      </td>
-      <td style="text-align:left">boolean</td>
-      <td style="text-align:left">The vehicle has been cleaned for the service.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>service_interval_km</code>
-      </td>
-      <td style="text-align:left">integer</td>
-      <td style="text-align:left">
-        <p>The vehicle service interval in km. Possible values are <b>1000</b>, <b>5000</b>, <b>6000</b>, <b>8000</b>, <b>12000</b>, <b>16000</b>, <b>18000</b>, <b>20000</b>, <b>24000</b> or <b>25000.</b>
-        </p>
-        <p><em>New values might be added in the future.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>service_monthly_km</code>
-      </td>
-      <td style="text-align:left">integer</td>
-      <td style="text-align:left">Kilometers allowed per month.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>storage</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Information about where the vehicle is stored for service.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>work_order</code>
-      </td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">The work order number for the vehicle service.</td>
-    </tr>
-  </tbody>
-</table>
+| **Attribute**          | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                      |
+| ---------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `end_service_date`     | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing the end service date.                                                                                                                                                                                                                                                                           |
+| `last_visit_date`      | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) presenting the last visit date.                                                                                                                                                                                                                                                                              |
+| `next_visit_date`      | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) presenting the next visit date.                                                                                                                                                                                                                                                                              |
+| `open_work_order_date` | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) presenting the service open work order date.                                                                                                                                                                                                                                                                 |
+| `planned_pick_up_date` | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) presenting the service planned pick up date.                                                                                                                                                                                                                                                                 |
+| `repair_date`          | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the vehicle was repaired.                                                                                                                                                                                                                                                                  |
+|                        |          |                                                                                                                                                                                                                                                                                                                                                                      |
+| `average_spending`     | integer  | The average spending per visit.                                                                                                                                                                                                                                                                                                                                      |
+| `code`                 | string   | Code from the dealer about the work done on the vehicle.                                                                                                                                                                                                                                                                                                             |
+| `invoiced`             | boolean  | Determine if an invoice is created for services performed on the vehicle.                                                                                                                                                                                                                                                                                            |
+| `loyalty`              | boolean  | Determine if the loyalty program was presented.                                                                                                                                                                                                                                                                                                                      |
+| `odometer_last_visit`  | integer  | The vehicle mileage at the customers last visit to the dealership.                                                                                                                                                                                                                                                                                                   |
+| `prepaid`              | boolean  | The customer has prepaid for the services to be done on his vehicle.                                                                                                                                                                                                                                                                                                 |
+| `reached_client`       | boolean  | The customer has been reached.                                                                                                                                                                                                                                                                                                                                       |
+| `repair_order`         | string   | The repair order number.                                                                                                                                                                                                                                                                                                                                             |
+| `service_cleaned`      | boolean  | The vehicle has been cleaned for the service.                                                                                                                                                                                                                                                                                                                        |
+| `service_interval_km`  | integer  | <p>The vehicle service interval in km. Possible values are <strong>1000</strong>, <strong>5000</strong>, <strong>6000</strong>, <strong>8000</strong>, <strong>12000</strong>, <strong>16000</strong>, <strong>18000</strong>, <strong>20000</strong>, <strong>24000</strong> or <strong>25000.</strong></p><p><em>New values might be added in the future.</em></p> |
+| `service_monthly_km`   | integer  | Kilometers allowed per month.                                                                                                                                                                                                                                                                                                                                        |
+| `storage`              | string   | Information about where the vehicle is stored for service.                                                                                                                                                                                                                                                                                                           |
+| `work_order`           | string   | The work order number for the vehicle service.                                                                                                                                                                                                                                                                                                                       |
 
 
 
@@ -605,130 +102,26 @@ Leads of type `service` may have these additional attributes.
 
 The `Lead` object may have the following [nested objects](../nested-objects.md).
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>Attribute</b>
-      </th>
-      <th style="text-align:left"><b>Type</b>
-      </th>
-      <th style="text-align:left"><b>Description</b>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>account</code>
-      </td>
-      <td style="text-align:left">object</td>
-      <td style="text-align:left"><a href="account.md">&#x200B;Account object</a> representing the associated
-        account.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>advisor</code>
-      </td>
-      <td style="text-align:left">object</td>
-      <td style="text-align:left">&#x200B;&#x200B;<a href="user.md">User object</a> representing the associated
-        advisor.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>bdc</code>
-      </td>
-      <td style="text-align:left">object</td>
-      <td style="text-align:left"><a href="user.md">User object</a> representing the associated BDC agent.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>commercial</code>
-      </td>
-      <td style="text-align:left">object</td>
-      <td style="text-align:left"><a href="user.md">User object</a> representing the associated F&amp;I.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>service_advisor</code>
-      </td>
-      <td style="text-align:left">object</td>
-      <td style="text-align:left"><a href="user.md">User object</a> representing the associated service advisor.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>service_agent</code>
-      </td>
-      <td style="text-align:left">object</td>
-      <td style="text-align:left"><a href="user.md">User object</a> representing the associated service agent.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>takeover_director</code>
-      </td>
-      <td style="text-align:left">object</td>
-      <td style="text-align:left"><a href="user.md">User object</a> representing the associated take over
-        director.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>associated_leads</code>
-      </td>
-      <td style="text-align:left">array</td>
-      <td style="text-align:left">An array of all the <code>Lead</code> IDs that are associated with the object.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>communications</code>
-      </td>
-      <td style="text-align:left">array</td>
-      <td style="text-align:left">Array of <a href="communication.md">communications objects</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>custom_fields</code>
-      </td>
-      <td style="text-align:left">array</td>
-      <td style="text-align:left">Array of <a href="custom-fields.md">custom fields objects</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>emails</code>
-      </td>
-      <td style="text-align:left">array</td>
-      <td style="text-align:left">Array of <a href="email.md">email objects</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>events</code>
-      </td>
-      <td style="text-align:left">array</td>
-      <td style="text-align:left">Array of <a href="event.md">event objects</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>phones</code>
-      </td>
-      <td style="text-align:left">array</td>
-      <td style="text-align:left">Array of <a href="phone.md">phone objects</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>products</code>
-      </td>
-      <td style="text-align:left">array</td>
-      <td style="text-align:left">
-        <p>Array of <a href="product.md">product objects</a>.</p>
-        <p><em>N.B. At this time, only service products are returned.</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>tasks</code>
-      </td>
-      <td style="text-align:left">array</td>
-      <td style="text-align:left">Array of <a href="task.md">task objects</a>.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>vehicles</code>
-      </td>
-      <td style="text-align:left">array</td>
-      <td style="text-align:left">Array of <a href="vehicle.md">vehicle objects</a>.</td>
-    </tr>
-  </tbody>
-</table>
-
-
+| **Attribute**       | **Type** | **Description**                                                                                                                 |
+| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `account`           | object   | [​Account object](account.md) representing the associated account.                                                              |
+| `advisor`           | object   | ​​[User object](user.md) representing the associated advisor.                                                                   |
+| `bdc`               | object   | [User object](user.md) representing the associated BDC agent.                                                                   |
+| `commercial`        | object   | [User object](user.md) representing the associated F\&I.                                                                        |
+| `service_advisor`   | object   | [User object](user.md) representing the associated service advisor.                                                             |
+| `service_agent`     | object   | [User object](user.md) representing the associated service agent.                                                               |
+| `takeover_director` | object   | [User object](user.md) representing the associated take over director.                                                          |
+| `delivered_by`      | object   | [User object](user.md) representing the user associated with the vehicle delivery.                                              |
+|                     |          |                                                                                                                                 |
+| `associated_leads`  | array    | An array of all the `Lead` IDs that are associated with the object.                                                             |
+| `communications`    | array    | Array of [communications objects](communication.md).                                                                            |
+| `custom_fields`     | array    | Array of [custom fields objects](custom-fields.md).                                                                             |
+| `emails`            | array    | Array of [email objects](email.md).                                                                                             |
+| `events`            | array    | Array of [event objects](event.md).                                                                                             |
+| `phones`            | array    | Array of [phone objects](phone.md).                                                                                             |
+| `products`          | array    | <p>Array of <a href="product.md">product objects</a>.</p><p><em>N.B. At this time, only service products are returned.</em></p> |
+| `tasks`             | array    | Array of [task objects](task.md).                                                                                               |
+| `vehicles`          | array    | Array of [vehicle objects](vehicle.md).                                                                                         |
 
 
 

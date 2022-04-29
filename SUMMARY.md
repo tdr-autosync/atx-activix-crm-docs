@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Version Information](version-information.md)
 
-## API Reference <a id="api"></a>
+## API Reference <a href="#api" id="api"></a>
 
 * [Authentication](api/authentication.md)
 * [Errors](api/errors.md)
@@ -13,6 +13,7 @@
   * [Email](api/resources/email.md)
   * [Event](api/resources/event.md)
   * [Lead](api/resources/lead.md)
+  * [Notes](api/resources/notes.md)
   * [Phone](api/resources/phone.md)
   * [Search](api/resources/search.md)
   * [Task](api/resources/task.md)
@@ -25,6 +26,7 @@
   * [Email](api/objects/email.md)
   * [Event](api/objects/event.md)
   * [Lead](api/objects/lead.md)
+  * [Notes](api/objects/notes.md)
   * [Phone](api/objects/phone.md)
   * [Product](api/objects/product.md)
   * [Task](api/objects/task.md)
@@ -39,6 +41,5 @@
 
 ## Integration Guidelines
 
-* [Auto-lead Data Format \(ADF\)](integration-guidelines/adf.md)
+* [Auto-lead Data Format (ADF)](integration-guidelines/adf.md)
 * [Phone system](integration-guidelines/phone-system.md)
-
