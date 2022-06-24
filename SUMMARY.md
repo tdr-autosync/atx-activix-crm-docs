@@ -8,6 +8,7 @@
 * [Authentication](api/authentication.md)
 * [Errors](api/errors.md)
 * [Resources](api/resources/README.md)
+  * [Account](api/resources/account.md)
   * [Call Log](api/resources/call-log.md)
   * [Communication](api/resources/communication.md)
   * [Email](api/resources/email.md)

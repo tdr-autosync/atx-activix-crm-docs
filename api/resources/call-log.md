@@ -2,86 +2,159 @@
 
 The following describes the available resources for a Call Log. Check out the [Call Log object](../objects/call-log.md) documentation for a complete list of attributes.
 
-{% api-method method="post" host="https://api.crm.activix.ca/v2" path="/call-logs" %}
-{% api-method-summary %}
-Create a call log
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.crm.activix.ca/v2" path="/call-logs" method="post" summary="Create a call log" %}
+{% swagger-description %}
+Creates a call log. Returns the created call log with the associated Lead. 
 
-{% api-method-description %}
-Creates a call log. Returns the created call log with the associated Lead.   
-  
-Use this endpoint to indicate that a call has been initiated or to log a completed call. If a **media\_url** is provided in the payload it will be uploaded to our system and the communication will contain the audio playback.
-{% endapi-method-description %}
+\
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+
+
+
+\
+
+
+Use this endpoint to indicate that a call has been initiated or to log a completed call. If a 
+
+**media_url**
+
+ is provided in the payload it will be uploaded to our system and the communication will contain the audio playback.
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
+Should be 
 
-{% api-method-parameter name="Accept" type="string" required=true %}
-Should be `application/json`.  
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+`application/json`
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="status" type="string" required=true %}
-The status of the call. Possible values are **answered**, **attempted**, **calling**, **error**, **interrupted**, **pending** or **unanswered**.
-{% endapi-method-parameter %}
+.
+{% endswagger-parameter %}
 
-{% api-method-parameter name="direction" type="string" required=true %}
-The direction of the call. Possible values are **outgoing** or **incoming**.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Should be 
 
-{% api-method-parameter name="duration" type="integer" required=false %}
-The duration of the call in seconds.   
-  
-_\*Provide this parameter to indicate that the call is completed._
-{% endapi-method-parameter %}
+`application/json`
 
-{% api-method-parameter name="start\_at" type="string" required=true %}
+.
+
+\
+
+
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="status" type="string" %}
+The status of the call. Possible values are 
+
+**answered**
+
+, 
+
+**attempted**
+
+, 
+
+**calling**
+
+, 
+
+**error**
+
+, 
+
+**interrupted**
+
+, 
+
+**pending**
+
+ or 
+
+**unanswered**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="direction" type="string" %}
+The direction of the call. Possible values are 
+
+**outgoing**
+
+ or 
+
+**incoming**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="duration" type="integer" %}
+The duration of the call in seconds. 
+
+\
+
+
+
+
+\
+
+
+
+
+_*Provide this parameter to indicate that the call is completed._
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="start_at" type="string" %}
 ISO 8601 datetime representing the start of the call.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="end\_at" type="string" required=false %}
-ISO 8601 datetime representing the end of the call.   
-  
-_\*Provide this parameter to indicate that the call is completed._
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="end_at" type="string" %}
+ISO 8601 datetime representing the end of the call. 
 
-{% api-method-parameter name="media\_url" type="string" required=false %}
-The web URL of the media file of the call. Possible file types are **wav** or **mp3**.
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="from" type="string" required=true %}
+
+
+
+\
+
+
+
+
+_*Provide this parameter to indicate that the call is completed._
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="media_url" type="string" %}
+The web URL of the media file of the call. Possible file types are 
+
+**wav**
+
+ or 
+
+**mp3**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="from" type="string" %}
 The phone number from where the call originated in E.164 format.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="to" type="string" required=true %}
+{% swagger-parameter in="body" name="to" type="string" %}
 The phone number to where the call is targeted in E.164 format.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="user\_did" type="string" required=false %}
+{% swagger-parameter in="body" name="user_did" type="string" %}
 The phone number in E.164 format of the user who is the target of the call.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="user\_email" type="string" required=false %}
+{% swagger-parameter in="body" name="user_email" type="string" %}
 The email of the user who is the target of the call. 
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-Call Log created successfully.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="201" description="Call Log created successfully." %}
 ```javascript
 {
     "data": {
@@ -104,10 +177,8 @@ Call Log created successfully.
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 If you want to indicate that a call is completed, **end\_at** and **duration** parameters are mandatory.
 
@@ -124,76 +195,134 @@ If you want to indicate that a call is completed, **end\_at** and **duration** p
 }
 ```
 
-{% api-method method="put" host="https://api.crm.activix.ca/v2" path="/call-logs/:id" %}
-{% api-method-summary %}
-Update a call log
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.crm.activix.ca/v2" path="/call-logs/:id" method="put" summary="Update a call log" %}
+{% swagger-description %}
+Updates the specified call log by setting the values of the parameters passed. Any parameters not provided will be left unchanged. The request returns the updated call log.
 
-{% api-method-description %}
-Updates the specified call log by setting the values of the parameters passed. Any parameters not provided will be left unchanged. The request returns the updated call log.  
-  
-Use this endpoint to change status or information about an existing call or indicate that the call has ended. If a **media\_url** is provided in the payload it will be uploaded to our system and the communication will contain the audio playback.
-{% endapi-method-description %}
+\
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="integer" required=true %}
+
+
+
+\
+
+
+Use this endpoint to change status or information about an existing call or indicate that the call has ended. If a 
+
+**media_url**
+
+ is provided in the payload it will be uploaded to our system and the communication will contain the audio playback.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="id" type="integer" %}
 The ID of the call log to update.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
+Should be 
 
-{% api-method-parameter name="Accept" type="string" required=true %}
-Should be `application/json`.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+`application/json`
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="status" type="string" required=true %}
-The status of the call. Possible values are **answered**, **attempted**, **calling**, **error**, **interrupted**, **pending** or **unanswered**.
-{% endapi-method-parameter %}
+.
+{% endswagger-parameter %}
 
-{% api-method-parameter name="duration" type="integer" required=false %}
-The duration of the call in seconds.  
-  
-_\*Provide this parameter to indicate that the call is completed._
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Accept" type="string" %}
+Should be 
 
-{% api-method-parameter name="end\_at" type="string" required=false %}
-ISO 8601 datetime representing the end of the call.  
-  
-_\*Provide this parameter to indicate that the call is completed._
-{% endapi-method-parameter %}
+`application/json`
 
-{% api-method-parameter name="media\_url" type="string" required=false %}
-The web URL of the media file of the call. Possible file types are **wav** or **mp3**.
-{% endapi-method-parameter %}
+.
+{% endswagger-parameter %}
 
-{% api-method-parameter name="user\_did" type="string" required=false %}
+{% swagger-parameter in="body" name="status" type="string" %}
+The status of the call. Possible values are 
+
+**answered**
+
+, 
+
+**attempted**
+
+, 
+
+**calling**
+
+, 
+
+**error**
+
+, 
+
+**interrupted**
+
+, 
+
+**pending**
+
+ or 
+
+**unanswered**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="duration" type="integer" %}
+The duration of the call in seconds.
+
+\
+
+
+
+
+\
+
+
+
+
+_*Provide this parameter to indicate that the call is completed._
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="end_at" type="string" %}
+ISO 8601 datetime representing the end of the call.
+
+\
+
+
+
+
+\
+
+
+
+
+_*Provide this parameter to indicate that the call is completed._
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="media_url" type="string" %}
+The web URL of the media file of the call. Possible file types are 
+
+**wav**
+
+ or 
+
+**mp3**
+
+.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="user_did" type="string" %}
 The phone number in E.164 format of the user who is the target of the call.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="user\_email" type="string" required=false %}
+{% swagger-parameter in="body" name="user_email" type="string" %}
 The email of the user who is the target of the call.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Communication updated successfully.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Communication updated successfully." %}
 ```javascript
 {
     "data": {
@@ -218,10 +347,8 @@ Communication updated successfully.
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 If you want to indicate that a call is completed, **end\_at** and **duration** parameters are mandatory.
 
@@ -236,4 +363,3 @@ If you want to indicate that a call is completed, **end\_at** and **duration** p
     ...
 }
 ```
-

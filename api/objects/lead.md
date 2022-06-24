@@ -102,26 +102,26 @@ Leads of type `service` may have these additional attributes.
 
 The `Lead` object may have the following [nested objects](../nested-objects.md).
 
-| **Attribute**       | **Type** | **Description**                                                                                                                 |
-| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `account`           | object   | [​Account object](account.md) representing the associated account.                                                              |
-| `advisor`           | object   | ​​[User object](user.md) representing the associated advisor.                                                                   |
-| `bdc`               | object   | [User object](user.md) representing the associated BDC agent.                                                                   |
-| `commercial`        | object   | [User object](user.md) representing the associated F\&I.                                                                        |
-| `service_advisor`   | object   | [User object](user.md) representing the associated service advisor.                                                             |
-| `service_agent`     | object   | [User object](user.md) representing the associated service agent.                                                               |
-| `takeover_director` | object   | [User object](user.md) representing the associated take over director.                                                          |
-| `delivered_by`      | object   | [User object](user.md) representing the user associated with the vehicle delivery.                                              |
-|                     |          |                                                                                                                                 |
-| `associated_leads`  | array    | An array of all the `Lead` IDs that are associated with the object.                                                             |
-| `communications`    | array    | Array of [communications objects](communication.md).                                                                            |
-| `custom_fields`     | array    | Array of [custom fields objects](custom-fields.md).                                                                             |
-| `emails`            | array    | Array of [email objects](email.md).                                                                                             |
-| `events`            | array    | Array of [event objects](event.md).                                                                                             |
-| `phones`            | array    | Array of [phone objects](phone.md).                                                                                             |
-| `products`          | array    | <p>Array of <a href="product.md">product objects</a>.</p><p><em>N.B. At this time, only service products are returned.</em></p> |
-| `tasks`             | array    | Array of [task objects](task.md).                                                                                               |
-| `vehicles`          | array    | Array of [vehicle objects](vehicle.md).                                                                                         |
+| **Attribute**       | **Type** | **Description**                                                                    |
+| ------------------- | -------- | ---------------------------------------------------------------------------------- |
+| `account`           | object   | [​Account object](account.md) representing the associated account.                 |
+| `advisor`           | object   | ​​[User object](user.md) representing the associated advisor.                      |
+| `bdc`               | object   | [User object](user.md) representing the associated BDC agent.                      |
+| `commercial`        | object   | [User object](user.md) representing the associated F\&I.                           |
+| `service_advisor`   | object   | [User object](user.md) representing the associated service advisor.                |
+| `service_agent`     | object   | [User object](user.md) representing the associated service agent.                  |
+| `takeover_director` | object   | [User object](user.md) representing the associated take over director.             |
+| `delivered_by`      | object   | [User object](user.md) representing the user associated with the vehicle delivery. |
+|                     |          |                                                                                    |
+| `associated_leads`  | array    | An array of all the `Lead` IDs that are associated with the object.                |
+| `communications`    | array    | Array of [communications objects](communication.md).                               |
+| `custom_fields`     | array    | Array of [custom fields objects](custom-fields.md).                                |
+| `emails`            | array    | Array of [email objects](email.md).                                                |
+| `events`            | array    | Array of [event objects](event.md).                                                |
+| `phones`            | array    | Array of [phone objects](phone.md).                                                |
+| `products`          | array    | Array of [product objects](product.md).                                            |
+| `tasks`             | array    | Array of [task objects](task.md).                                                  |
+| `vehicles`          | array    | Array of [vehicle objects](vehicle.md).                                            |
 
 
 
