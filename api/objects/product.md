@@ -4,32 +4,33 @@ The representation of a product is called a `Product` object.
 
 ## The `Product` Object
 
-| **Attribute** | **Type** | **Description**                                                                                                                                                 |
-| ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `created_at`  | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the product was created.                                                              |
-| `updated_at`  | string   | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the product was last updated.                                                         |
-|               |          |                                                                                                                                                                 |
-| `category`    | string   | The category of the product.                                                                                                                                    |
-| `minutes`     | integer  | <p>Time representing the work duration.</p><p><em>For <strong>service</strong> products only.</em></p>                                                          |
-| `name`        | string   | Name of the product.                                                                                                                                            |
-| `notes`       | string   | Notes.                                                                                                                                                          |
-| `premium`     | boolean  | Determine if it is a premium product.                                                                                                                           |
-| `price`       | numeric  | Price of the product.                                                                                                                                           |
-| `sold`        | boolean  | Determine if the product is sold.                                                                                                                               |
-| `type`        | integer  | <p>The type of product. Possible values are <strong>commercial</strong> or <strong>service</strong>.</p><p><em>New values might be added in the future</em></p> |
+| Attribute    | Type    | Description                                                                                                                                                          |
+| ------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `created_at` | string  | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the product was created.                                                                   |
+| `updated_at` | string  | [ISO datetime](https://en.wikipedia.org/wiki/ISO\_8601) representing when the product was last updated.                                                              |
+|              |         |                                                                                                                                                                      |
+| `category`   | string  | The category of the product.                                                                                                                                         |
+| `minutes`    | integer | <p>Time representing the work duration.</p><p><em>For <strong>service</strong> products only.</em></p>                                                               |
+| `name`       | string  | Name of the product.                                                                                                                                                 |
+| `notes`      | string  | Notes.                                                                                                                                                               |
+| `premium`    | boolean | Determine if it is a premium product.                                                                                                                                |
+| `price`      | numeric | Price of the product.                                                                                                                                                |
+| `sold`       | boolean | Determine if the product is sold.                                                                                                                                    |
+| `type`       | string  | <p>The type of product. Possible values are <strong>commercial</strong> or <strong>service</strong>.<br></p><p><em>New values might be added in the future.</em></p> |
 
 ### List of available products
 
-|  1 | ins\_filling                        | commercial  | Replacement ins.                   |
-| -: | ----------------------------------- | ----------- | ---------------------------------- |
-|  2 | ins\_rental                         | commercial  | Leasing insurance                  |
-|  3 | ins\_invalidity                     | commercial  | Invalidity insurance               |
-|  4 | ins\_health                         | commercial  | Health insurance                   |
-|  5 | ins\_life                           | commercial  | Life insurance                     |
-|  6 | extended\_warranty                  | commercial  | Extended warranty                  |
-|  7 | rustproofing                        | commercial  | Rustproofing                       |
-|  8 | chiselling                          | commercial  | Chiselling                         |
-|  9 | anti\_theft                         | commercial  | Anti theft                         |
+| ID | Name                                | Type        | Label                              |
+| -- | ----------------------------------- | ----------- | ---------------------------------- |
+| 1  | ins\_filling                        | commercial  | Replacement ins.                   |
+| 2  | ins\_rental                         | commercial  | Leasing insurance                  |
+| 3  | ins\_invalidity                     | commercial  | Invalidity insurance               |
+| 4  | ins\_health                         | commercial  | Health insurance                   |
+| 5  | ins\_life                           | commercial  | Life insurance                     |
+| 6  | extended\_warranty                  | commercial  | Extended warranty                  |
+| 7  | rustproofing                        | commercial  | Rustproofing                       |
+| 8  | chiselling                          | commercial  | Chiselling                         |
+| 9  | anti\_theft                         | commercial  | Anti theft                         |
 | 10 | starter                             | commercial  | Remote starter                     |
 | 11 | window\_tint                        | commercial  | Window tint                        |
 | 12 | pre\_paid\_maintenance              | commercial  | PPM                                |
