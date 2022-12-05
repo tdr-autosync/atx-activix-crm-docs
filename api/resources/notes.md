@@ -2,7 +2,7 @@
 
 The following describes the available resources for a Note. Check out the [Note Object](notes.md) documentation for a complete list of attributes.
 
-{% swagger method="post" path="/lead/:lead_id/notes" baseUrl="https://api.crm.activix.ca/v2" summary="Create a note" %}
+{% swagger method="post" path="/leads/:lead_id/notes" baseUrl="https://api.crm.activix.ca/v2" summary="Create a note" %}
 {% swagger-description %}
 _Creates a note in the specified lead. Returns the created note._
 {% endswagger-description %}
@@ -71,7 +71,7 @@ Body example
 }
 ```
 
-{% swagger method="put" path="/lead/:lead_id/notes/:note_id" baseUrl="https://api.crm.activix.ca/v2" summary="Update an existing note" %}
+{% swagger method="put" path="/leads/:lead_id/notes/:note_id" baseUrl="https://api.crm.activix.ca/v2" summary="Update an existing note" %}
 {% swagger-description %}
 _Updates an existing note in the specified lead. Returns the updated note._
 {% endswagger-description %}
