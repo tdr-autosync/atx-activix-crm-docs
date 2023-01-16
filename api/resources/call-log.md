@@ -180,7 +180,13 @@ The email of the user who is the target of the call.
 {% endswagger-response %}
 {% endswagger %}
 
+{% hint style="warning" %}
 If you want to indicate that a call is completed, **end\_at** and **duration** parameters are mandatory.
+{% endhint %}
+
+{% hint style="info" %}
+If no **lead\_id** is provided, we will search for a matching lead by phone number or create a new one.
+{% endhint %}
 
 **Body Example**
 
@@ -350,7 +356,9 @@ The email of the user who is the target of the call.
 {% endswagger-response %}
 {% endswagger %}
 
+{% hint style="warning" %}
 If you want to indicate that a call is completed, **end\_at** and **duration** parameters are mandatory.
+{% endhint %}
 
 **Body Example**
 
